@@ -37,6 +37,7 @@
   .views{display:flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:var(--shadow)}
   .views button{border:0;background:transparent;font-size:13px;font-weight:600;color:var(--muted);padding:7px 13px;border-radius:7px;cursor:pointer}
   .views button.active{background:var(--blue);color:#fff}
+  .newdot{display:inline-grid;place-items:center;min-width:17px;height:17px;padding:0 4px;margin-left:6px;border-radius:9px;background:#dc2626;color:#fff;font-size:10px;font-weight:700;vertical-align:middle;line-height:1}
   .btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 13px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);color:var(--ink)}
   .btn:hover{border-color:#cfe0ff}
   .btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -347,8 +348,8 @@ const DEFAULTS=[
    img:P+"real-progress-hero.png",canva:"DAHODWLscvU",
    caption:"Warm, human brand-story beat to balance the meme run."},
   {date:"2026-07-17",title:"Red Card — Selling the Old Way",theme:"worldcup",fmt:"Carousel · 7 slides",holiday:"World Cup knockouts",
-   img:S+"redcard-1.jpg",slides:seq("redcard",7,"jpg"),file:"~/opendoor/projects/red-card-meme/export/red-card-carousel.pdf",
-   caption:"⚽ Soccer-ref 'red card' carousel timed to the later World Cup rounds (semis Jul 14–15 → final Jul 19). NOT yet in Canva — local export. Goal-celebration Opendoor payoff slide."},
+   img:S+"redcard-1.jpg",slides:seq("redcard",7,"jpg"),canva:"DAHOFdzTB74",
+   caption:"⚽ Soccer-ref 'red card' carousel timed to the later World Cup rounds (semis Jul 14–15 → final Jul 19). 6 old-way clichés + a goal-celebration Opendoor payoff slide."},
   {date:"2026-07-20",title:"\"I Said Try opendoor.com\"",theme:"meme",fmt:"Carousel · 12 slides",
    img:P+"try-opendoor-series.png",slides:seq("try",12),canva:"DAHOCjs2zTE",
    caption:"Text-exchange series. High-save, screenshot-y format."},
@@ -427,6 +428,16 @@ function saveCustom(){localStorage.setItem(INV_CUSTOM_KEY,JSON.stringify(customI
 function slug(s){return (s||"item").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
 // unified inventory: built-in catalog (stable ids) + user-added customs
 function allInv(){return [...INVENTORY.map(it=>({id:"inv-"+slug(it.title),builtin:true,...it})), ...customInv];}
+// "new inventory" notification — track which item ids have been seen
+const INV_SEEN_KEY="opendoor_inv_seen_v1";
+let invSeen=loadSeen();
+function loadSeen(){const raw=localStorage.getItem(INV_SEEN_KEY);
+  if(raw){try{return new Set(JSON.parse(raw));}catch(e){}}
+  const s=new Set(INVENTORY.map(it=>"inv-"+slug(it.title)));  // first run: existing catalog isn't "new"
+  localStorage.setItem(INV_SEEN_KEY,JSON.stringify([...s]));return s;}
+function saveSeen(){localStorage.setItem(INV_SEEN_KEY,JSON.stringify([...invSeen]));}
+function newInvCount(){return allInv().filter(it=>!invHidden.has(it.id)&&!invSeen.has(it.id)).length;}
+function markInvSeen(){let ch=false;allInv().forEach(it=>{if(!invHidden.has(it.id)&&!invSeen.has(it.id)){invSeen.add(it.id);ch=true;}});if(ch)saveSeen();}
 
 function load(){
   let arr;
@@ -451,7 +462,8 @@ function isVideo(p){return !!p.video;}
 /* ===== STATS ===== */
 function stats(){
   document.getElementById("s-posts").textContent=posts.length;
-  document.getElementById("btn-inv").textContent="Unscheduled ("+allInv().filter(it=>!invHidden.has(it.id)).length+")";
+  const vis=allInv().filter(it=>!invHidden.has(it.id)).length, nw=newInvCount();
+  document.getElementById("btn-inv").innerHTML="Unscheduled ("+vis+")"+(nw?'<span class="newdot" title="'+nw+' new">'+nw+'</span>':'');
   if(!posts.length){document.getElementById("s-range").textContent="—";return;}
   const s=[...posts].sort((a,b)=>a.date.localeCompare(b.date));
   const a=parse(s[0].date),b=parse(s[s.length-1].date);
@@ -666,6 +678,7 @@ function setView(v){view=v;
   document.getElementById("btn-month").classList.toggle("active",v==="month");
   document.getElementById("btn-list").classList.toggle("active",v==="list");
   document.getElementById("btn-inv").classList.toggle("active",v==="inv");
+  if(v==="inv"){markInvSeen();stats();}   // opening the tab clears the "new" dot
 }
 function shiftMonth(n){viewM+=n;if(viewM<0){viewM=11;viewY--;}if(viewM>11){viewM=0;viewY++;}buildGrid();}
 function goToday(){viewY=2026;viewM=6;buildGrid();}

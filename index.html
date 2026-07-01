@@ -451,7 +451,7 @@ function load(){
 function seed(){return DEFAULTS.map((p,i)=>({id:"seed-"+i,...p}));}
 function save(){localStorage.setItem(STORE_KEY,JSON.stringify(posts));render();}
 function uid(){return "p-"+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36);}
-function canvaURL(c){return !c?null:(c.startsWith("http")?c:"https://www.canva.com/design/"+c+"/edit");}
+function canvaURL(c){return !c?null:(c.startsWith("http")?c:"https://www.canva.com/design/"+c+"/view");}
 function fileURL(v){return !v?null:"file://"+v.replace(/^~/,"/Users/morganbrown");}
 function parse(d){const a=d.split("-").map(Number);return new Date(a[0],a[1]-1,a[2]);}
 function fmtFull(d){const dt=parse(d);return DOW[dt.getDay()]+", "+MON3[dt.getMonth()]+" "+dt.getDate();}
@@ -754,7 +754,7 @@ async function initApp(){
     "<b>Schedule:</b> drag posts between days; click → <b>Edit details</b>. <b>+ Add post</b> / <b>+ Add inventory item</b> for new content; use ‹ › for future months. "+
     "<br><b>Sync across machines:</b> <b>Sync ↑</b> pushes your schedule to GitHub (asks once for a token, stored only in this browser); <b>Sync ↓</b> on another machine pulls the latest. A fresh machine auto-pulls on first open. "+
     "<b>Export/Import</b> JSON also works for manual backup. "+
-    "<br><b>Holidays/events</b> show as colored tags and update as you navigate months. Canva posts open <code>canva.com/design/&lt;id&gt;/edit</code>. "+
+    "<br><b>Holidays/events</b> show as colored tags and update as you navigate months. Canva posts open <code>canva.com/design/&lt;id&gt;/view</code>. "+
     "<i>Note: videos link to local files and won't play on the hosted site; image previews &amp; carousels do.</i>";
 }
 // gate startup

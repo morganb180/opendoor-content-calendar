@@ -66,6 +66,9 @@
   .chip.dragging{opacity:.4}
   .chip img{width:32px;height:40px;object-fit:cover;border-radius:5px;background:#eef1f6;flex:none}
   .chip .ct{font-size:10.5px;font-weight:600;line-height:1.22;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .chip-comment{font-size:9px;color:var(--muted);margin-top:2px;white-space:nowrap}
+  .chip-comment{display:none}
+  @media(min-width:761px){.chip-comment{display:block}}
   /* CARDS (list + inventory) */
   .weeks,.invView{display:none}
   .week{margin-bottom:28px}
@@ -130,10 +133,76 @@
   .lbinfo .acts a,.lbinfo .acts button{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:600;padding:10px 12px;border-radius:9px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
   .lbinfo .acts a:hover,.lbinfo .acts button:hover{background:rgba(255,255,255,.18)}
   .lbinfo .acts a.canva{background:var(--blue);border-color:var(--blue)}
-  .lbclose{position:absolute;top:16px;right:20px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
-  .lbclose:hover{background:rgba(255,255,255,.3)}
-  @media(max-width:760px){.lbinner{flex-direction:column}.lbmedia img,.lbmedia video{max-width:84vw;max-height:54vh}.cell{min-height:auto}.chip .ct{display:none}.chip img{width:100%;height:28px}}
-  /* GATE */
+ .lbclose{position:absolute;top:16px;right:20px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+ .lbclose:hover{background:rgba(255,255,255,.3)}
+  /* SOCIAL CAPTION FIELD */
+  .field label .hint-inline{font-weight:400;text-transform:none;letter-spacing:0;font-size:11px;color:var(--muted);margin-left:6px}
+  .canva-push-row{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .canva-push-row .btn{font-size:12px;padding:7px 11px}
+  .canva-status{font-size:11.5px;color:var(--muted);margin-top:5px}
+  .canva-status.ok{color:#16a34a} .canva-status.err{color:#dc2626}
+  /* COMMENTS */
+  .lb-comments{margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:14px}
+  .lb-comments h5{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#aeb6c2;margin:0 0 10px}
+  .lb-comment{display:flex;gap:9px;margin-bottom:10px;align-items:flex-start}
+  .lb-comment .avatar{width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:11px;font-weight:700;color:#fff}
+  .lb-comment .body{flex:1}
+  .lb-comment .meta{font-size:11px;color:#aeb6c2;margin-bottom:2px}
+  .lb-comment .meta b{color:#d7dce3;font-weight:600}
+  .lb-comment .text{font-size:13px;color:#e8ebf0;line-height:1.45}
+  .lb-comment .del{color:#dc2626;cursor:pointer;font-size:11px;margin-left:8px;opacity:.6}
+  .lb-comment .del:hover{opacity:1}
+  .lb-addcomment{display:flex;gap:8px;margin-top:8px}
+  .lb-addcomment input{flex:1;border:1px solid rgba(255,255,255,.25);border-radius:9px;padding:9px 11px;font:inherit;font-size:13px;background:rgba(255,255,255,.08);color:#fff}
+  .lb-addcomment input::placeholder{color:#aeb6c2}
+  .lb-addcomment input:focus{outline:none;border-color:var(--blue);background:rgba(255,255,255,.12)}
+  .lb-addcomment button{flex:none}
+  .comment-count{font-size:11px;color:#aeb6c2;margin-left:4px}
+  /* MOBILE */
+  @media(max-width:760px){
+    .wrap{padding:16px 12px 60px}
+    h1{font-size:18px} .sub{font-size:12.5px}
+    .stats{gap:6px} .stat{padding:7px 10px} .stat b{font-size:16px}
+    .toolbar{gap:8px}
+    .legend{order:2;width:100%;justify-content:center}
+    .controls{order:1;width:100%;justify-content:center}
+    .views button{font-size:12px;padding:6px 10px}
+    .btn{font-size:12px;padding:7px 10px}
+    .monthnav{gap:8px} .monthnav h2{font-size:15px;min-width:120px}
+    .hint{display:none}
+    .dow div{padding:6px 4px;font-size:9px}
+    .cell{min-height:auto;padding:4px}
+    .chip{padding:3px;gap:4px;margin-top:3px}
+    .chip img{width:100%;height:24px;border-radius:4px}
+    .chip .ct{display:none}
+    .marker{font-size:7px;padding:1px 3px}
+    .daynum{font-size:11px}
+    .cards{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+    .card:hover{transform:none}
+    .ctitle{font-size:13px} .caption{font-size:11px}
+    .overlay{padding:0}
+    .modal{border-radius:0;max-width:100%;max-height:100vh;height:100vh}
+    .modal h3{padding:14px 16px;font-size:16px}
+    .form{padding:12px 16px;gap:10px}
+    .modalfoot{padding:12px 16px}
+    .row{flex-direction:column;gap:10px}
+    .lb{padding:0}
+    .lbinner{flex-direction:column;max-height:100vh;height:100vh;overflow-y:auto;padding:0}
+    .lbstage{flex-direction:row;width:100%;justify-content:center}
+    .lbmedia img,.lbmedia video{max-width:90vw;max-height:50vh}
+    .lbinfo{max-width:100%;padding:16px;width:100%}
+    .lbinfo h4{font-size:17px}
+    .lbclose{top:8px;right:10px;width:36px;height:36px;font-size:20px;z-index:5}
+    .lbarrow{width:36px;height:36px;font-size:18px}
+    .gatebox{padding:26px 22px}
+  }
+  @media(max-width:480px){
+    .cards{grid-template-columns:1fr}
+    .stats{flex-direction:row}
+    .controls{gap:6px}
+    .views button{padding:5px 8px;font-size:11px}
+  }
+ /* GATE */
   .gate{position:fixed;inset:0;background:linear-gradient(160deg,#eaf2ff,#f5f7fb);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
   .gatebox{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(16,24,40,.16);padding:34px 30px;width:100%;max-width:360px;text-align:center}
   .gatebox .logo{margin:0 auto 14px}
@@ -245,8 +314,15 @@
         <div class="field"><label>Format</label><input id="f-fmt" placeholder="Static · 3:4"></div>
         <div class="field" id="f-holidayField"><label>Event tag (optional)</label><input id="f-holiday" placeholder="e.g. July 4th"></div>
       </div>
-      <div class="field"><label>Caption / notes</label><textarea id="f-caption" rows="2"></textarea></div>
-      <div class="field"><label>Canva design ID or link (optional)</label><input id="f-canva" placeholder="DAHxxxxxxx or https://..."></div>
+      <div class="field"><label>Caption / notes</label><textarea id="f-caption" rows="2" placeholder="Internal notes about this post"></textarea></div>
+      <div class="field"><label>Social caption <span class="hint-inline">— goes live with the post; push to Canva if linked</span></label><textarea id="f-socialCaption" rows="3" placeholder="The actual caption text for IG/FB..." oninput="toggleCanvaPushRow()"></textarea>
+      <div class="canva-push-row" id="canvaPushRow" style="display:none">
+        <button class="btn primary" onclick="pushCaptionToCanva()">Push to Canva ↗</button>
+        <button class="btn ghost" onclick="copySocialCaption()">Copy caption</button>
+        <span class="canva-status" id="canvaStatus"></span>
+      </div>
+      </div>
+     <div class="field"><label>Canva design ID or link (optional)</label><input id="f-canva" placeholder="DAHxxxxxxx or https://..." oninput="toggleCanvaPushRow()"></div>
       <div class="field"><label>Video / file path (optional)</label><input id="f-video" placeholder="~/opendoor/finals/.../clip.mp4"></div>
       <div class="field"><label>Preview image (URL / path, or upload)</label>
         <input id="f-img" placeholder="previews/my-post.png" oninput="syncPrev()">
@@ -273,19 +349,33 @@
       <div class="lbmedia" id="lbMedia"></div>
       <button class="lbarrow" id="lbNext" onclick="lbStep(1)">›</button>
     </div>
-    <div class="lbinfo">
-      <span class="badge" id="lbBadge"></span>
-      <h4 id="lbTitle"></h4>
-      <div class="lf" id="lbFmt"></div>
-      <p id="lbCaption"></p>
-      <div class="counter" id="lbCounter"></div>
-      <div class="acts" id="lbActs"></div>
-    </div>
+   <div class="lbinfo">
+     <span class="badge" id="lbBadge"></span>
+     <h4 id="lbTitle"></h4>
+     <div class="lf" id="lbFmt"></div>
+     <p id="lbCaption"></p>
+     <div id="lbSocialCaption" style="display:none;margin-top:8px;padding:10px 12px;background:rgba(255,255,255,.06);border-radius:9px;border:1px solid rgba(255,255,255,.12)">
+       <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#aeb6c2;margin-bottom:4px">Social caption</div>
+       <div id="lbSocialCaptionText" style="font-size:13px;color:#e8ebf0;line-height:1.5;white-space:pre-wrap"></div>
+     </div>
+     <div class="counter" id="lbCounter"></div>
+     <div class="acts" id="lbActs"></div>
+     <div class="lb-comments" id="lbComments">
+       <h5>Internal comments <span class="comment-count" id="lbCommentCount"></span></h5>
+       <div id="lbCommentList"></div>
+       <div class="lb-addcomment">
+         <input type="text" id="lbCommentInput" placeholder="Add a comment..." onkeydown="if(event.key==='Enter')addComment()">
+         <button class="btn primary" onclick="addComment()">Post</button>
+       </div>
+     </div>
+   </div>
   </div>
 </div>
 
 <script>
 const STORE_KEY="opendoor_calendar_v2";
+const COMMENTS_KEY="opendoor_comments_v1";      // {postId: [{id,text,author,ts}]}
+const COMMENT_AUTHOR_KEY="opendoor_comment_author";
 const TODAY="2026-06-30";
 const THEME={
   seasonal:{cls:"b-seasonal",color:"#ff7a45",label:"Seasonal"},
@@ -299,6 +389,7 @@ const MARKERS={
   "2026-07-01":{l:"⚽ USA vs Bosnia · R32",t:"evt"},
   "2026-07-04":{l:"🇺🇸 Independence Day",t:"hol"},
   "2026-07-11":{l:"⚽ Quarter-finals",t:"evt"},
+  "2026-07-12":{l:"🎾 Wimbledon Final",t:"evt"},
   "2026-07-15":{l:"⚽ Semi-finals",t:"evt"},
   "2026-07-19":{l:"⚽ World Cup Final",t:"evt"},
   "2026-08-17":{l:"🎒 Back-to-school season",t:"mkt"},
@@ -326,6 +417,9 @@ const DEFAULTS=[
   {date:"2026-07-01",title:"World Cup — The Leading O Becomes the Ball",theme:"worldcup",fmt:"Video · 9:16",holiday:"USA · 1st knockout",
    img:P+"worldcup.png",canva:"DAHOFqh_g5g",
    caption:"⚽ Always rooting for the home team — we're on your side when you make your move. (USA vs. Bosnia & Herzegovina, the US's first knockout match, Round of 32, Levi's Stadium.)"},
+  {date:"2026-07-02",title:"Wimbledon — The Grass Is Truly Greener",theme:"seasonal",fmt:"Static · 3:4",holiday:"🎾 Wimbledon",
+   img:P+"wimbledon-doors.png",canva:"DAHOKZYzGc4",
+   caption:"🎾 Grass-season brand post for Wimbledon week 1. A 3×3 grid of green front doors (middle-America mix); 'the grass is truly greener' on the other side of an Opendoor."},
   {date:"2026-07-03",title:"Some Things Just Go Together — July",theme:"seasonal",fmt:"Static · 3:4",
    img:P+"go-together-july.png",canva:"DAHN_aEi-KM",
    caption:"Hot dogs + the 4th. Home + Opendoor. The 'go together' series, July edition."},
@@ -341,6 +435,9 @@ const DEFAULTS=[
   {date:"2026-07-10",title:"Today's Forecast: 100% Chance of an Offer",theme:"seasonal",fmt:"Static · 3:4",
    img:P+"forecast-offer.png",canva:"DAHOECZyDlE",
    caption:"Summer weather-meme. Sunny, optimistic."},
+  {date:"2026-07-12",title:"Wimbledon — Your Own Center Court",theme:"seasonal",fmt:"Static · 3:4",holiday:"🎾 Wimbledon Final",
+   img:P+"wimbledon-centercourt.png",canva:"DAHOKau9MAw",
+   caption:"🎾 Finals-day post (Gentlemen's Singles Final). Photoreal striped-lawn backyard: 'the best seat this summer is your own Center Court.'"},
   {date:"2026-07-13",title:"Things That Go Together",theme:"meme",fmt:"Static · 3:4",
    img:P+"go-together-home.png",canva:"DAHN-Qf43Ko",
    caption:"PB&J / flag & apple pie / home & Opendoor. The evergreen anchor of the series."},
@@ -439,6 +536,82 @@ function saveSeen(){localStorage.setItem(INV_SEEN_KEY,JSON.stringify([...invSeen
 function newInvCount(){return allInv().filter(it=>!invHidden.has(it.id)&&!invSeen.has(it.id)).length;}
 function markInvSeen(){let ch=false;allInv().forEach(it=>{if(!invHidden.has(it.id)&&!invSeen.has(it.id)){invSeen.add(it.id);ch=true;}});if(ch)saveSeen();}
 
+/* ===== COMMENTS ===== */
+function loadComments(){try{return JSON.parse(localStorage.getItem(COMMENTS_KEY)||"{}");}catch(e){return{};}}
+function saveComments(){localStorage.setItem(COMMENTS_KEY,JSON.stringify(comments));}
+let comments=loadComments();
+function getCommentAuthor(){return localStorage.getItem(COMMENT_AUTHOR_KEY)||"";}
+function setCommentAuthor(a){localStorage.setItem(COMMENT_AUTHOR_KEY,a);}
+function avatarColor(name){const colors=["#1f80ff","#7c3aed","#ff7a45","#0ea5e9","#16a34a","#dc2626","#d97706","#6366f1"];let h=0;for(const c of name)h=(h*31+c.charCodeAt(0))|0;return colors[Math.abs(h)%colors.length];}
+function avatarInitials(name){const p=name.trim().split(/\s+/);return((p[0]||"?")[0]+(p[1]||"")[0]||p[0][0]||"?").toUpperCase();}
+function commentKey(id){return id||("inv-"+(lbItem&&lbItem.id?lbItem.id:""));}
+function addComment(){
+  const inp=document.getElementById("lbCommentInput");const text=inp.value.trim();if(!text)return;
+  let author=getCommentAuthor();
+  if(!author){author=prompt("Your name (for comments):");if(!author)return;author=author.trim();setCommentAuthor(author);}
+  const key=commentKey(lbItem&&lbItem._id);if(!key)return;
+  if(!comments[key])comments[key]=[];
+  comments[key].push({id:"c-"+Date.now().toString(36),text,author,ts:Date.now()});
+  saveComments();inp.value="";renderComments(key);
+}
+function deleteComment(cid){
+  const key=commentKey(lbItem&&lbItem._id);if(!key||!comments[key])return;
+  comments[key]=comments[key].filter(c=>c.id!==cid);saveComments();renderComments(key);
+}
+function fmtCommentTime(ts){const d=new Date(ts),now=new Date();const diff=now-d;const m=6e4,h=36e5,day=864e5;
+  if(diff<m)return"Just now";if(diff<h)return Math.floor(diff/m)+"m ago";
+  if(diff<day)return Math.floor(diff/h)+"h ago";if(diff<7*day)return Math.floor(diff/day)+"d ago";
+  return d.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+}
+function renderComments(key){
+  const list=(comments[key]||[]);
+  document.getElementById("lbCommentCount").textContent=list.length?"("+list.length+")":"";
+  document.getElementById("lbCommentList").innerHTML=list.map(c=>
+    '<div class="lb-comment"><div class="avatar" style="background:'+avatarColor(c.author)+'">'+avatarInitials(c.author)+'</div>'+
+    '<div class="body"><div class="meta"><b>'+esc(c.author)+'</b> · '+fmtCommentTime(c.ts)+
+    '<span class="del" onclick="deleteComment(\''+c.id+'\')">Delete</span></div>'+
+    '<div class="text">'+esc(c.text)+'</div></div></div>'
+  ).join("");
+}
+
+/* ===== CANVA CAPTION PUSH ===== */
+const CANVA_TOKEN_KEY="canva_connect_token";
+const CANVA_API="https://api.canva.com/v1";
+function getCanvaToken(){return localStorage.getItem(CANVA_TOKEN_KEY)||"";}
+function getCanvaDesignId(p){if(!p||!p.canva)return null;const c=p.canva;return c.startsWith("http")?c.match(/\/design\/([^/]+)/)?.[1]:c;}
+function showCanvaStatus(msg,ok){const el=document.getElementById("canvaStatus");if(!el)return;el.textContent=msg;el.className="canva-status"+(ok===true?" ok":ok===false?" err":"");}
+function toggleCanvaPushRow(){const row=document.getElementById("canvaPushRow");const canva=document.getElementById("f-canva").value.trim();const sc=document.getElementById("f-socialCaption").value.trim();row.style.display=(canva&&sc)?"flex":"none";if(!sc)showCanvaStatus("","");}
+async function pushCaptionToCanva(){
+  const sc=document.getElementById("f-socialCaption").value.trim();if(!sc){showCanvaStatus("Write a social caption first.",false);return;}
+  const canvaId=document.getElementById("f-canva").value.trim();if(!canvaId){showCanvaStatus("Link a Canva design first.",false);return;}
+  const designId=getCanvaDesignId({canva:canvaId});
+  let tok=getCanvaToken();
+  if(!tok){tok=prompt("Paste your Canva Connect API token (stored only in this browser):");if(!tok)return;tok=tok.trim();localStorage.setItem(CANVA_TOKEN_KEY,tok);}
+  showCanvaStatus("Pushing to Canva…","");
+  try{
+    const res=await fetch(CANVA_API+"/autofills",{method:"POST",
+      headers:{Authorization:"Bearer "+tok,"Content-Type":"application/json"},
+      body:JSON.stringify({design_id:designId,inputs:{caption:sc}})});
+    if(res.ok){
+      const data=await res.json();
+      const jobUrl=data.job?CANVA_API+"/autofills/"+data.job.id:null;
+      showCanvaStatus("Pushed ✓ "+(jobUrl?"Canva is rendering — check your design.":"Check your design in Canva."),true);
+    } else if(res.status===401||res.status===403){
+      localStorage.removeItem(CANVA_TOKEN_KEY);
+      const er=await res.json().catch(()=>({}));
+      showCanvaStatus("Auth failed: "+(er.message||"token rejected")+". Click again to re-enter.",false);
+    } else {
+      const er=await res.json().catch(()=>({}));
+      showCanvaStatus("Push failed: "+(er.message||res.status),false);
+    }
+  }catch(e){showCanvaStatus("Network error: "+e.message,false);}
+}
+async function copySocialCaption(){
+  const sc=document.getElementById("f-socialCaption").value.trim();
+  try{await navigator.clipboard.writeText(sc);showCanvaStatus("Copied ✓",true);}
+  catch(e){showCanvaStatus("Couldn't copy — select manually.",false);}
+}
+
 function load(){
   let arr;
   try{const raw=localStorage.getItem(STORE_KEY); arr=raw?JSON.parse(raw):seed();}catch(e){arr=seed();}
@@ -485,9 +658,11 @@ function buildGrid(){
     const m=MARKERS[ds]; if(m)inner+='<div class="marker mk-'+m.t+'">'+m.l+'</div>';
     posts.filter(p=>p.date===ds).forEach(p=>{
       const t=THEME[p.theme]||THEME.meme;
+      const cc=comments[p.id]?comments[p.id].length:0;
       inner+='<div class="chip" draggable="true" data-id="'+p.id+'" style="border-left-color:'+t.color+'" onclick="openPreview(\''+p.id+'\')">'+
              '<img src="'+(p.img||"")+'" alt="" onerror="this.style.visibility=\'hidden\'">'+
-             '<span class="ct">'+(isVideo(p)?'▶ ':'')+esc(p.title)+'</span></div>';
+             '<span class="ct">'+(isVideo(p)?'▶ ':'')+esc(p.title)+'</span>'+
+             (cc?'<span class="chip-comment">💬 '+cc+'</span>':'')+'</div>';
     });
     html+='<div class="cell'+(ds===TODAY?" today":"")+'" data-date="'+ds+'">'+inner+'</div>';
   }
@@ -582,6 +757,8 @@ function showLB(item,id){
   document.getElementById("lbTitle").textContent=item.title;
   document.getElementById("lbFmt").textContent=(item.date?fmtFull(item.date)+" · ":"")+(item.fmt||"");
   document.getElementById("lbCaption").textContent=item.caption||"";
+  const scEl=document.getElementById("lbSocialCaption");const scTxt=document.getElementById("lbSocialCaptionText");
+  if(item.socialCaption){scEl.style.display="";scTxt.textContent=item.socialCaption;}else{scEl.style.display="none";}
   const acts=[];
   if(item.canva)acts.push('<a class="canva" target="_blank" href="'+canvaURL(item.canva)+'">Open in Canva ↗</a>');
   if(item.video)acts.push('<a target="_blank" href="'+fileURL(item.video)+'">▶ Open video file</a>');
@@ -590,6 +767,7 @@ function showLB(item,id){
   else {acts.push('<button onclick="closeLB();addFromInvItem()">Add to schedule →</button>');
         if(item.builtin===false)acts.push('<button onclick="closeLB();editInvItem(\''+item.id+'\')">Edit item</button>');}
   document.getElementById("lbActs").innerHTML=acts.join("");
+  renderComments(commentKey(id));
   renderLBMedia();
   document.getElementById("lb").classList.add("open");
 }
@@ -614,7 +792,7 @@ function closeLB(){const m=document.getElementById("lbMedia");m.innerHTML="";doc
 function openAdd(prefill){
   modalMode="post"; showPostFields();
   pendingExtra=prefill?{slides:prefill.slides,file:prefill.file}:null;
-  const base=prefill?{title:prefill.title,theme:prefill.theme,fmt:prefill.fmt,caption:prefill.caption,canva:prefill.canva,video:prefill.video,img:prefill.img}:{theme:"meme",fmt:"Static · 3:4"};
+  const base=prefill?{title:prefill.title,theme:prefill.theme,fmt:prefill.fmt,caption:prefill.caption,socialCaption:prefill.socialCaption,canva:prefill.canva,video:prefill.video,img:prefill.img}:{theme:"meme",fmt:"Static · 3:4"};
   fillForm({id:"",date:viewY+"-"+String(viewM+1).padStart(2,"0")+"-01",...base});
   document.getElementById("modalTitle").textContent=prefill?"Add to schedule":"Add post";
   document.getElementById("f-delete").style.display="none";
@@ -633,8 +811,9 @@ function editInvItem(id){const it=findInv(id);if(!it||it.builtin)return;pendingE
   document.getElementById("overlay").classList.add("open");}
 function fillForm(p){
   f("id",p.id||"");f("title",p.title||"");f("date",p.date||"");f("theme",p.theme||"meme");
-  f("fmt",p.fmt||"");f("holiday",p.holiday||"");f("caption",p.caption||"");f("canva",p.canva||"");
+  f("fmt",p.fmt||"");f("holiday",p.holiday||"");f("caption",p.caption||"");f("socialCaption",p.socialCaption||"");f("canva",p.canva||"");
   f("video",p.video||p.file||"");f("img",p.img||"");syncPrev();
+  showCanvaStatus("","");toggleCanvaPushRow();
 }
 function f(id,val){document.getElementById("f-"+id).value=val;}
 function syncPrev(){const i=document.getElementById("f-prevImg");i.src=document.getElementById("f-img").value;i.style.visibility="visible";}
@@ -645,7 +824,8 @@ function savePost(){
   if(!title){alert("Title is required.");return;}
   const vid=document.getElementById("f-video").value.trim();
   const base={title,theme:document.getElementById("f-theme").value,fmt:document.getElementById("f-fmt").value.trim(),
-    caption:document.getElementById("f-caption").value.trim(),canva:document.getElementById("f-canva").value.trim(),
+    caption:document.getElementById("f-caption").value.trim(),socialCaption:document.getElementById("f-socialCaption").value.trim(),
+    canva:document.getElementById("f-canva").value.trim(),
     img:document.getElementById("f-img").value.trim()};
   // treat .mp4/.mov/.webm as a playable video, anything else as a generic file link
   if(/\.(mp4|mov|webm|m4v)$/i.test(vid)){base.video=vid;} else if(vid){base.file=vid;}
@@ -683,7 +863,7 @@ function setView(v){view=v;
 function shiftMonth(n){viewM+=n;if(viewM<0){viewM=11;viewY--;}if(viewM>11){viewM=0;viewY++;}buildGrid();}
 function goToday(){viewY=2026;viewM=6;buildGrid();}
 function exportJSON(){
-  const payload={version:4,exportedAt:new Date().toISOString(),posts,customInventory:customInv,hiddenInventory:[...invHidden]};
+  const payload={version:5,exportedAt:new Date().toISOString(),posts,customInventory:customInv,hiddenInventory:[...invHidden],comments};
   const b=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
   const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="opendoor-content-calendar.json";a.click();
 }
@@ -691,8 +871,9 @@ function importJSON(e){const file=e.target.files[0];if(!file)return;const r=new 
   r.onload=()=>{try{const d=JSON.parse(r.result);
     if(Array.isArray(d)){posts=d.map(p=>({id:p.id||uid(),...p}));}          // legacy: bare schedule array
     else if(d&&Array.isArray(d.posts)){posts=d.posts.map(p=>({id:p.id||uid(),...p}));
-      customInv=(d.customInventory||[]).map(it=>({id:it.id||uid(),...it}));saveCustom();
-      invHidden=new Set(d.hiddenInventory||[]);saveHidden();}
+    customInv=(d.customInventory||[]).map(it=>({id:it.id||uid(),...it}));saveCustom();
+      invHidden=new Set(d.hiddenInventory||[]);saveHidden();
+      if(d.comments){comments=d.comments;saveComments();}}
     else {alert("Invalid file.");return;}
     save();
   }catch(x){alert("Could not parse JSON.");}};
@@ -720,7 +901,8 @@ function applyState(d){
   if(Array.isArray(d)){posts=d.map(p=>({id:p.id||uid(),...p}));}
   else if(d&&Array.isArray(d.posts)){posts=d.posts.map(p=>({id:p.id||uid(),...p}));
     customInv=(d.customInventory||[]).map(it=>({id:it.id||uid(),...it}));saveCustom();
-    invHidden=new Set(d.hiddenInventory||[]);saveHidden();}
+    invHidden=new Set(d.hiddenInventory||[]);saveHidden();
+    if(d.comments){comments=d.comments;saveComments();}}
   else return false;
   localStorage.setItem(STORE_KEY,JSON.stringify(posts));return true;}
 async function pullFromRepo(silent){
@@ -732,7 +914,7 @@ async function pushToRepo(){
   if(!tok){tok=prompt("Paste a GitHub token (fine-grained PAT with Contents: Read+Write on "+REPO.repo+").\nStored only in this browser, never in the page.");
     if(!tok)return;tok=tok.trim();localStorage.setItem("gh_pat",tok);}
   const api="https://api.github.com/repos/"+REPO.owner+"/"+REPO.repo+"/contents/"+REPO.path;
-  const payload={version:4,exportedAt:new Date().toISOString(),posts,customInventory:customInv,hiddenInventory:[...invHidden]};
+  const payload={version:5,exportedAt:new Date().toISOString(),posts,customInventory:customInv,hiddenInventory:[...invHidden],comments};
   const content=btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))));
   const H={Authorization:"Bearer "+tok,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
   toast("Pushing to GitHub…");
@@ -755,6 +937,8 @@ async function initApp(){
     "<br><b>Sync across machines:</b> <b>Sync ↑</b> pushes your schedule to GitHub (asks once for a token, stored only in this browser); <b>Sync ↓</b> on another machine pulls the latest. A fresh machine auto-pulls on first open. "+
     "<b>Export/Import</b> JSON also works for manual backup. "+
     "<br><b>Holidays/events</b> show as colored tags and update as you navigate months. Canva posts open <code>canva.com/design/&lt;id&gt;/view</code>. "+
+    "<b>Social captions:</b> add the actual IG/FB caption in the edit form. If the post has a Canva design, <b>Push to Canva</b> sends it via the Canva Connect API (token stored in browser). "+
+    "<b>Comments:</b> leave internal feedback on any post or inventory item in the preview panel — comments sync with Sync ↑/↓. "+
     "<i>Note: videos link to local files and won't play on the hosted site; image previews &amp; carousels do.</i>";
 }
 // gate startup

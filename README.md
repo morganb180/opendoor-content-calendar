@@ -41,6 +41,39 @@ Repository access: only `opendoor-content-calendar`, Permissions → Contents: R
   under `~/opendoor/` — they **won't play on the hosted site**. To make them play remotely, upload
   the mp4s somewhere (Drive/Canva/this repo) and update the `video:`/`file:` paths in `index.html`.
 
+## Social captions & Canva push
+
+Each post has two text fields:
+
+- **Caption / notes** — internal notes about the post (existing field).
+- **Social caption** — the actual caption text that goes live with the post on IG/FB.
+
+When a post has both a **social caption** and a linked **Canva design**, the edit form shows a
+**Push to Canva** button. This calls the [Canva Connect API](https://www.canva.com/developers/)
+autofill endpoint to inject the caption text into the design. The first push asks for a Canva
+Connect API token (stored only in the browser's localStorage, like the GitHub PAT).
+
+If the API call fails (no token, wrong permissions, or network issues), **Copy caption** is a
+fallback — it copies the text to your clipboard so you can paste it into Canva manually.
+
+## Internal comments
+
+Each post and inventory item has a **comments thread** in the lightbox preview panel. Comments
+are stored in localStorage and synced via the same `calendar-data.json` mechanism (Sync ↑/↓).
+The first comment asks for your name (stored in localStorage for future comments).
+
+Comments show a 💬 count on the month-grid chip and are visible in the lightbox.
+
+## Mobile support
+
+The calendar is fully responsive:
+
+- Month grid collapses to compact cells on phones (thumbnails only, no titles)
+- Edit modal becomes full-screen
+- Lightbox stacks vertically (media on top, info/comments below)
+- Inventory cards switch to single-column
+- Touch-friendly button sizes and spacing
+
 ## Editing the schedule in code
 
 The seeded schedule is the `DEFAULTS` array near the top of the `<script>` in `index.html`; the

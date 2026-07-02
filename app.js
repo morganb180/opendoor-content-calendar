@@ -154,6 +154,7 @@ const INVENTORY=[
 let posts=load();
 let view="month", viewY=2026, viewM=6;
 let pendingExtra=null;          // slides/file carried into Add from inventory
+let pendingCanvaImports=[];
 let lbItem=null, lbIdx=0, lbSlides=[];
 const INV_HIDDEN_KEY="opendoor_inv_hidden_v2";   // hidden inventory ids
 const INV_CUSTOM_KEY="opendoor_inv_custom_v1";   // user-added inventory items
@@ -254,6 +255,101 @@ async function copySocialCaption(){
   const sc=document.getElementById("f-socialCaption").value.trim();
   try{await navigator.clipboard.writeText(sc);showCanvaStatus("Copied ✓",true);}
   catch(e){showCanvaStatus("Couldn't copy — select manually.",false);}
+}
+
+/* ===== CANVA IMPORT ===== */
+function openCanvaImport(){
+  pendingCanvaImports=[];
+  document.getElementById("canvaImportStatus").textContent="";
+  document.getElementById("canvaImportStatus").className="import-status";
+  document.getElementById("canvaImportPreview").className="import-preview";
+  document.getElementById("canvaImportPreview").innerHTML="";
+  document.getElementById("canvaImportOverlay").classList.add("open");
+  document.getElementById("canvaImportText").focus();
+}
+function closeCanvaImport(){document.getElementById("canvaImportOverlay").classList.remove("open");}
+function showCanvaImportStatus(msg,ok){const el=document.getElementById("canvaImportStatus");el.textContent=msg;el.className="import-status"+(ok===true?" ok":ok===false?" err":"");}
+function canvaLinksFrom(text){return text.match(/https?:\/\/[^\s,"'<>]*canva\.com\/[^\s,"'<>]*/gi)||[];}
+function extractCanvaId(value){
+  const raw=(value||"").trim();if(!raw)return null;
+  return raw.match(/[?&](?:design_id|template_id)=([^&#]+)/)?.[1]||raw.match(/\/design\/([^/?#]+)/)?.[1]||raw.match(/\/templates\/([^/?#]+)/)?.[1]||raw.match(/\bDA[A-Za-z0-9_-]{6,}\b/)?.[0]||null;
+}
+function splitImportRow(row){
+  const delimiter=row.includes("\t")?"\t":row.includes("|")?"|":",";
+  const out=[];let cur="",quoted=false;
+  for(let i=0;i<row.length;i++){
+    const ch=row[i],next=row[i+1];
+    if(ch==='"'&&quoted&&next==='"'){cur+='"';i++;continue;}
+    if(ch==='"'){quoted=!quoted;continue;}
+    if(ch===delimiter&&!quoted){out.push(cur.trim());cur="";continue;}
+    cur+=ch;
+  }
+  out.push(cur.trim());return out.filter(Boolean);
+}
+function normalizeDate(value){
+  const s=(value||"").trim();
+  if(/^\d{4}-\d{2}-\d{2}$/.test(s))return s;
+  const m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);if(!m)return null;
+  const y=Number(m[3].length===2?"20"+m[3]:m[3]);return y+"-"+String(m[1]).padStart(2,"0")+"-"+String(m[2]).padStart(2,"0");
+}
+function normalizeTheme(value){
+  const key=(value||"").trim().toLowerCase().replace(/\s+/g,"");
+  const map={seasonal:"seasonal",worldcup:"worldcup",world:"worldcup",wc:"worldcup",meme:"meme",proof:"proof",brand:"brand"};
+  return map[key]||null;
+}
+function inferCanvaTitle(canvaId){return canvaId?"Canva design "+canvaId:"Untitled Canva import";}
+function parseCanvaImportLine(line,defaults){
+  const fields=splitImportRow(line);let canvaField=fields.find(x=>extractCanvaId(x));
+  if(!canvaField){const links=canvaLinksFrom(line);canvaField=links[0]||line.match(/\bDA[A-Za-z0-9_-]{6,}\b/)?.[0];}
+  const canvaId=extractCanvaId(canvaField);if(!canvaId)return null;
+  const rest=fields.filter(x=>x!==canvaField);
+  const dateIndex=rest.findIndex(x=>normalizeDate(x));
+  const themeIndex=rest.findIndex(x=>normalizeTheme(x));
+  const targetDate=dateIndex>=0?normalizeDate(rest[dateIndex]):"";
+  const theme=themeIndex>=0?normalizeTheme(rest[themeIndex]):defaults.theme;
+  const remainder=rest.filter((_,i)=>i!==dateIndex&&i!==themeIndex);
+  const title=remainder[0]||inferCanvaTitle(canvaId);
+  const socialCaption=remainder.slice(1).join(", ");
+  const caption="Imported from Canva"+(targetDate?" · target date "+targetDate:"")+".";
+  return {title,theme,fmt:defaults.fmt,caption,socialCaption,canva:canvaField||canvaId,img:"",targetDate,source:"canva-import"};
+}
+function parseCanvaImports(){
+  const raw=document.getElementById("canvaImportText").value.trim();
+  if(!raw){pendingCanvaImports=[];renderCanvaImportPreview();showCanvaImportStatus("Paste at least one Canva URL.",false);return;}
+  const defaults={theme:document.getElementById("canvaImportTheme").value,fmt:document.getElementById("canvaImportFmt").value.trim()||"Static · 4:5"};
+  const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  const parsed=[];
+  lines.forEach(line=>{
+    const item=parseCanvaImportLine(line,defaults);
+    if(item)parsed.push(item);
+    else canvaLinksFrom(line).forEach(link=>{const linkItem=parseCanvaImportLine(link,defaults);if(linkItem)parsed.push(linkItem);});
+  });
+  const seen=new Set();pendingCanvaImports=parsed.filter(item=>{const id=extractCanvaId(item.canva);if(seen.has(id))return false;seen.add(id);return true;});
+  renderCanvaImportPreview();
+  showCanvaImportStatus(pendingCanvaImports.length?"Found "+pendingCanvaImports.length+" Canva item"+(pendingCanvaImports.length===1?"":"s")+".":"No Canva design links found.",!!pendingCanvaImports.length);
+}
+function renderCanvaImportPreview(){
+  const box=document.getElementById("canvaImportPreview");
+  if(!pendingCanvaImports.length){box.className="import-preview";box.innerHTML="";return;}
+  const destination=document.getElementById("canvaImportDestination").value;
+  box.className="import-preview open";
+  box.innerHTML='<table class="import-table"><thead><tr><th>Destination</th><th>Title</th><th>Theme</th><th>Date</th><th>Canva</th><th>Social caption</th></tr></thead><tbody>'+pendingCanvaImports.map(item=>{
+    const dest=destination==="schedule"&&item.targetDate?"Schedule":"Inventory";
+    return '<tr><td>'+dest+'</td><td>'+esc(item.title)+'</td><td>'+esc((THEME[item.theme]||THEME.brand).label)+'</td><td class="muted">'+esc(item.targetDate||"—")+'</td><td class="muted">'+esc(extractCanvaId(item.canva)||"")+'</td><td class="muted">'+esc(item.socialCaption||"—")+'</td></tr>';
+  }).join("")+'</tbody></table>';
+}
+function saveCanvaImports(){
+  if(!pendingCanvaImports.length)parseCanvaImports();
+  if(!pendingCanvaImports.length)return;
+  const destination=document.getElementById("canvaImportDestination").value;
+  let addedPosts=0,addedInv=0;
+  pendingCanvaImports.forEach(item=>{
+    const {targetDate,source,...base}=item;
+    if(destination==="schedule"&&targetDate){posts.push({id:uid(),date:targetDate,holiday:"",...base});addedPosts++;}
+    else{customInv.push({id:uid(),...base});addedInv++;}
+  });
+  saveCustom();storage.setJSON(STORE_KEY,posts);closeCanvaImport();setView(addedPosts?"month":"inv");render();
+  toast("Imported "+(addedPosts?addedPosts+" scheduled":"")+(addedPosts&&addedInv?" + ":"")+(addedInv?addedInv+" inventory":"")+" item"+((addedPosts+addedInv)===1?"":"s"));
 }
 
 function buildPayload(){return {version:6,exportedAt:new Date().toISOString(),posts,customInventory:customInv,hiddenInventory:[...invHidden],comments};}
@@ -550,6 +646,7 @@ function handleAction(e){
   const actions={
     "open-add":()=>openAdd(),"set-view":()=>setView(el.dataset.view),"sync-down":()=>pullFromRepo(),"sync-up":()=>pushToRepo(),
     "export-json":()=>exportJSON(),"open-import":()=>document.getElementById("importer").click(),"reset-all":()=>resetAll(),
+    "open-canva-import":()=>openCanvaImport(),"close-canva-import":()=>closeCanvaImport(),"parse-canva-import":()=>parseCanvaImports(),"save-canva-import":()=>saveCanvaImports(),
     "shift-month":()=>shiftMonth(step),"go-today":()=>goToday(),"add-inventory":()=>addInventory(),"push-caption-canva":()=>pushCaptionToCanva(),
     "copy-social-caption":()=>copySocialCaption(),"delete-post":()=>deletePost(),"close-modal":()=>closeModal(),"save-post":()=>savePost(),
     "close-lb":()=>closeLB(),"lb-step":()=>lbStep(step),"add-comment":()=>addComment(),"delete-comment":()=>deleteComment(el.dataset.commentId),
@@ -564,6 +661,7 @@ function handleInput(e){
   if(e.target.id==="f-socialCaption"||e.target.id==="f-canva")toggleCanvaPushRow();
   if(e.target.id==="f-canvaCaptionField")saveCanvaCaptionField();
   if(e.target.id==="f-img")syncPrev();
+  if(e.target.id==="canvaImportDestination"&&pendingCanvaImports.length)renderCanvaImportPreview();
 }
 
 function handleImageError(e){if(e.target.tagName==="IMG")e.target.style.visibility="hidden";}
@@ -608,6 +706,7 @@ async function pushToRepo(){
 /* ===== INIT ===== */
 async function initApp(){
   document.getElementById("overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeModal();});
+  document.getElementById("canvaImportOverlay").addEventListener("click",e=>{if(e.target.id==="canvaImportOverlay")closeCanvaImport();});
   document.getElementById("lb").addEventListener("click",e=>{if(e.target.id==="lb")closeLB();});
   document.addEventListener("click",handleAction);
   document.addEventListener("input",handleInput);

@@ -106,6 +106,18 @@ const DEFAULTS=[
   {date:"2026-07-31",title:"Go Together — Summer Edition",theme:"seasonal",fmt:"Static · 3:4",
    img:P+"go-together-summer.png",canva:"DAHN_eXM9GE",
    caption:"Summer 'go together' cap on July, bridging into August."},
+  {date:"2026-08-03",title:"Tired Too Sis — Cash Offer to Accept",theme:"meme",fmt:"Static · 3:4",
+   img:P+"tired-sis-cash-offer.jpg",canva:"DAHOR5T8W3Y",
+   caption:"Viral crosswalk cardboard-sign meme (the 'I'M TIRED TOO SIS' format), sign swapped to 'BUT WE HAVE A FREAKING CASH OFFER TO ACCEPT.' Most template-native of the set — leads the series. Page 1 of the FINAL 4 Canva design.",
+   socialCaption:"so much on the to-do list this week 😮‍💨"},
+  {date:"2026-08-10",title:"Tired Too Sis — The House Won't Sell Itself",theme:"meme",fmt:"Static · 3:4",
+   img:P+"tired-sis-sell-itself.jpg",canva:"DAHOR5T8W3Y",
+   caption:"Same format, week 2. Sign: 'BUT THE HOUSE WON'T FREAKING SELL ITSELF' — the social caption delivers the flip. Page 2 of the FINAL 4 design.",
+   socialCaption:"actually… it will. opendoor.com"},
+  {date:"2026-08-17",title:"Tired Too Sis — That's Why I Sold to Opendoor",theme:"meme",fmt:"Static · 3:4",
+   img:P+"tired-sis-sold.jpg",canva:"DAHOR5T8W3Y",
+   caption:"Series closer, most ad-like payoff: 'THAT'S WHY I SOLD MY HOUSE TO OPENDOOR.' Runs after the format has done its organic work. Page 3 of the FINAL 4 design.",
+   socialCaption:"she gets it 🤝"},
   {date:"2026-08-24",title:"Go Together — Back to School",theme:"seasonal",fmt:"Static · 3:4",
    img:P+"go-together-school.png",canva:"DAHN_QCvB9g",
    caption:"AUGUST teaser — slot to your late-Aug back-to-school cadence."},
@@ -113,6 +125,8 @@ const DEFAULTS=[
 
 /* Inventory — ready assets NOT scheduled */
 const INVENTORY=[
+  {title:"Tired Too Sis — 27 Showings (alternate)",theme:"meme",fmt:"Static · 3:4",img:P+"tired-sis-showings.jpg",canva:"DAHOR5T8W3Y",
+   caption:"Fourth variant of the cardboard-sign series: 'BUT WE ARE NOT DOING 27 SHOWINGS THIS WEEKEND.' A/B alternate or a 4th weekly beat if the format performs. Page 4 of the FINAL 4 design (all 6 raw variants: DAHOLnIoyZg)."},
   {title:"Doctor's Rx — Handwritten Scribble",theme:"meme",fmt:"Static · 4:5",img:P+"inv/doctor-scribble.png",canva:"DAHN_wWzGLo",
    caption:"Alternate hand-scribble style of the Doctor's Rx meme (different look from the scheduled iPhone version) — good A/B option."},
   {title:"What You're Doing — Variant 2",theme:"meme",fmt:"Static · 4:5",img:P+"inv/what-v2.png",canva:"DAHN_7Mo14s",

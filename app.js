@@ -125,6 +125,9 @@ const DEFAULTS=[
 
 /* Inventory — ready assets NOT scheduled */
 const INVENTORY=[
+  {title:"Opendoor Walk Sign — Night (Chicago + Philly)",theme:"brand",fmt:"Carousel · 2 slides",
+   img:P+"inv/walksign-chicago.jpg",slides:[P+"inv/walksign-chicago.jpg",P+"inv/walksign-philly.jpg"],canva:"DAHOMAi1t58",
+   caption:"Photoreal pedestrian walk signal reskinned Opendoor blue: the don't-walk hand sits unlit while the O glows white — the signal says GO. Chicago (L train) + Philadelphia (City Hall) night scenes. Suggested slot: an open early-August date."},
   {title:"Make It Better — ChatGPT For-Sale Sign",theme:"meme",fmt:"Static · 3:4",img:P+"make-it-better.png",canva:"DAHORyYGTMo",
    caption:"Reskin of the viral 'text ChatGPT a photo + Make it better.' format. A dull, generic For Sale sign gets texted in; ChatGPT replies 'Done.' with a vivid Opendoor sign in the same shot. Real ChatGPT-app chrome (hamburger + ChatGPT header, compose/more icons), rendered as crisp HTML, not a screenshot."},
   {title:"Tired Too Sis — 27 Showings (alternate)",theme:"meme",fmt:"Static · 3:4",img:P+"tired-sis-showings.jpg",canva:"DAHOR5T8W3Y",

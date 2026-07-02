@@ -175,6 +175,22 @@ const INVENTORY=[
    caption:"Green-morphsuit guy invades a house; lady reacts: 'deal with this or sell to Opendoor.'"},
   {title:"UGC Talking-Head Spots",theme:"brand",fmt:"Video · 9:16",img:P+"inv/ugc-spots.jpg",video:"~/opendoor/finals/ugc-spots/opendoor_ugc_FINAL_notext.mp4",
    caption:"Native UGC talking-head set (comments / relocation variants), no burned-in text."},
+  {title:"Skip to SOLD — Copy Machine Reveal",theme:"meme",fmt:"Static · 3:4",img:P+"copy-machine-receipt.png",canva:"DAHOLyzi2LA",
+   caption:"'Home Sale Receipt' prints out of a copier, Total: SOLD. Built from a Canva Content Reveal template — Canva-only build, no local render."},
+  {title:"Seasons Split — Dallas Ranch",theme:"seasonal",fmt:"Video · 9:16 · ~10s",img:P+"inv/seasons-split-dallas.jpg",video:"~/opendoor/finals/seasons-split-dallas/seasons_dallas.mp4",
+   caption:"Hard-cut geometric-mask reskin: a $650k Dallas ranch flips summer↔autumn mid-frame. Textless cut also available."},
+  {title:"What's It Worth — TOFU Curiosity Spot",theme:"brand",fmt:"Video · 9:16 · ~33s",img:P+"inv/whats-it-worth.jpg",video:"~/opendoor/projects/whats-it-worth/output/worth_preview.mp4",
+   caption:"Top-of-funnel Pixar spot built around home-value curiosity, soft 'see your value' CTA. Silent picture-lock."},
+  {title:"The Situation — Inherited Home",theme:"brand",fmt:"Video · 9:16 · ~42s",img:P+"inv/inherited.jpg",video:"~/opendoor/projects/the-situation-inherited/output/inherited_preview.mp4",
+   caption:"Warm Pixar narrative about selling a home you've inherited. Silent picture-lock. (Distinct from the shorter UGC 'inherited' cutdown in the UGC Talking-Head set.)"},
+  {title:"Jennifer Chen — The Overlap (\"Both\")",theme:"brand",fmt:"Video · 9:16 · ~46s",img:P+"inv/jennifer-both.jpg",video:"~/opendoor/finals/jennifer-both/pixar-both-clips/jennifer_both_pixar_FINAL_silent.mp4",
+   caption:"Pragmatic-planner persona juggling life's overlap; Pixar cut shown. A claymation alt cut also exists (~37s, minor dog-morph glitch in shot 08 per QA notes). Silent picture-lock. Not the same asset as the Phoenix-Jennifer spot in Offer-Confidence Slate."},
+  {title:"Dream Home Mug — Steam Reveal",theme:"brand",fmt:"Video · 9:16",img:P+"inv/dream-home-mug.jpg",video:"~/opendoor/finals/dream-home-mug/dream_home_mug_omniflash_v2_steam.mp4",
+   caption:"Steam rising from a coffee mug forms a tiny house silhouette. v2 'steam' take — the improved version."},
+  {title:"Move-In Found Footage",theme:"brand",fmt:"Video · 4:3 · ~9s",img:P+"inv/movein-homevideo.jpg",video:"~/opendoor/finals/movein-homevideo/movein_natural_foundfootage_v2.mp4",
+   caption:"Faux 2010s camcorder found-footage: dad clumsily films his family moving into their first house. Intentional 4:3 camcorder look."},
+  {title:"Jersey Crest Reveal — Alternate Styles",theme:"brand",fmt:"Video · 9:16 · 4 styles",img:P+"inv/jersey-crest-alt.jpg",video:"~/opendoor/projects/jersey-patch-embroidery/omni_out/crest_modern_minimal_take1.mp4",
+   caption:"Macro embroidery timelapse, an Opendoor crest self-stitching onto a jersey. Modern-minimal shown; shield-banner, shield-classic, and shield-classic-whiteO cuts also finished. (Circular-ring cut is already scheduled Jul 19.)"},
 ];
 
 /* ===== STATE ===== */

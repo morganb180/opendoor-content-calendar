@@ -125,6 +125,8 @@ const DEFAULTS=[
 
 /* Inventory — ready assets NOT scheduled */
 const INVENTORY=[
+  {title:"Make It Better — ChatGPT For-Sale Sign",theme:"meme",fmt:"Static · 3:4",img:P+"make-it-better.png",canva:"DAHORyYGTMo",
+   caption:"Reskin of the viral 'text ChatGPT a photo + Make it better.' format. A dull, generic For Sale sign gets texted in; ChatGPT replies 'Done.' with a vivid Opendoor sign in the same shot. Real ChatGPT-app chrome (hamburger + ChatGPT header, compose/more icons), rendered as crisp HTML, not a screenshot."},
   {title:"Tired Too Sis — 27 Showings (alternate)",theme:"meme",fmt:"Static · 3:4",img:P+"tired-sis-showings.jpg",canva:"DAHOR5T8W3Y",
    caption:"Fourth variant of the cardboard-sign series: 'BUT WE ARE NOT DOING 27 SHOWINGS THIS WEEKEND.' A/B alternate or a 4th weekly beat if the format performs. Page 4 of the FINAL 4 design (all 6 raw variants: DAHOLnIoyZg)."},
   {title:"Doctor's Rx — Handwritten Scribble",theme:"meme",fmt:"Static · 4:5",img:P+"inv/doctor-scribble.png",canva:"DAHN_wWzGLo",

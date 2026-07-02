@@ -88,6 +88,11 @@ const DEFAULTS=[
   {date:"2026-07-17",title:"Red Card — Selling the Old Way",theme:"worldcup",fmt:"Carousel · 7 slides",holiday:"World Cup knockouts",
    img:S+"redcard-1.jpg",slides:seq("redcard",7,"jpg"),canva:"DAHOFdzTB74",
    caption:"⚽ Soccer-ref 'red card' carousel timed to the later World Cup rounds (semis Jul 14–15 → final Jul 19). 6 old-way clichés + a goal-celebration Opendoor payoff slide."},
+  {date:"2026-07-19",title:"Jersey Crest Reveal — Circular Ring",theme:"worldcup",fmt:"Video · 9:16",holiday:"World Cup Final",
+   img:P+"jersey-crest-circular.png",canva:"DAHORwReEzA",
+   video:"https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/crest_circular_ring_take1-ae33672a49.mp4",
+   caption:"Final-day World Cup tie-in. Macro satin-stitch embroidery timelapse: an Opendoor circular crest (O door-mark, arced 'OPENDOOR', two stars) self-stitches onto a cobalt-blue jersey over the heart, like a team patch, not a sponsor logo. Gemini omni-flash native video.",
+   socialCaption:"Kitted up. Ready to help you make your move."},
   {date:"2026-07-20",title:"\"I Said Try opendoor.com\"",theme:"meme",fmt:"Carousel · 12 slides",
    img:P+"try-opendoor-series.png",slides:seq("try",12),canva:"DAHOCjs2zTE",
    caption:"Text-exchange series. High-save, screenshot-y format."},
@@ -404,7 +409,7 @@ function seed(){return DEFAULTS.map((p,i)=>({id:"seed-"+i,...p}));}
 function save(){storage.setJSON(STORE_KEY,posts);render();}
 function uid(){return "p-"+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36);}
 function canvaURL(c){return !c?null:(c.startsWith("http")?c:"https://www.canva.com/design/"+c+"/view");}
-function fileURL(v){return !v?null:"file://"+v.replace(/^~/,"/Users/morganbrown");}
+function fileURL(v){return !v?null:(/^https?:\/\//i.test(v)?v:"file://"+v.replace(/^~/,"/Users/morganbrown"));}
 function parse(d){const a=d.split("-").map(Number);return new Date(a[0],a[1]-1,a[2]);}
 function fmtFull(d){const dt=parse(d);return DOW[dt.getDay()]+", "+MON3[dt.getMonth()]+" "+dt.getDate();}
 function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}

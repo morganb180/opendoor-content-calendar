@@ -27,11 +27,14 @@ requireText(html, 'data-action="open-add"', "delegated add-post action");
 requireText(html, 'data-action="push-caption-canva"', "delegated Canva action");
 requireText(html, 'data-action="open-canva-import"', "Canva import action");
 requireText(html, 'id="canvaImportText"', "Canva import textarea");
+requireText(html, 'data-action="sample-canva-import"', "Canva import sample action");
+requireText(html, 'data-action="clear-canva-import"', "Canva import clear action");
 
 requireText(css, ".lb-comments", "comments styling");
 requireText(css, "@media(max-width:760px)", "mobile breakpoint");
 requireText(css, ".canva-push-row", "Canva push styling");
 requireText(css, ".import-modal", "Canva import styling");
+requireText(css, ".mini-del", "Canva import row removal styling");
 
 requireText(js, "const storage=", "centralized storage helper");
 requireText(js, "function buildPayload()", "shared payload builder");
@@ -42,6 +45,8 @@ requireText(js, "const CANVA_CAPTION_FIELD_KEY", "Canva field config");
 requireText(js, "brand_template_id", "Canva Autofill payload");
 requireText(js, "function parseCanvaImports()", "Canva import parser");
 requireText(js, "function extractCanvaId(value)", "Canva ID extractor");
+requireText(js, "function updateCanvaImportField(el)", "Canva import editable fields");
+requireText(js, "function removeCanvaImport(index)", "Canva import row removal");
 requireText(js, "function saveCanvaImports()", "Canva import saver");
 requireText(js, "function handleAction(e)", "delegated action handler");
 requireText(js, "function handleInput(e)", "delegated input handler");

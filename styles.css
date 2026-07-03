@@ -120,6 +120,11 @@
   .import-table th{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:#fafbfe}
   .import-table tr:last-child td{border-bottom:0}
   .import-table .muted{color:var(--muted)}
+  .import-table input,.import-table select,.import-table textarea{width:100%;min-width:120px;border:1px solid var(--line);border-radius:7px;padding:6px 7px;font:inherit;font-size:12px;background:#fafbfe;color:var(--ink)}
+  .import-table textarea{min-width:180px;resize:vertical;line-height:1.35}
+  .import-table input:focus,.import-table select:focus,.import-table textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+  .mini-del{width:26px;height:26px;border-radius:50%;border:0;background:#f3f4f6;color:#dc2626;font-size:16px;line-height:1;cursor:pointer}
+  .mini-del:hover{background:#dc2626;color:#fff}
   /* LIGHTBOX */
   .lb{position:fixed;inset:0;background:rgba(11,18,32,.86);display:none;z-index:60;padding:24px}
   .lb.open{display:flex;align-items:center;justify-content:center}

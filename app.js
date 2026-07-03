@@ -312,6 +312,19 @@ function openCanvaImport(){
 }
 function closeCanvaImport(){document.getElementById("canvaImportOverlay").classList.remove("open");}
 function showCanvaImportStatus(msg,ok){const el=document.getElementById("canvaImportStatus");el.textContent=msg;el.className="import-status"+(ok===true?" ok":ok===false?" err":"");}
+function sampleCanvaImport(){
+  document.getElementById("canvaImportText").value=[
+    "https://www.canva.com/design/DAH_SAMPLE01/edit, 2026-08-03, seasonal, Back-to-school opener, Ready for a move before school starts?",
+    "https://www.canva.com/design/DAH_SAMPLE02/view | brand | Home equity explainer | Sell simply, move confidently."
+  ].join("\n");
+  parseCanvaImports();
+}
+function clearCanvaImport(){
+  pendingCanvaImports=[];
+  document.getElementById("canvaImportText").value="";
+  renderCanvaImportPreview();
+  showCanvaImportStatus("","");
+}
 function canvaLinksFrom(text){return text.match(/https?:\/\/[^\s,"'<>]*canva\.com\/[^\s,"'<>]*/gi)||[];}
 function extractCanvaId(value){
   const raw=(value||"").trim();if(!raw)return null;
@@ -376,11 +389,27 @@ function renderCanvaImportPreview(){
   if(!pendingCanvaImports.length){box.className="import-preview";box.innerHTML="";return;}
   const destination=document.getElementById("canvaImportDestination").value;
   box.className="import-preview open";
-  box.innerHTML='<table class="import-table"><thead><tr><th>Destination</th><th>Title</th><th>Theme</th><th>Date</th><th>Canva</th><th>Social caption</th></tr></thead><tbody>'+pendingCanvaImports.map(item=>{
+  box.innerHTML='<table class="import-table"><thead><tr><th>Destination</th><th>Title</th><th>Theme</th><th>Date</th><th>Canva</th><th>Social caption</th><th></th></tr></thead><tbody>'+pendingCanvaImports.map((item,i)=>{
     const dest=destination==="schedule"&&item.targetDate?"Schedule":"Inventory";
-    return '<tr><td>'+dest+'</td><td>'+esc(item.title)+'</td><td>'+esc((THEME[item.theme]||THEME.brand).label)+'</td><td class="muted">'+esc(item.targetDate||"—")+'</td><td class="muted">'+esc(extractCanvaId(item.canva)||"")+'</td><td class="muted">'+esc(item.socialCaption||"—")+'</td></tr>';
+    return '<tr><td>'+dest+'</td>'+editableImportCell(i,"title",item.title,"Title")+
+      '<td><select data-import-index="'+i+'" data-import-field="theme">'+Object.keys(THEME).map(k=>'<option value="'+k+'"'+(item.theme===k?' selected':'')+'>'+THEME[k].label+'</option>').join("")+'</select></td>'+editableImportCell(i,"targetDate",item.targetDate,"YYYY-MM-DD")+
+      '<td class="muted">'+esc(extractCanvaId(item.canva)||"")+'</td>'+editableImportCell(i,"socialCaption",item.socialCaption,"Caption",true)+
+      '<td><button class="mini-del" data-action="remove-canva-import" data-index="'+i+'" title="Remove row">×</button></td></tr>';
   }).join("")+'</tbody></table>';
 }
+function editableImportCell(i,field,value,placeholder,longText){
+  const attrs='data-import-index="'+i+'" data-import-field="'+field+'" placeholder="'+esc(placeholder)+'"';
+  return longText
+    ? '<td><textarea rows="2" '+attrs+'>'+esc(value||"")+'</textarea></td>'
+    : '<td><input '+attrs+' value="'+esc(value||"")+'"></td>';
+}
+function updateCanvaImportField(el){
+  const item=pendingCanvaImports[Number(el.dataset.importIndex)];if(!item)return;
+  let value=el.value.trim();
+  if(el.dataset.importField==="targetDate")value=normalizeDate(value)||value;
+  item[el.dataset.importField]=value;
+}
+function removeCanvaImport(index){pendingCanvaImports.splice(Number(index),1);renderCanvaImportPreview();showCanvaImportStatus(pendingCanvaImports.length?"Ready to import "+pendingCanvaImports.length+" item"+(pendingCanvaImports.length===1?"":"s")+".":"No rows selected.",!!pendingCanvaImports.length);}
 function saveCanvaImports(){
   if(!pendingCanvaImports.length)parseCanvaImports();
   if(!pendingCanvaImports.length)return;
@@ -413,8 +442,20 @@ function cleanupComments(){
 }
 
 function load(){
-  let arr;
-  arr=storage.getJSON(STORE_KEY,null)||seed();
+  let arr=storage.getJSON(STORE_KEY,null);
+  if(!arr){arr=seed();}
+  else{
+    // Merge in any DEFAULTS entries this browser's saved state predates (added to app.js
+    // after this browser's first seed). Without this, new scheduled posts silently never
+    // appear for returning visitors -- the saved array is used verbatim instead of DEFAULTS.
+    const seen=new Set(arr.map(p=>p.canva||(p.date+"|"+p.title)));
+    let merged=false;
+    DEFAULTS.forEach((d,i)=>{
+      const key=d.canva||(d.date+"|"+d.title);
+      if(!seen.has(key)){arr.push({id:"seed-new-"+i+"-"+Date.now().toString(36),...d}); seen.add(key); merged=true;}
+    });
+    if(merged)storage.setJSON(STORE_KEY,arr);
+  }
   // backfill slides/file from DEFAULTS for previously-saved posts (match by canva id)
   arr.forEach(p=>{
     if(p.canva && (!p.slides||!p.slides.length)){const d=DEFAULTS.find(x=>x.canva===p.canva); if(d&&d.slides)p.slides=d.slides;}
@@ -690,6 +731,7 @@ function handleAction(e){
     "open-add":()=>openAdd(),"set-view":()=>setView(el.dataset.view),"sync-down":()=>pullFromRepo(),"sync-up":()=>pushToRepo(),
     "export-json":()=>exportJSON(),"open-import":()=>document.getElementById("importer").click(),"reset-all":()=>resetAll(),
     "open-canva-import":()=>openCanvaImport(),"close-canva-import":()=>closeCanvaImport(),"parse-canva-import":()=>parseCanvaImports(),"save-canva-import":()=>saveCanvaImports(),
+    "sample-canva-import":()=>sampleCanvaImport(),"clear-canva-import":()=>clearCanvaImport(),"remove-canva-import":()=>removeCanvaImport(el.dataset.index),
     "shift-month":()=>shiftMonth(step),"go-today":()=>goToday(),"add-inventory":()=>addInventory(),"push-caption-canva":()=>pushCaptionToCanva(),
     "copy-social-caption":()=>copySocialCaption(),"delete-post":()=>deletePost(),"close-modal":()=>closeModal(),"save-post":()=>savePost(),
     "close-lb":()=>closeLB(),"lb-step":()=>lbStep(step),"add-comment":()=>addComment(),"delete-comment":()=>deleteComment(el.dataset.commentId),
@@ -705,6 +747,7 @@ function handleInput(e){
   if(e.target.id==="f-canvaCaptionField")saveCanvaCaptionField();
   if(e.target.id==="f-img")syncPrev();
   if(e.target.id==="canvaImportDestination"&&pendingCanvaImports.length)renderCanvaImportPreview();
+  if(e.target.dataset.importField)updateCanvaImportField(e.target);
 }
 
 function handleImageError(e){if(e.target.tagName==="IMG")e.target.style.visibility="hidden";}

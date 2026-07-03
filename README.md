@@ -80,9 +80,11 @@ Supported input:
 - Comma, tab, or pipe-delimited rows.
 - Dates in `YYYY-MM-DD` or `M/D/YYYY` format.
 
-By default, imported items go to **Unscheduled inventory** so you can review, preview, and add them
-to the calendar. If you choose **Schedule rows with dates**, only rows with a parsed date are placed
-directly onto the schedule; undated rows still go to inventory.
+After parsing, the preview table lets you edit titles, themes, dates, and social captions or remove
+rows before saving. By default, imported items go to **Unscheduled inventory** so you can review,
+preview, and add them to the calendar. If you choose **Schedule rows with dates**, only rows with a
+parsed date are placed directly onto the schedule; undated rows still go to inventory. Use **Use
+sample** in the modal to see the expected format.
 
 This is the pragmatic workflow bridge until a deeper Canva generation/API process exists. A future
 Canva Connect integration can enrich these imported drafts with metadata, exports, or thumbnails

@@ -16,22 +16,67 @@ const THEME={
 /* Holidays & big events — {label, type: hol|evt|mkt} */
 const MARKERS={
   "2026-07-01":{l:"⚽ USA vs Bosnia · R32",t:"evt"},
+  "2026-07-03":{l:"Tour de France begins",t:"evt"},
   "2026-07-04":{l:"🇺🇸 Independence Day",t:"hol"},
+  "2026-07-10":[{l:"MLB All-Star Week begins",t:"evt"},{l:"Summer Fridays",t:"mkt"}],
   "2026-07-11":{l:"⚽ Quarter-finals",t:"evt"},
-  "2026-07-12":{l:"🎾 Wimbledon Final",t:"evt"},
-  "2026-07-15":{l:"⚽ Semi-finals",t:"evt"},
+  "2026-07-12":[{l:"🎾 Wimbledon Final",t:"evt"},{l:"MLB All-Star Sunday",t:"evt"}],
+  "2026-07-13":{l:"MLB Home Run Derby",t:"evt"},
+  "2026-07-14":{l:"MLB All-Star Game",t:"evt"},
+  "2026-07-15":[{l:"⚽ Semi-finals",t:"evt"},{l:"Mid-July move check-in",t:"mkt"}],
   "2026-07-19":{l:"⚽ World Cup Final",t:"evt"},
+  "2026-07-22":{l:"Comic-Con Preview Night",t:"evt"},
+  "2026-07-23":{l:"San Diego Comic-Con",t:"evt"},
+  "2026-07-25":{l:"WNBA All-Star Game",t:"evt"},
+  "2026-07-26":[{l:"Parents' Day",t:"hol"},{l:"Tour de France ends",t:"evt"},{l:"Comic-Con ends",t:"evt"}],
+  "2026-07-31":{l:"Last July weekend",t:"mkt"},
+  "2026-08-07":{l:"International Beer Day",t:"evt"},
+  "2026-08-09":{l:"Book Lovers Day",t:"evt"},
+  "2026-08-12":{l:"International Youth Day",t:"evt"},
   "2026-08-17":{l:"🎒 Back-to-school season",t:"mkt"},
+  "2026-08-19":{l:"World Photography Day",t:"evt"},
+  "2026-08-23":{l:"US Open Fan Week begins",t:"evt"},
+  "2026-08-26":{l:"National Dog Day",t:"evt"},
+  "2026-08-30":{l:"US Open main draw begins",t:"evt"},
+  "2026-08-31":{l:"Labor Day weekend ramp",t:"mkt"},
+  "2026-09-02":{l:"Venice Film Festival begins",t:"evt"},
   "2026-09-07":{l:"Labor Day",t:"hol"},
+  "2026-09-09":{l:"NFL Kickoff",t:"evt"},
+  "2026-09-10":[{l:"TIFF begins",t:"evt"},{l:"New York Fashion Week begins",t:"evt"}],
+  "2026-09-11":{l:"Patriot Day",t:"hol"},
+  "2026-09-12":{l:"Venice Film Festival ends",t:"evt"},
+  "2026-09-13":{l:"US Open Final",t:"evt"},
+  "2026-09-15":{l:"NYFW ends",t:"evt"},
+  "2026-09-20":{l:"TIFF ends",t:"evt"},
+  "2026-09-22":{l:"First day of fall",t:"mkt"},
+  "2026-09-27":{l:"Good Neighbor Day",t:"evt"},
+  "2026-10-05":{l:"World Teachers' Day",t:"evt"},
+  "2026-10-10":{l:"World Mental Health Day",t:"evt"},
   "2026-10-12":{l:"Indigenous Peoples’ Day",t:"hol"},
+  "2026-10-16":{l:"Boss's Day",t:"evt"},
+  "2026-10-18":{l:"Diwali",t:"hol"},
+  "2026-10-24":{l:"Make a Difference Day",t:"evt"},
   "2026-10-31":{l:"🎃 Halloween",t:"evt"},
+  "2026-11-01":{l:"Daylight Saving Time ends",t:"mkt"},
   "2026-11-03":{l:"🗳️ Election Day",t:"evt"},
   "2026-11-11":{l:"Veterans Day",t:"hol"},
+  "2026-11-13":{l:"World Kindness Day",t:"evt"},
   "2026-11-26":{l:"🦃 Thanksgiving",t:"hol"},
   "2026-11-27":{l:"🛍️ Black Friday",t:"mkt"},
+  "2026-11-28":{l:"Small Business Saturday",t:"mkt"},
+  "2026-11-30":{l:"Cyber Monday",t:"mkt"},
+  "2026-12-01":{l:"Giving Tuesday",t:"mkt"},
+  "2026-12-07":{l:"Pearl Harbor Remembrance Day",t:"hol"},
+  "2026-12-13":{l:"Hanukkah begins",t:"hol"},
+  "2026-12-21":{l:"First day of winter",t:"mkt"},
+  "2026-12-24":{l:"Christmas Eve",t:"hol"},
   "2026-12-25":{l:"🎄 Christmas",t:"hol"},
+  "2026-12-26":[{l:"Kwanzaa begins",t:"hol"},{l:"Boxing Day",t:"hol"}],
   "2026-12-31":{l:"🎉 New Year’s Eve",t:"evt"},
   "2027-01-01":{l:"New Year’s Day",t:"hol"},
+  "2027-01-18":{l:"Martin Luther King Jr. Day",t:"hol"},
+  "2027-02-07":{l:"Super Bowl LXI",t:"evt"},
+  "2027-02-14":{l:"Valentine's Day",t:"hol"},
 };
 const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const MON3=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -470,6 +515,7 @@ function fileURL(v){return !v?null:(/^https?:\/\//i.test(v)?v:"file://"+v.replac
 function parse(d){const a=d.split("-").map(Number);return new Date(a[0],a[1]-1,a[2]);}
 function fmtFull(d){const dt=parse(d);return DOW[dt.getDay()]+", "+MON3[dt.getMonth()]+" "+dt.getDate();}
 function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
+function markersFor(date){const m=MARKERS[date];return Array.isArray(m)?m:(m?[m]:[]);}
 function slidesOf(p){return (p.slides&&p.slides.length)?p.slides:(p.img?[p.img]:[]);}
 function isVideo(p){return !!p.video;}
 
@@ -496,7 +542,7 @@ function buildGrid(){
   for(let d=1;d<=days;d++){
     const ds=viewY+"-"+String(viewM+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");
     let inner='<div class="daynum">'+d+'</div>';
-    const m=MARKERS[ds]; if(m)inner+='<div class="marker mk-'+m.t+'">'+m.l+'</div>';
+    markersFor(ds).forEach(m=>{inner+='<div class="marker mk-'+m.t+'">'+esc(m.l)+'</div>';});
     posts.filter(p=>p.date===ds).forEach(p=>{
       const t=THEME[p.theme]||THEME.meme;
       const cc=comments[p.id]?comments[p.id].length:0;

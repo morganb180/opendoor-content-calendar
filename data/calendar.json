@@ -1,0 +1,1359 @@
+{
+  "version": 7,
+  "updatedAt": "2026-07-03T00:39:04.476Z",
+  "config": {
+    "cadence": "Mon/Wed/Fri + event specials",
+    "timezone": "America/Los_Angeles",
+    "themes": {
+      "seasonal": {
+        "color": "#ff7a45",
+        "label": "Seasonal"
+      },
+      "worldcup": {
+        "color": "#16a34a",
+        "label": "World Cup"
+      },
+      "meme": {
+        "color": "#7c3aed",
+        "label": "Meme"
+      },
+      "proof": {
+        "color": "#0ea5e9",
+        "label": "Proof"
+      },
+      "brand": {
+        "color": "#1f80ff",
+        "label": "Brand"
+      }
+    }
+  },
+  "markers": {
+    "2026-07-01": {
+      "label": "⚽ USA vs Bosnia · R32",
+      "type": "evt"
+    },
+    "2026-07-03": {
+      "label": "Tour de France begins",
+      "type": "evt"
+    },
+    "2026-07-04": {
+      "label": "🇺🇸 Independence Day",
+      "type": "hol"
+    },
+    "2026-07-10": [
+      {
+        "label": "MLB All-Star Week begins",
+        "type": "evt"
+      },
+      {
+        "label": "Summer Fridays",
+        "type": "mkt"
+      }
+    ],
+    "2026-07-11": {
+      "label": "⚽ Quarter-finals",
+      "type": "evt"
+    },
+    "2026-07-12": [
+      {
+        "label": "🎾 Wimbledon Final",
+        "type": "evt"
+      },
+      {
+        "label": "MLB All-Star Sunday",
+        "type": "evt"
+      }
+    ],
+    "2026-07-13": {
+      "label": "MLB Home Run Derby",
+      "type": "evt"
+    },
+    "2026-07-14": {
+      "label": "MLB All-Star Game",
+      "type": "evt"
+    },
+    "2026-07-15": [
+      {
+        "label": "⚽ Semi-finals",
+        "type": "evt"
+      },
+      {
+        "label": "Mid-July move check-in",
+        "type": "mkt"
+      }
+    ],
+    "2026-07-19": {
+      "label": "⚽ World Cup Final",
+      "type": "evt"
+    },
+    "2026-07-22": {
+      "label": "Comic-Con Preview Night",
+      "type": "evt"
+    },
+    "2026-07-23": {
+      "label": "San Diego Comic-Con",
+      "type": "evt"
+    },
+    "2026-07-25": {
+      "label": "WNBA All-Star Game",
+      "type": "evt"
+    },
+    "2026-07-26": [
+      {
+        "label": "Parents' Day",
+        "type": "hol"
+      },
+      {
+        "label": "Tour de France ends",
+        "type": "evt"
+      },
+      {
+        "label": "Comic-Con ends",
+        "type": "evt"
+      }
+    ],
+    "2026-07-31": {
+      "label": "Last July weekend",
+      "type": "mkt"
+    },
+    "2026-08-07": {
+      "label": "International Beer Day",
+      "type": "evt"
+    },
+    "2026-08-09": {
+      "label": "Book Lovers Day",
+      "type": "evt"
+    },
+    "2026-08-12": {
+      "label": "International Youth Day",
+      "type": "evt"
+    },
+    "2026-08-17": {
+      "label": "🎒 Back-to-school season",
+      "type": "mkt"
+    },
+    "2026-08-19": {
+      "label": "World Photography Day",
+      "type": "evt"
+    },
+    "2026-08-23": {
+      "label": "US Open Fan Week begins",
+      "type": "evt"
+    },
+    "2026-08-26": {
+      "label": "National Dog Day",
+      "type": "evt"
+    },
+    "2026-08-30": {
+      "label": "US Open main draw begins",
+      "type": "evt"
+    },
+    "2026-08-31": {
+      "label": "Labor Day weekend ramp",
+      "type": "mkt"
+    },
+    "2026-09-02": {
+      "label": "Venice Film Festival begins",
+      "type": "evt"
+    },
+    "2026-09-07": {
+      "label": "Labor Day",
+      "type": "hol"
+    },
+    "2026-09-09": {
+      "label": "NFL Kickoff",
+      "type": "evt"
+    },
+    "2026-09-10": [
+      {
+        "label": "TIFF begins",
+        "type": "evt"
+      },
+      {
+        "label": "New York Fashion Week begins",
+        "type": "evt"
+      }
+    ],
+    "2026-09-11": {
+      "label": "Patriot Day",
+      "type": "hol"
+    },
+    "2026-09-12": {
+      "label": "Venice Film Festival ends",
+      "type": "evt"
+    },
+    "2026-09-13": {
+      "label": "US Open Final",
+      "type": "evt"
+    },
+    "2026-09-15": {
+      "label": "NYFW ends",
+      "type": "evt"
+    },
+    "2026-09-20": {
+      "label": "TIFF ends",
+      "type": "evt"
+    },
+    "2026-09-22": {
+      "label": "First day of fall",
+      "type": "mkt"
+    },
+    "2026-09-27": {
+      "label": "Good Neighbor Day",
+      "type": "evt"
+    },
+    "2026-10-05": {
+      "label": "World Teachers' Day",
+      "type": "evt"
+    },
+    "2026-10-10": {
+      "label": "World Mental Health Day",
+      "type": "evt"
+    },
+    "2026-10-12": {
+      "label": "Indigenous Peoples’ Day",
+      "type": "hol"
+    },
+    "2026-10-16": {
+      "label": "Boss's Day",
+      "type": "evt"
+    },
+    "2026-10-18": {
+      "label": "Diwali",
+      "type": "hol"
+    },
+    "2026-10-24": {
+      "label": "Make a Difference Day",
+      "type": "evt"
+    },
+    "2026-10-31": {
+      "label": "🎃 Halloween",
+      "type": "evt"
+    },
+    "2026-11-01": {
+      "label": "Daylight Saving Time ends",
+      "type": "mkt"
+    },
+    "2026-11-03": {
+      "label": "🗳️ Election Day",
+      "type": "evt"
+    },
+    "2026-11-11": {
+      "label": "Veterans Day",
+      "type": "hol"
+    },
+    "2026-11-13": {
+      "label": "World Kindness Day",
+      "type": "evt"
+    },
+    "2026-11-26": {
+      "label": "🦃 Thanksgiving",
+      "type": "hol"
+    },
+    "2026-11-27": {
+      "label": "🛍️ Black Friday",
+      "type": "mkt"
+    },
+    "2026-11-28": {
+      "label": "Small Business Saturday",
+      "type": "mkt"
+    },
+    "2026-11-30": {
+      "label": "Cyber Monday",
+      "type": "mkt"
+    },
+    "2026-12-01": {
+      "label": "Giving Tuesday",
+      "type": "mkt"
+    },
+    "2026-12-07": {
+      "label": "Pearl Harbor Remembrance Day",
+      "type": "hol"
+    },
+    "2026-12-13": {
+      "label": "Hanukkah begins",
+      "type": "hol"
+    },
+    "2026-12-21": {
+      "label": "First day of winter",
+      "type": "mkt"
+    },
+    "2026-12-24": {
+      "label": "Christmas Eve",
+      "type": "hol"
+    },
+    "2026-12-25": {
+      "label": "🎄 Christmas",
+      "type": "hol"
+    },
+    "2026-12-26": [
+      {
+        "label": "Kwanzaa begins",
+        "type": "hol"
+      },
+      {
+        "label": "Boxing Day",
+        "type": "hol"
+      }
+    ],
+    "2026-12-31": {
+      "label": "🎉 New Year’s Eve",
+      "type": "evt"
+    },
+    "2027-01-01": {
+      "label": "New Year’s Day",
+      "type": "hol"
+    },
+    "2027-01-18": {
+      "label": "Martin Luther King Jr. Day",
+      "type": "hol"
+    },
+    "2027-02-07": {
+      "label": "Super Bowl LXI",
+      "type": "evt"
+    },
+    "2027-02-14": {
+      "label": "Valentine's Day",
+      "type": "hol"
+    }
+  },
+  "posts": [
+    {
+      "id": "seed-0",
+      "status": "scheduled",
+      "date": "2026-07-01",
+      "title": "Are You Busy This Month?",
+      "theme": "meme",
+      "fmt": "Carousel · 2 slides",
+      "holiday": "",
+      "caption": "Monthly opener. Packed calendar of chores vs. a wide-open beach month with Opendoor.",
+      "socialCaption": "",
+      "canva": "DAHN-8eHiBA",
+      "media": {
+        "img": "previews/busy-month.png",
+        "slides": [
+          "previews/slides/busy-1.png",
+          "previews/slides/busy-2.png"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-1",
+      "status": "scheduled",
+      "date": "2026-07-01",
+      "title": "World Cup — The Leading O Becomes the Ball",
+      "theme": "worldcup",
+      "fmt": "Video · 9:16",
+      "holiday": "USA · 1st knockout",
+      "caption": "⚽ Always rooting for the home team — we're on your side when you make your move. (USA vs. Bosnia & Herzegovina, the US's first knockout match, Round of 32, Levi's Stadium.)",
+      "socialCaption": "",
+      "canva": "DAHOFqh_g5g",
+      "media": {
+        "img": "previews/worldcup.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-2",
+      "status": "scheduled",
+      "date": "2026-07-02",
+      "title": "Skip the Circus — Banner Drop",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Reskin of the viral banner-drop stunt (Blue Apron 'hot dogs' post): masked climbers atop a skyscraper mast unfurl a flag reading 'Skip the circus / Skip straight to sold / opendoor.com.' Deadpan, screenshot-y — 'wait, is this real?' energy. Scheduled for AM.",
+      "socialCaption": "some people really love Opendoor",
+      "canva": "",
+      "media": {
+        "img": "previews/skip-circus.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-3",
+      "status": "scheduled",
+      "date": "2026-07-02",
+      "title": "Wimbledon — The Grass Is Truly Greener",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "🎾 Wimbledon",
+      "caption": "🎾 Grass-season brand post for Wimbledon week 1. A 3×3 grid of green front doors (middle-America mix); 'the grass is truly greener' on the other side of an Opendoor.",
+      "socialCaption": "",
+      "canva": "DAHOKZYzGc4",
+      "media": {
+        "img": "previews/wimbledon-doors.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-4",
+      "status": "scheduled",
+      "date": "2026-07-03",
+      "title": "Some Things Just Go Together — July",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Hot dogs + the 4th. Home + Opendoor. The 'go together' series, July edition.",
+      "socialCaption": "",
+      "canva": "DAHN_aEi-KM",
+      "media": {
+        "img": "previews/go-together-july.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-5",
+      "status": "scheduled",
+      "date": "2026-07-04",
+      "title": "Fireworks Wordmark",
+      "theme": "seasonal",
+      "fmt": "Video · 9:16",
+      "holiday": "July 4th",
+      "caption": "🎆 Independence Day hero post. Opendoor wordmark amongst the fireworks finale. (3 cuts: gold / finale / blue.)",
+      "socialCaption": "",
+      "canva": "DAHOFu7Evxs",
+      "media": {
+        "img": "previews/fireworks.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-6",
+      "status": "scheduled",
+      "date": "2026-07-06",
+      "title": "Doctor's Rx — \"opendoor.com\"",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "iMessage meme. Relatable hook with the opendoor.com punchline.",
+      "socialCaption": "",
+      "canva": "DAHOClozijM",
+      "media": {
+        "img": "previews/doctor-rx.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-7",
+      "status": "scheduled",
+      "date": "2026-07-08",
+      "title": "Based On My Calculations…",
+      "theme": "meme",
+      "fmt": "Carousel · 7 slides",
+      "holiday": "",
+      "caption": "Calculator-meme carousel — what selling the old way really 'costs' you.",
+      "socialCaption": "",
+      "canva": "DAHN-WGEddY",
+      "media": {
+        "img": "previews/calculator-carousel.jpg",
+        "slides": [
+          "previews/slides/calc-1.jpg",
+          "previews/slides/calc-2.jpg",
+          "previews/slides/calc-3.jpg",
+          "previews/slides/calc-4.jpg",
+          "previews/slides/calc-5.jpg",
+          "previews/slides/calc-6.jpg",
+          "previews/slides/calc-7.jpg"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-8",
+      "status": "scheduled",
+      "date": "2026-07-10",
+      "title": "Today's Forecast: 100% Chance of an Offer",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Summer weather-meme. Sunny, optimistic.",
+      "socialCaption": "",
+      "canva": "DAHOECZyDlE",
+      "media": {
+        "img": "previews/forecast-offer.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-9",
+      "status": "scheduled",
+      "date": "2026-07-12",
+      "title": "Wimbledon — Your Own Center Court",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "🎾 Wimbledon Final",
+      "caption": "🎾 Finals-day post (Gentlemen's Singles Final). Photoreal striped-lawn backyard: 'the best seat this summer is your own Center Court.'",
+      "socialCaption": "",
+      "canva": "DAHOKau9MAw",
+      "media": {
+        "img": "previews/wimbledon-centercourt.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-10",
+      "status": "scheduled",
+      "date": "2026-07-13",
+      "title": "Things That Go Together",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "PB&J / flag & apple pie / home & Opendoor. The evergreen anchor of the series.",
+      "socialCaption": "",
+      "canva": "DAHN-Qf43Ko",
+      "media": {
+        "img": "previews/go-together-home.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-11",
+      "status": "scheduled",
+      "date": "2026-07-15",
+      "title": "Real Progress — Hero + Camera Roll",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Warm, human brand-story beat to balance the meme run.",
+      "socialCaption": "",
+      "canva": "DAHODWLscvU",
+      "media": {
+        "img": "previews/real-progress-hero.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-12",
+      "status": "scheduled",
+      "date": "2026-07-17",
+      "title": "Red Card — Selling the Old Way",
+      "theme": "worldcup",
+      "fmt": "Carousel · 7 slides",
+      "holiday": "World Cup knockouts",
+      "caption": "⚽ Soccer-ref 'red card' carousel timed to the later World Cup rounds (semis Jul 14–15 → final Jul 19). 6 old-way clichés + a goal-celebration Opendoor payoff slide.",
+      "socialCaption": "",
+      "canva": "DAHOFdzTB74",
+      "media": {
+        "img": "previews/slides/redcard-1.jpg",
+        "slides": [
+          "previews/slides/redcard-1.jpg",
+          "previews/slides/redcard-2.jpg",
+          "previews/slides/redcard-3.jpg",
+          "previews/slides/redcard-4.jpg",
+          "previews/slides/redcard-5.jpg",
+          "previews/slides/redcard-6.jpg",
+          "previews/slides/redcard-7.jpg"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-13",
+      "status": "scheduled",
+      "date": "2026-07-19",
+      "title": "Jersey Crest Reveal — Circular Ring",
+      "theme": "worldcup",
+      "fmt": "Video · 9:16",
+      "holiday": "World Cup Final",
+      "caption": "Final-day World Cup tie-in. Macro satin-stitch embroidery timelapse: an Opendoor circular crest (O door-mark, arced 'OPENDOOR', two stars) self-stitches onto a cobalt-blue jersey over the heart, like a team patch, not a sponsor logo. Gemini omni-flash native video.",
+      "socialCaption": "Kitted up. Ready to help you make your move.",
+      "canva": "DAHORwReEzA",
+      "media": {
+        "img": "previews/jersey-crest-circular.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/crest_circular_ring_take1-ae33672a49.mp4"
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-14",
+      "status": "scheduled",
+      "date": "2026-07-20",
+      "title": "\"I Said Try opendoor.com\"",
+      "theme": "meme",
+      "fmt": "Carousel · 12 slides",
+      "holiday": "",
+      "caption": "Text-exchange series. High-save, screenshot-y format.",
+      "socialCaption": "",
+      "canva": "DAHOCjs2zTE",
+      "media": {
+        "img": "previews/try-opendoor-series.png",
+        "slides": [
+          "previews/slides/try-1.png",
+          "previews/slides/try-2.png",
+          "previews/slides/try-3.png",
+          "previews/slides/try-4.png",
+          "previews/slides/try-5.png",
+          "previews/slides/try-6.png",
+          "previews/slides/try-7.png",
+          "previews/slides/try-8.png",
+          "previews/slides/try-9.png",
+          "previews/slides/try-10.png",
+          "previews/slides/try-11.png",
+          "previews/slides/try-12.png"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-15",
+      "status": "scheduled",
+      "date": "2026-07-22",
+      "title": "Price-Cut Cards (Jun 2026)",
+      "theme": "proof",
+      "fmt": "Carousel · 7 slides",
+      "holiday": "",
+      "caption": "Per-market price-cut charts. Data/credibility post — real numbers.",
+      "socialCaption": "",
+      "canva": "DAHN_TrpnVc",
+      "media": {
+        "img": "previews/price-cut-cards.png",
+        "slides": [
+          "previews/slides/price-1.png",
+          "previews/slides/price-2.png",
+          "previews/slides/price-3.png",
+          "previews/slides/price-4.png",
+          "previews/slides/price-5.png",
+          "previews/slides/price-6.png",
+          "previews/slides/price-7.png"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-16",
+      "status": "scheduled",
+      "date": "2026-07-24",
+      "title": "Group-Text \"opendoor.com\" Memes",
+      "theme": "meme",
+      "fmt": "Carousel · 4 slides",
+      "holiday": "",
+      "caption": "Group-chat meme set — friends gassing each other up to just go to opendoor.com.",
+      "socialCaption": "",
+      "canva": "DAHODtsvdCM",
+      "media": {
+        "img": "previews/group-text-memes.png",
+        "slides": [
+          "previews/slides/group-1.png",
+          "previews/slides/group-2.png",
+          "previews/slides/group-3.png",
+          "previews/slides/group-4.png"
+        ],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-17",
+      "status": "scheduled",
+      "date": "2026-07-27",
+      "title": "What You're Doing vs. Could Be Doing",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Selling hassle vs. beach + Opendoor. Emoji comparison — fast, shareable.",
+      "socialCaption": "",
+      "canva": "DAHN_wrVczk",
+      "media": {
+        "img": "previews/what-im-doing-beach.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-18",
+      "status": "scheduled",
+      "date": "2026-07-29",
+      "title": "Real Progress — iPhone Photo Grid",
+      "theme": "brand",
+      "fmt": "Static · 9:16",
+      "holiday": "",
+      "caption": "Story-friendly progress grid. Closes the month on an authentic note.",
+      "socialCaption": "",
+      "canva": "DAHOCnuVRsg",
+      "media": {
+        "img": "previews/real-progress-grid.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-19",
+      "status": "scheduled",
+      "date": "2026-07-31",
+      "title": "Go Together — Summer Edition",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Summer 'go together' cap on July, bridging into August.",
+      "socialCaption": "",
+      "canva": "DAHN_eXM9GE",
+      "media": {
+        "img": "previews/go-together-summer.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-20",
+      "status": "scheduled",
+      "date": "2026-08-03",
+      "title": "Tired Too Sis — Cash Offer to Accept",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Viral crosswalk cardboard-sign meme (the 'I'M TIRED TOO SIS' format), sign swapped to 'BUT WE HAVE A FREAKING CASH OFFER TO ACCEPT.' Most template-native of the set — leads the series. Page 1 of the FINAL 4 Canva design.",
+      "socialCaption": "so much on the to-do list this week 😮‍💨",
+      "canva": "DAHOR5T8W3Y",
+      "media": {
+        "img": "previews/tired-sis-cash-offer.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-21",
+      "status": "scheduled",
+      "date": "2026-08-10",
+      "title": "Tired Too Sis — The House Won't Sell Itself",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Same format, week 2. Sign: 'BUT THE HOUSE WON'T FREAKING SELL ITSELF' — the social caption delivers the flip. Page 2 of the FINAL 4 design.",
+      "socialCaption": "actually… it will. opendoor.com",
+      "canva": "DAHOR5T8W3Y",
+      "media": {
+        "img": "previews/tired-sis-sell-itself.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-22",
+      "status": "scheduled",
+      "date": "2026-08-17",
+      "title": "Tired Too Sis — That's Why I Sold to Opendoor",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "Series closer, most ad-like payoff: 'THAT'S WHY I SOLD MY HOUSE TO OPENDOOR.' Runs after the format has done its organic work. Page 3 of the FINAL 4 design.",
+      "socialCaption": "she gets it 🤝",
+      "canva": "DAHOR5T8W3Y",
+      "media": {
+        "img": "previews/tired-sis-sold.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "seed-23",
+      "status": "scheduled",
+      "date": "2026-08-24",
+      "title": "Go Together — Back to School",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "holiday": "",
+      "caption": "AUGUST teaser — slot to your late-Aug back-to-school cadence.",
+      "socialCaption": "",
+      "canva": "DAHN_QCvB9g",
+      "media": {
+        "img": "previews/go-together-school.png",
+        "slides": [],
+        "video": ""
+      },
+      "postedUrl": "",
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "inv-opendoor-walk-sign-night-chicago-philly",
+      "builtin": true,
+      "status": "ready",
+      "title": "Opendoor Walk Sign — Night (Chicago + Philly)",
+      "theme": "brand",
+      "fmt": "Carousel · 2 slides",
+      "caption": "Photoreal pedestrian walk signal reskinned Opendoor blue: the don't-walk hand sits unlit while the O glows white — the signal says GO. Chicago (L train) + Philadelphia (City Hall) night scenes. Suggested slot: an open early-August date.",
+      "socialCaption": "",
+      "canva": "DAHOMAi1t58",
+      "media": {
+        "img": "previews/inv/walksign-chicago.jpg",
+        "slides": [
+          "previews/inv/walksign-chicago.jpg",
+          "previews/inv/walksign-philly.jpg"
+        ],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-make-it-better-chatgpt-for-sale-sign",
+      "builtin": true,
+      "status": "ready",
+      "title": "Make It Better — ChatGPT For-Sale Sign",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Reskin of the viral 'text ChatGPT a photo + Make it better.' format. A dull, generic For Sale sign gets texted in; ChatGPT replies 'Done.' with a vivid Opendoor sign in the same shot. Real ChatGPT-app chrome (hamburger + ChatGPT header, compose/more icons), rendered as crisp HTML, not a screenshot.",
+      "socialCaption": "",
+      "canva": "DAHORyYGTMo",
+      "media": {
+        "img": "previews/make-it-better.png",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-tired-too-sis-27-showings-alternate",
+      "builtin": true,
+      "status": "ready",
+      "title": "Tired Too Sis — 27 Showings (alternate)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Fourth variant of the cardboard-sign series: 'BUT WE ARE NOT DOING 27 SHOWINGS THIS WEEKEND.' A/B alternate or a 4th weekly beat if the format performs. Page 4 of the FINAL 4 design (all 6 raw variants: DAHOLnIoyZg).",
+      "socialCaption": "",
+      "canva": "DAHOR5T8W3Y",
+      "media": {
+        "img": "previews/tired-sis-showings.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-doctor-s-rx-handwritten-scribble",
+      "builtin": true,
+      "status": "ready",
+      "title": "Doctor's Rx — Handwritten Scribble",
+      "theme": "meme",
+      "fmt": "Static · 4:5",
+      "caption": "Alternate hand-scribble style of the Doctor's Rx meme (different look from the scheduled iPhone version) — good A/B option.",
+      "socialCaption": "",
+      "canva": "DAHN_wWzGLo",
+      "media": {
+        "img": "previews/inv/doctor-scribble.png",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-what-you-re-doing-variant-2",
+      "builtin": true,
+      "status": "ready",
+      "title": "What You're Doing — Variant 2",
+      "theme": "meme",
+      "fmt": "Static · 4:5",
+      "caption": "A/B variant of the beach 'what you could be doing' comparison.",
+      "socialCaption": "",
+      "canva": "DAHN_7Mo14s",
+      "media": {
+        "img": "previews/inv/what-v2.png",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-what-you-re-doing-variant-3",
+      "builtin": true,
+      "status": "ready",
+      "title": "What You're Doing — Variant 3",
+      "theme": "meme",
+      "fmt": "Static · 4:5",
+      "caption": "Third A/B variant of the beach comparison.",
+      "socialCaption": "",
+      "canva": "DAHN_yjMIYg",
+      "media": {
+        "img": "previews/inv/what-v3.png",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-opendoor-in-the-clouds-city-skylines",
+      "builtin": true,
+      "status": "ready",
+      "title": "Opendoor in the Clouds — City Skylines",
+      "theme": "brand",
+      "fmt": "Carousel · 3 slides · 7 cities",
+      "caption": "Sky-pano + cloud-wordmark carousel. 7 city variants built (Seattle, Chicago, Las Vegas shown). Reusable city series. Link opens the Seattle build.",
+      "socialCaption": "",
+      "canva": "DAHN9oMp1t0",
+      "media": {
+        "img": "previews/inv/untitled-omp.jpg",
+        "slides": [
+          "previews/inv/untitled-omp.jpg",
+          "previews/inv/untitled-d5oi.jpg",
+          "previews/inv/untitled-gu5.jpg"
+        ],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-opendoor-in-the-clouds-plain-template",
+      "builtin": true,
+      "status": "ready",
+      "title": "Opendoor in the Clouds — Plain (template)",
+      "theme": "brand",
+      "fmt": "Carousel · 3 slides",
+      "caption": "No-city sky-pano + cloud-wordmark carousel — the base template every city variant is copied from. Works as a plain evergreen brand post.",
+      "socialCaption": "",
+      "canva": "DAHN8PgFU8k",
+      "media": {
+        "img": "previews/inv/plain-sky-slide1.jpg",
+        "slides": [
+          "previews/inv/plain-sky-slide1.jpg",
+          "previews/inv/plain-sky-slide2.jpg",
+          "previews/inv/plain-sky-slide3.jpg"
+        ],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-the-showing-paper-collage-narrative",
+      "builtin": true,
+      "status": "ready",
+      "title": "The Showing — Paper-Collage Narrative",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · ~42s",
+      "caption": "Emotional Pixar-style narrative spot rendered as hand-torn cut-paper, with VO.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/the-showing.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/the-showing/the_showing_papercollage_v3_VO.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-good-dogs-clay-stop-motion",
+      "builtin": true,
+      "status": "ready",
+      "title": "Good Dogs — Clay Stop-Motion",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 15s",
+      "caption": "Claymation 'the move, via the dogs'. Scored 15s cut.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/good-dogs.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/good-dogs/good-dogs-clips/gooddogs_15s_scored.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-cash-now-more-later-ui-motion",
+      "builtin": true,
+      "status": "ready",
+      "title": "Cash Now, More Later — UI Motion",
+      "theme": "proof",
+      "fmt": "Video · 9:16",
+      "caption": "Two-phase NOW/LATER UI-motion explainer; choreographed zoom-through intro.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/cashnow.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/cashnow/opendoor_cashnow_final_vertical.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-my-friend-vs-me-comparison",
+      "builtin": true,
+      "status": "ready",
+      "title": "My Friend vs. Me — Comparison",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Stress-vs-calm two-column comparison meme, kinetic text, no VO.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/friend-vs-me.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/friend-vs-me/opendoor_vs_guys.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-pov-phone-walk-app-demo",
+      "builtin": true,
+      "status": "ready",
+      "title": "POV Phone Walk — App Demo",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "POV phone-in-hand get-an-offer walkthrough → $534,200, on a real walking plate.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/phone-walk.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/phone-walk/opendoor_phone_walk.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-whiteboard-teach-comparison-ugc",
+      "builtin": true,
+      "status": "ready",
+      "title": "Whiteboard Teach — Comparison UGC",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Presenter + 'SELL THE OLD WAY → YOU NEED' board, $427k phone payoff.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/whiteboard.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/whiteboard/opendoor_whiteboard_teach_v5.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-the-other-door-unaware-ad",
+      "builtin": true,
+      "status": "ready",
+      "title": "The Other Door — Unaware Ad",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 50s",
+      "caption": "Trapped-equity spot, flat delivery, music holds until the reveal. Captioned cut.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/unaware.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/unaware/opendoor_unaware_captioned.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-review-wall-social-proof",
+      "builtin": true,
+      "status": "ready",
+      "title": "Review Wall — Social Proof",
+      "theme": "proof",
+      "fmt": "Video · 9:16 · 30s",
+      "caption": "Fast-flip wall of real reviews; featured cards snap & hold. 30s + 15s cuts.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/review-wall.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/review-wall/seller_reviewwall_30s_v1.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-skip-to-sold-panorama-fly-through",
+      "builtin": true,
+      "status": "ready",
+      "title": "Skip to SOLD — Panorama Fly-Through",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Snaking-word 'SOOOLLLDDD' panorama fly-through.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/sold.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/sold/opendoor_sold_flythrough.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-kicks-to-offer-giant-phone-in-a-field",
+      "builtin": true,
+      "status": "ready",
+      "title": "Kicks to Offer — Giant Phone in a Field",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "Soccer kicks wake the phone → photograph house → offer in hand → SOLD. Also a strong World Cup tie-in.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/kicks-offer.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/kicks-offer/opendoor_kicks_offer_picturelock.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-offer-confidence-slate-pixar-spots",
+      "builtin": true,
+      "status": "ready",
+      "title": "Offer-Confidence Slate — Pixar Spots",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 4 cities",
+      "caption": "4 Pixar Opendoor spots (Phoenix / Atlanta / Raleigh / Denver), VO + captions + music.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/offer-confidence.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/offer-confidence/offer-confidence-previews/phoenix-jennifer_preview.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-green-guy-reaction-greenscreen-stitch",
+      "builtin": true,
+      "status": "ready",
+      "title": "Green-Guy Reaction — Greenscreen Stitch",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Green-morphsuit guy invades a house; lady reacts: 'deal with this or sell to Opendoor.'",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/greenguy.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/greenguy/opendoor_greenguy_reaction.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-ugc-talking-head-spots",
+      "builtin": true,
+      "status": "ready",
+      "title": "UGC Talking-Head Spots",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "Native UGC talking-head set (comments / relocation variants), no burned-in text.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/ugc-spots.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/ugc-spots/opendoor_ugc_FINAL_notext.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-skip-to-sold-copy-machine-reveal",
+      "builtin": true,
+      "status": "ready",
+      "title": "Skip to SOLD — Copy Machine Reveal",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "'Home Sale Receipt' prints out of a copier, Total: SOLD. Built from a Canva Content Reveal template — Canva-only build, no local render.",
+      "socialCaption": "",
+      "canva": "DAHOLyzi2LA",
+      "media": {
+        "img": "previews/copy-machine-receipt.png",
+        "slides": [],
+        "video": ""
+      },
+      "localOnly": false,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-seasons-split-dallas-ranch",
+      "builtin": true,
+      "status": "ready",
+      "title": "Seasons Split — Dallas Ranch",
+      "theme": "seasonal",
+      "fmt": "Video · 9:16 · ~10s",
+      "caption": "Hard-cut geometric-mask reskin: a $650k Dallas ranch flips summer↔autumn mid-frame. Textless cut also available.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/seasons-split-dallas.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/seasons-split-dallas/seasons_dallas.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-what-s-it-worth-tofu-curiosity-spot",
+      "builtin": true,
+      "status": "ready",
+      "title": "What's It Worth — TOFU Curiosity Spot",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · ~33s",
+      "caption": "Top-of-funnel Pixar spot built around home-value curiosity, soft 'see your value' CTA. Silent picture-lock.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/whats-it-worth.jpg",
+        "slides": [],
+        "video": "~/opendoor/projects/whats-it-worth/output/worth_preview.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-the-situation-inherited-home",
+      "builtin": true,
+      "status": "ready",
+      "title": "The Situation — Inherited Home",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · ~42s",
+      "caption": "Warm Pixar narrative about selling a home you've inherited. Silent picture-lock. (Distinct from the shorter UGC 'inherited' cutdown in the UGC Talking-Head set.)",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/inherited.jpg",
+        "slides": [],
+        "video": "~/opendoor/projects/the-situation-inherited/output/inherited_preview.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-jennifer-chen-the-overlap-both",
+      "builtin": true,
+      "status": "ready",
+      "title": "Jennifer Chen — The Overlap (\"Both\")",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · ~46s",
+      "caption": "Pragmatic-planner persona juggling life's overlap; Pixar cut shown. A claymation alt cut also exists (~37s, minor dog-morph glitch in shot 08 per QA notes). Silent picture-lock. Not the same asset as the Phoenix-Jennifer spot in Offer-Confidence Slate.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/jennifer-both.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/jennifer-both/pixar-both-clips/jennifer_both_pixar_FINAL_silent.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-dream-home-mug-steam-reveal",
+      "builtin": true,
+      "status": "ready",
+      "title": "Dream Home Mug — Steam Reveal",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "Steam rising from a coffee mug forms a tiny house silhouette. v2 'steam' take — the improved version.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/dream-home-mug.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/dream-home-mug/dream_home_mug_omniflash_v2_steam.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-move-in-found-footage",
+      "builtin": true,
+      "status": "ready",
+      "title": "Move-In Found Footage",
+      "theme": "brand",
+      "fmt": "Video · 4:3 · ~9s",
+      "caption": "Faux 2010s camcorder found-footage: dad clumsily films his family moving into their first house. Intentional 4:3 camcorder look.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/movein-homevideo.jpg",
+        "slides": [],
+        "video": "~/opendoor/finals/movein-homevideo/movein_natural_foundfootage_v2.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    },
+    {
+      "id": "inv-jersey-crest-reveal-alternate-styles",
+      "builtin": true,
+      "status": "ready",
+      "title": "Jersey Crest Reveal — Alternate Styles",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 4 styles",
+      "caption": "Macro embroidery timelapse, an Opendoor crest self-stitching onto a jersey. Modern-minimal shown; shield-banner, shield-classic, and shield-classic-whiteO cuts also finished. (Circular-ring cut is already scheduled Jul 19.)",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/inv/jersey-crest-alt.jpg",
+        "slides": [],
+        "video": "~/opendoor/projects/jersey-patch-embroidery/omni_out/crest_modern_minimal_take1.mp4"
+      },
+      "localOnly": true,
+      "updatedAt": "2026-07-03T00:23:46.865Z"
+    }
+  ],
+  "comments": {}
+}

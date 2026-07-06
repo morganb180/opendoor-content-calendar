@@ -64,6 +64,13 @@
   @media(min-width:761px){.chip-comment{display:block}}
   /* CARDS (list + inventory) */
   .weeks,.invView{display:none}
+  .activity{margin:18px 0 0;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:12px 14px}
+  .activity-head{display:flex;align-items:center;justify-content:space-between;color:var(--ink);font-size:13px;margin-bottom:8px}
+  .activity-head span{color:var(--muted);font-size:11px;font-weight:600}
+  .activity-list{display:grid;gap:6px}
+  .activity-item{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:12px;color:var(--muted)}
+  .activity-item span{color:var(--blue);font-weight:700}.activity-item b{color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.activity-item time{font-size:11px;color:var(--muted)}
+  .activity-empty{font-size:12px;color:var(--muted)}
   .week{margin-bottom:28px}
   .week h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;gap:10px}
   .week h3::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -75,6 +82,7 @@
   .thumb .when{position:absolute;top:10px;left:10px;background:rgba(11,18,32,.82);color:#fff;font-size:12px;font-weight:700;padding:5px 9px;border-radius:8px}
   .thumb .tags{position:absolute;top:10px;right:10px;display:flex;gap:6px}
   .thumb .vbadge{background:rgba(11,18,32,.82);color:#fff;font-size:11px;font-weight:700;padding:4px 8px;border-radius:8px}
+  .thumb .vbadge.local{background:#7c2d12}
   .thumb .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
   .thumb .play span{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
   .thumb .play span::after{content:"";border-left:14px solid var(--ink);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
@@ -133,6 +141,7 @@
   .lbmedia{background:#000;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
   .lbmedia img{max-height:82vh;max-width:60vw;display:block}
   .lbmedia video{max-height:82vh;max-width:60vw;display:block}
+  .local-note{margin-top:10px;color:#fcd9b6;background:rgba(124,45,18,.55);border:1px solid rgba(251,146,60,.35);border-radius:8px;padding:8px 10px;font-size:12px;text-align:center}
   .lbarrow{width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:20px;cursor:pointer;flex:none}
   .lbarrow:hover{background:rgba(255,255,255,.3)}
   .lbinfo{color:#fff;flex:1;min-width:200px;max-width:300px}
@@ -153,6 +162,11 @@
   .canva-push-row .btn{font-size:12px;padding:7px 11px}
   .canva-status{font-size:11.5px;color:var(--muted);margin-top:5px}
   .canva-status.ok{color:#16a34a} .canva-status.err{color:#dc2626}
+  .data-asof{width:100%;font-size:11.5px;color:var(--muted);text-align:right;margin-top:6px}
+  .status-chip{display:inline-flex;align-items:center;height:18px;padding:0 6px;border-radius:999px;background:#eef1f6;color:#536070;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  .st-draft{background:#fff7ed;color:#c2410c}.st-ready{background:#ecfdf3;color:#15803d}.st-scheduled{background:#eff6ff;color:#1d4ed8}.st-posted{background:#f3f4f6;color:#6b7280}
+  .chip .status-chip{height:15px;padding:0 4px;font-size:8px;margin-left:auto}
+  .chip.posted,.card.posted{opacity:.62}
   /* COMMENTS */
   .lb-comments{margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:14px}
   .lb-comments h5{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#aeb6c2;margin:0 0 10px}
@@ -176,6 +190,7 @@
     h1{font-size:18px} .sub{font-size:12.5px}
     .stats{gap:6px} .stat{padding:7px 10px} .stat b{font-size:16px}
     .toolbar{gap:8px}
+    .data-asof{text-align:center}
     .legend{order:2;width:100%;justify-content:center}
     .controls{order:1;width:100%;justify-content:center}
     .views button{font-size:12px;padding:6px 10px}
@@ -190,6 +205,7 @@
     .marker{font-size:7px;padding:1px 3px}
     .daynum{font-size:11px}
     .cards{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+    .activity-item{grid-template-columns:1fr;gap:2px}
     .card:hover{transform:none}
     .ctitle{font-size:13px} .caption{font-size:11px}
     .overlay{padding:0}

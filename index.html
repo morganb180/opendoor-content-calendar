@@ -50,12 +50,13 @@
         <button id="btn-inv" data-action="set-view" data-view="inv">Unscheduled</button>
       </div>
       <button class="btn ghost" data-action="sync-down" title="Pull the latest shared schedule from GitHub">Sync ↓</button>
-      <button class="btn ghost" data-action="sync-up" title="Push your schedule to GitHub for other machines">Sync ↑</button>
+      <button class="btn ghost" data-action="sync-up" title="Publish your schedule to GitHub for other machines">Publish changes</button>
       <button class="btn ghost" data-action="export-json" title="Download schedule JSON">Export</button>
       <button class="btn ghost" data-action="open-import" title="Load schedule JSON">Import</button>
       <button class="btn ghost" data-action="reset-all" title="Restore seeded schedule">Reset</button>
       <input type="file" id="importer" accept="application/json" style="display:none">
     </div>
+    <div class="data-asof" id="dataAsOf">data as of – · Sync ↓ for latest</div>
   </div>
 
   <section id="monthView">
@@ -73,6 +74,10 @@
   </section>
 
   <section id="listView" class="weeks"></section>
+  <section class="activity" id="activitySec">
+    <div class="activity-head"><b>Recent changes</b><span id="activityStatus"></span></div>
+    <div id="activityList" class="activity-list"></div>
+  </section>
   <section id="invViewSec" class="invView">
     <div class="invhdr"><b>Inventory — ready assets not yet on the calendar.</b> Click to preview; hit <b>“Add to schedule”</b> to drop it onto a date, or the <b>×</b> on a card to remove drafts you don't want. <span id="invHdrNote"></span></div>
     <div style="margin:0 0 16px"><button class="btn primary" data-action="add-inventory">+ Add inventory item</button></div>
@@ -139,16 +144,20 @@
         <div class="field"><label>Format</label><input id="f-fmt" placeholder="Static · 3:4"></div>
         <div class="field" id="f-holidayField"><label>Event tag (optional)</label><input id="f-holiday" placeholder="e.g. July 4th"></div>
       </div>
+      <div class="field"><label>Status</label>
+        <select id="f-status">
+          <option value="draft">Draft</option><option value="ready">Ready</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option>
+        </select>
+      </div>
+      <div class="field"><label>Posted URL (optional)</label><input id="f-postedUrl" placeholder="https://www.instagram.com/p/..."></div>
       <div class="field"><label>Caption / notes</label><textarea id="f-caption" rows="2" placeholder="Internal notes about this post"></textarea></div>
-      <div class="field"><label>Social caption <span class="hint-inline">— goes live with the post; copy or push to a Canva Autofill template</span></label><textarea id="f-socialCaption" rows="3" placeholder="The actual caption text for IG/FB..."></textarea>
+      <div class="field"><label>Social caption <span class="hint-inline">— goes live with the post; copy it into Canva when needed</span></label><textarea id="f-socialCaption" rows="3" placeholder="The actual caption text for IG/FB..."></textarea>
       <div class="canva-push-row" id="canvaPushRow" style="display:none">
-        <button class="btn primary" data-action="push-caption-canva">Push to Canva Autofill ↗</button>
         <button class="btn ghost" data-action="copy-social-caption">Copy caption</button>
         <span class="canva-status" id="canvaStatus"></span>
       </div>
       </div>
-     <div class="field"><label>Canva design or Autofill brand template ID (optional)</label><input id="f-canva" placeholder="DAHxxxxxxx, template ID, or https://..."></div>
-      <div class="field"><label>Canva caption field <span class="hint-inline">— Autofill template text field name</span></label><input id="f-canvaCaptionField" placeholder="caption"></div>
+     <div class="field"><label>Canva design ID or URL (optional)</label><input id="f-canva" placeholder="DAHxxxxxxx or https://..."></div>
       <div class="field"><label>Video / file path (optional)</label><input id="f-video" placeholder="~/opendoor/finals/.../clip.mp4"></div>
       <div class="field"><label>Preview image (URL / path, or upload)</label>
         <input id="f-img" placeholder="previews/my-post.png">

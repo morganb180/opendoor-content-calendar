@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opendoor content calendar",
+  "type": "object",
+  "required": ["version", "updatedAt", "config", "markers", "posts", "inventory", "comments"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 7 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "config": {
+      "type": "object",
+      "required": ["cadence", "timezone", "themes"],
+      "additionalProperties": true,
+      "properties": {
+        "cadence": { "type": "string" },
+        "timezone": { "type": "string" },
+        "themes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["color", "label"],
+            "additionalProperties": false,
+            "properties": {
+              "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+              "label": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "markers": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/$defs/marker" },
+          { "type": "array", "items": { "$ref": "#/$defs/marker" } }
+        ]
+      }
+    },
+    "posts": { "type": "array", "items": { "$ref": "#/$defs/post" } },
+    "inventory": { "type": "array", "items": { "$ref": "#/$defs/inventoryItem" } },
+    "comments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/comment" }
+      }
+    }
+  },
+  "$defs": {
+    "marker": {
+      "type": "object",
+      "required": ["label", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "enum": ["hol", "evt", "mkt"] }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "img": { "type": "string" },
+        "slides": { "type": "array", "items": { "type": "string" } },
+        "video": { "type": "string" }
+      }
+    },
+    "baseItem": {
+      "type": "object",
+      "required": ["id", "status", "title", "theme", "fmt", "caption", "media", "updatedAt"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "enum": ["draft", "ready", "scheduled", "posted"] },
+        "title": { "type": "string", "minLength": 1 },
+        "theme": { "type": "string", "minLength": 1 },
+        "fmt": { "type": "string" },
+        "caption": { "type": "string" },
+        "socialCaption": { "type": "string" },
+        "canva": { "type": "string" },
+        "media": { "$ref": "#/$defs/media" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "localOnly": { "type": "boolean" },
+        "builtin": { "type": "boolean" }
+      }
+    },
+    "post": {
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "type": "object",
+          "required": ["date"],
+          "properties": {
+            "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+            "holiday": { "type": "string" },
+            "postedUrl": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "inventoryItem": { "$ref": "#/$defs/baseItem" },
+    "comment": {
+      "type": "object",
+      "required": ["id", "author", "text", "ts"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "author": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "ts": { "type": "number" }
+      }
+    }
+  }
+}

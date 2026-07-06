@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-06T19:44:16.893Z",
+  "updatedAt": "2026-07-06T22:55:39.211Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1353,6 +1353,27 @@
       },
       "localOnly": true,
       "updatedAt": "2026-07-06T19:44:16.893Z"
+    },
+    {
+      "id": "p-mr9tjbeq20m",
+      "status": "ready",
+      "title": "The Emoji We Want",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4",
+      "caption": "The emoji we got vs. the emoji we want. Four houses, one blue door. Anyone else waiting for that update? 🏠",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/slides/p-mr9tjbeq20m/emoji_we_want_colonial_1080x1440.png",
+        "slides": [
+          "previews/slides/p-mr9tjbeq20m/emoji_we_want_colonial_1080x1440.png",
+          "previews/slides/p-mr9tjbeq20m/emoji_we_want_craftsman_1080x1440.png",
+          "previews/slides/p-mr9tjbeq20m/emoji_we_want_ranch_1080x1440.png",
+          "previews/slides/p-mr9tjbeq20m/emoji_we_want_spanish_1080x1440.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-06T22:55:39.210Z"
     }
   ],
   "comments": {}

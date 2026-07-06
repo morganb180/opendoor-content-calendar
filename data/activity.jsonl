@@ -1,2 +1,4 @@
 {"ts":"2026-07-02T00:00:00.000Z","actor":"system","action":"migrate","id":"data/calendar.json","title":"Migrated calendar content to data/calendar.json","detail":{"version":7}}
 {"ts":"2026-07-06T19:16:17.709Z","actor":"morganbrown","action":"add","id":"p-mr9lp86j54f","title":"Audit Test Asset","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-06T22:55:39.211Z","actor":"morganbrown","action":"add","id":"p-mr9tjbeq20m","title":"The Emoji We Want","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-06T22:55:39.333Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"The Emoji We Want carousel","posts":24,"inventory":30}}

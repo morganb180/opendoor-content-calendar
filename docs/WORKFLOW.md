@@ -24,7 +24,7 @@ Use the site’s **Import from Canva** modal or `tools/calctl import-canva` to r
 Set up the Connect integration once:
 
 1. At <https://www.canva.com/developers/> create an integration and enable the **`design:meta:read`** scope.
-2. Add redirect URL `http://127.0.0.1/callback` (any loopback port is accepted; the CLI picks a free one).
+2. Add redirect URL `http://127.0.0.1:8787/callback` (exact match required, port included; override the port with `callbackPort` in `~/.config/opendoor-calendar/config.json` or `CANVA_CALLBACK_PORT`).
 3. Provide the Client ID via `export CANVA_CLIENT_ID=OC-…` or `~/.config/opendoor-calendar/config.json` (`{ "clientId": "OC-…" }`). If the integration issued a secret, add `CANVA_CLIENT_SECRET` / `"clientSecret"` too.
 
 Then:

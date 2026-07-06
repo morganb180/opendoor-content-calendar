@@ -222,7 +222,7 @@ function canvaSetupGuide() {
     "  1. Sign in at https://www.canva.com/developers/ and create an integration",
     "     (Developers → Your integrations → Create an integration → \"Public\" or \"Private\").",
     "  2. Under \"Scopes\", enable:  design:meta:read",
-    "  3. Under \"Authentication → Redirect URLs\", add:  http://127.0.0.1/callback",
+    "  3. Under \"Authentication → Redirect URLs\", add:  http://127.0.0.1:8787/callback",
     "     (Canva accepts any 127.0.0.1 port for a loopback redirect; the CLI picks a free one.)",
     "  4. Copy the Client ID. Provide it one of these two ways:",
     "        export CANVA_CLIENT_ID=OC-xxxxxxxxxxxx",

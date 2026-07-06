@@ -166,7 +166,11 @@ async function authorizeInteractive(config, { log = () => {}, scopes = SCOPES, f
   const codeChallenge = challengeFor(verifier);
   const state = base64url(crypto.randomBytes(16));
   const server = http.createServer();
-  await new Promise((resolve, reject) => { server.once("error", reject); server.listen(0, "127.0.0.1", resolve); });
+  // Canva requires the registered redirect URL to match exactly, port included — bind a
+  // fixed port (config "callbackPort" / CANVA_CALLBACK_PORT, default 8787) and register
+  // http://127.0.0.1:<port>/callback on the integration.
+  const wantPort = Number(config.callbackPort || process.env.CANVA_CALLBACK_PORT || 8787);
+  await new Promise((resolve, reject) => { server.once("error", reject); server.listen(wantPort, "127.0.0.1", resolve); });
   const port = server.address().port;
   const redirectUri = `http://127.0.0.1:${port}/callback`;
   const authUrl = buildAuthorizeUrl({ clientId: config.clientId, redirectUri, codeChallenge, state, scopes });

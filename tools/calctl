@@ -1,0 +1,426 @@
+#!/usr/bin/env node
+"use strict";
+const { execFileSync, spawnSync } = require("child_process");
+const path = require("path");
+const fs = require("fs");
+const { ROOT, DEFAULT_DATA, nowISO, uid, dataPathFrom, loadData, saveData, appendActivity, themeKeys, findItem } = require("./lib/store");
+const canva = require("./lib/canva");
+const { parseCanvaImportLine, canvaLinksFrom, extractCanvaId } = canva;
+const { isURL, resolveImage, resolveSlides, posterFromVideo, optimizeCopy } = require("./lib/media");
+
+function die(message) { console.error(`calctl: ${message}`); process.exit(1); }
+function log(message) { if (message) console.log(message); }
+const BOOL_FLAGS = new Set(["inventory", "json", "no-push", "allow-local", "help", "all", "force"]);
+function parseArgs(argv) {
+  const opts = { _: [] };
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i] === "-m" ? "--message" : argv[i];
+    if (!arg.startsWith("--")) { opts._.push(arg); continue; }
+    const eq = arg.indexOf("=");
+    if (eq > 2) { opts[arg.slice(2, eq)] = arg.slice(eq + 1); continue; }
+    const key = arg.slice(2), next = argv[i + 1];
+    if (BOOL_FLAGS.has(key) || !next || next.startsWith("--")) opts[key] = true;
+    else { opts[key] = next; i++; }
+  }
+  return opts;
+}
+function usage() {
+  console.log(`Usage: tools/calctl <command> [options]
+
+Commands:
+  add --title T --theme brand --fmt "Static · 4:5" [--date YYYY-MM-DD|--inventory] [--img path] [--slides dir-or-glob] [--video URL|path] [--allow-local] [--canva ID|url] [--caption text] [--social-caption text] [--holiday text] [--status draft|ready|scheduled|posted]
+      (no --date and no --inventory -> goes to inventory)
+  schedule <id|title> <date>      inventory -> calendar, id preserved
+  move <id|title> <date>          reschedule a post
+  set <id|title> key=value [...]  e.g. status=posted postedUrl=... img=... media.video=...
+  rm <id|title>                   removes the item and its comments
+  list [--month YYYY-MM] [--inventory] [--status ready] [--json]
+  import-canva "URL[, date, theme, title, caption]" [...]   [--theme brand] [--fmt "Static · 4:5"]
+  canva pull <id|--all> [--force]   fetch title/thumbnail via Canva Connect (local OAuth)
+  canva logout                      clear the cached Canva token
+  validate [--json]
+  optimize-images
+  deploy [-m "message"] [--no-push]
+
+Global: --data path/to/calendar.json`);
+}
+function context(argv) { const opts = parseArgs(argv); return { opts, dataPath: dataPathFrom(opts), warnings: [] }; }
+function warn(ctx, message) { ctx.warnings.push(message); }
+function finish(ctx) { ctx.warnings.forEach(message => console.warn(`WARN ${message}`)); }
+function assertTheme(data, theme) { if (!themeKeys(data).includes(theme)) die(`theme must be one of: ${themeKeys(data).join(", ")}`); }
+function assertDate(date) { if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) die("date must be YYYY-MM-DD"); }
+function normalizeCanva(value) { const raw = String(value || "").trim(); if (!raw) return ""; const cid = extractCanvaId(raw); if (!cid) die(`cannot extract a Canva id from "${raw}"`); return cid; }
+function baseItem(args, data, ctx) {
+  if (!args.title) die("--title is required");
+  if (!args.theme) die("--theme is required");
+  assertTheme(data, args.theme);
+  if (!args.fmt) die("--fmt is required");
+  const id = args.id || uid();
+  const media = { img: "", slides: [], video: "" };
+  if (args.img) media.img = resolveImage(args.img, { warn: message => warn(ctx, message) });
+  if (args.slides) media.slides = resolveSlides(args.slides, id, { warn: message => warn(ctx, message) });
+  if (args.video) {
+    if (isURL(args.video)) media.video = args.video;
+    else if (args["allow-local"]) {
+      media.video = args.video.startsWith("~/") ? args.video : args.video.replace(process.env.HOME || "/Users/morganbrown", "~");
+      if (!media.img) media.img = posterFromVideo(args.video.replace(/^~/, process.env.HOME || "/Users/morganbrown"), id, { warn: message => warn(ctx, message) }) || "";
+    } else die(`Local videos are not committed here. Upload ${args.video} to canva-asset-host or another https host, then rerun with --video URL. Use --allow-local only for Morgan-machine-only playback.`);
+  }
+  if (!media.img && media.slides.length) media.img = media.slides[0];
+  return { id, status: args.status || (args.date ? "scheduled" : "ready"), title: args.title, theme: args.theme, fmt: args.fmt, caption: args.caption || "", socialCaption: args["social-caption"] || "", canva: normalizeCanva(args.canva || ""), media, updatedAt: nowISO(), ...(args["allow-local"] && args.video && !isURL(args.video) ? { localOnly: true } : {}) };
+}
+const STATUSES = ["draft", "ready", "scheduled", "posted"];
+function cmdAdd(argv) {
+  const ctx = context(argv), args = ctx.opts, data = loadData(ctx.dataPath);
+  if (args.date && args.inventory) die("--date and --inventory are mutually exclusive");
+  if (args.date) assertDate(args.date);
+  if (args.status && !STATUSES.includes(args.status)) die(`status must be one of: ${STATUSES.join("|")}`);
+  const item = baseItem(args, data, ctx);
+  if (args.date) {
+    data.posts.push({ ...item, date: args.date, holiday: args.holiday || "", postedUrl: args.postedUrl || "" });
+    log(`${item.id} scheduled ${args.date}: "${item.title}" [${item.status}]`);
+  } else {
+    if (args.holiday) warn(ctx, "--holiday only applies to scheduled posts; ignored for inventory");
+    data.inventory.push(item);
+    log(`${item.id} added to inventory: "${item.title}" [${item.status}]`);
+  }
+  saveData(ctx.dataPath, data); appendActivity("add", item, { date: args.date || "", inventory: !args.date }); finish(ctx);
+}
+function cmdSchedule(argv) {
+  const ctx = context(argv), [ref, date] = ctx.opts._, data = loadData(ctx.dataPath); assertDate(date);
+  const { item, kind } = findItem(data, ref);
+  if (kind === "post") die(`${item.id} is already on the calendar (${item.date}); use calctl move`);
+  data.inventory = data.inventory.filter(x => x.id !== item.id);
+  data.posts.push({ ...item, status: "scheduled", date, holiday: item.holiday || "", postedUrl: item.postedUrl || "", updatedAt: nowISO() });
+  saveData(ctx.dataPath, data); appendActivity("schedule", item, { date }); log(`${item.id} scheduled ${date}: "${item.title}" (moved from inventory, id preserved)`);
+}
+function cmdMove(argv) {
+  const ctx = context(argv), [ref, date] = ctx.opts._, data = loadData(ctx.dataPath); assertDate(date);
+  const { item, kind } = findItem(data, ref); if (kind !== "post") die(`${item.id} is inventory; use schedule`);
+  const from = item.date; item.date = date; item.updatedAt = nowISO(); saveData(ctx.dataPath, data); appendActivity("move", item, { from, date }); log(`${item.id} moved ${from} -> ${date}: "${item.title}"`);
+}
+function coerce(value) { if (value === "true") return true; if (value === "false") return false; return value; }
+function assign(item, key, value) {
+  const parts = key.split("."); let target = item;
+  while (parts.length > 1) { const part = parts.shift(); target[part] = target[part] || {}; target = target[part]; }
+  target[parts[0]] = coerce(value);
+}
+function cmdSet(argv) {
+  const ctx = context(argv), [ref, ...pairs] = ctx.opts._, data = loadData(ctx.dataPath); if (!pairs.length) die("set requires key=value [...]");
+  const { item, kind } = findItem(data, ref);
+  const changed = [];
+  pairs.forEach(pair => {
+    const idx = pair.indexOf("="); if (idx < 1) die(`invalid assignment: ${pair}`);
+    let key = pair.slice(0, idx); const value = pair.slice(idx + 1);
+    if (key === "img" || key === "video") key = "media." + key;
+    if (key === "status" && !STATUSES.includes(value)) die(`status must be one of: ${STATUSES.join("|")}`);
+    if (key === "theme") assertTheme(data, value);
+    if (key === "date") { if (kind !== "post") die(`${item.id} is inventory; use calctl schedule to give it a date`); assertDate(value); }
+    if ((key === "holiday" || key === "postedUrl") && kind !== "post") die(`${key} only applies to scheduled posts`);
+    if (key === "canva" && value) assign(item, key, normalizeCanva(value));
+    else if (key === "slides" || key === "media.slides") item.media = { ...(item.media || {}), slides: value ? value.split(",").map(s => s.trim()).filter(Boolean) : [] };
+    else assign(item, key, value);
+    changed.push(key);
+  });
+  item.updatedAt = nowISO(); saveData(ctx.dataPath, data); appendActivity("set", item, { fields: changed }); log(`${item.id} updated (${changed.join(", ")}): "${item.title}"`);
+}
+function cmdRm(argv) {
+  const ctx = context(argv), [ref] = ctx.opts._, data = loadData(ctx.dataPath); if (!ref) die("rm requires <id|title>");
+  const { item, kind } = findItem(data, ref); data.posts = data.posts.filter(x => x.id !== item.id); data.inventory = data.inventory.filter(x => x.id !== item.id); const hadComments = !!data.comments[item.id]; delete data.comments[item.id]; saveData(ctx.dataPath, data); appendActivity("rm", item, { kind, hadComments }); log(`${item.id} removed from ${kind === "post" ? "calendar" : "inventory"}: "${item.title}"${hadComments ? " (comments deleted)" : ""}`);
+}
+function cmdList(argv) {
+  const ctx = context(argv), data = loadData(ctx.dataPath);
+  let items = ctx.opts.inventory ? data.inventory.slice() : data.posts.slice().sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+  if (ctx.opts.month) {
+    if (!/^\d{4}-\d{2}$/.test(ctx.opts.month)) die(`--month must be YYYY-MM`);
+    items = items.filter(x => (x.date || "").startsWith(ctx.opts.month + "-"));
+  }
+  if (ctx.opts.status) {
+    if (!STATUSES.includes(ctx.opts.status)) die(`status must be one of: ${STATUSES.join("|")}`);
+    items = items.filter(x => x.status === ctx.opts.status);
+  }
+  if (ctx.opts.json) return console.log(JSON.stringify(items, null, 2));
+  items.forEach(item => console.log(`${item.id}\t${item.date || "inventory"}\t${item.status}\t${item.theme}\t${item.title}${item.canva ? "\tcanva:" + item.canva : ""}`));
+  console.log(`-- ${items.length} item${items.length === 1 ? "" : "s"}`);
+}
+function cmdImportCanva(argv) {
+  const ctx = context(argv), rows = ctx.opts._, data = loadData(ctx.dataPath); if (!rows.length) die("import-canva requires at least one row");
+  if (ctx.opts.theme) assertTheme(data, ctx.opts.theme);
+  const defaults = { theme: ctx.opts.theme || "brand", fmt: ctx.opts.fmt || "Static · 4:5" };
+  const existing = new Set([...data.posts, ...data.inventory].map(x => extractCanvaId(x.canva)).filter(Boolean));
+  const seen = new Set();
+  let addedPosts = 0, addedInv = 0, skipped = 0;
+  // Args may hold multi-line pastes; lines without clean fields may still carry several links.
+  const lines = rows.flatMap(r => String(r).split(/\r?\n/)).map(x => x.trim()).filter(Boolean);
+  lines.forEach(line => {
+    const parsedItems = [];
+    const one = parseCanvaImportLine(line, defaults, themeKeys(data));
+    if (one) parsedItems.push(one);
+    else canvaLinksFrom(line).forEach(link => { const li = parseCanvaImportLine(link, defaults, themeKeys(data)); if (li) parsedItems.push(li); });
+    if (!parsedItems.length) die(`no Canva design id found in: ${line}`);
+    parsedItems.forEach(parsed => {
+      const cid = extractCanvaId(parsed.canva);
+      if (seen.has(cid)) return;
+      seen.add(cid);
+      if (existing.has(cid)) { log(`skip ${cid}: already on the calendar`); skipped++; return; }
+      const item = { id: uid(), status: parsed.targetDate && !ctx.opts.inventory ? "scheduled" : "ready", title: parsed.title, theme: parsed.theme, fmt: parsed.fmt, caption: parsed.caption, socialCaption: parsed.socialCaption, canva: parsed.canva, media: { img: "", slides: [], video: "" }, updatedAt: nowISO() };
+      if (parsed.targetDate && !ctx.opts.inventory) { data.posts.push({ ...item, date: parsed.targetDate, holiday: "", postedUrl: "" }); log(`${item.id} scheduled ${parsed.targetDate}: "${item.title}" (canva ${cid})`); appendActivity("import-canva", item, { date: parsed.targetDate, canva: cid }); addedPosts++; }
+      else { data.inventory.push(item); log(`${item.id} added to inventory: "${item.title}" (canva ${cid})`); appendActivity("import-canva", item, { inventory: true, canva: cid }); addedInv++; }
+    });
+  });
+  if (!addedPosts && !addedInv) { log("nothing new to import"); return; }
+  saveData(ctx.dataPath, data);
+  log(`imported ${addedPosts} scheduled + ${addedInv} inventory item(s)${skipped ? `, skipped ${skipped} duplicate(s)` : ""}`);
+}
+function runNode(script, args = []) { execFileSync(process.execPath, [script, ...args], { cwd: ROOT, stdio: "inherit" }); }
+function runValidator(dataPath) { return spawnSync(process.execPath, [path.join(ROOT, "scripts/validate-data.js"), dataPath], { encoding: "utf8" }); }
+function cmdValidate(argv) {
+  const ctx = context(argv);
+  const r = runValidator(ctx.dataPath);
+  if (ctx.opts.json) {
+    const pick = prefix => (r.stderr || "").split("\n").filter(l => l.startsWith(prefix)).map(l => l.slice(prefix.length));
+    console.log(JSON.stringify({ ok: r.status === 0, errors: pick("ERROR "), warnings: pick("WARN ") }, null, 2));
+  } else {
+    if (r.stderr) process.stderr.write(r.stderr);
+    if (r.stdout) process.stdout.write(r.stdout);
+  }
+  if (r.status !== 0) process.exit(1);
+}
+function cmdOptimizeImages() { runNode("scripts/optimize-images.js"); }
+function git(args) { return spawnSync("git", ["-C", ROOT, ...args], { encoding: "utf8" }); }
+function cmdDeploy(argv) {
+  const ctx = context(argv);
+  if (ctx.opts.data) console.warn("WARN --data is ignored by deploy; it validates and commits data/calendar.json");
+  const v = runValidator(DEFAULT_DATA);
+  if (v.stderr) process.stderr.write(v.stderr);
+  if (v.status !== 0) die("validation failed; fix errors before deploying");
+  log("validation passed");
+  // Stage first so we can detect a no-op deploy before logging any activity.
+  if (git(["add", "data", "previews"]).status !== 0) die(`git add failed`);
+  if (git(["diff", "--cached", "--quiet"]).status === 0) { log("nothing to deploy: data/ and previews/ are unchanged"); return; }
+  // Log the deploy BEFORE committing so the activity entry ships in the same commit.
+  const message = ctx.opts.message || "Update calendar data";
+  const data = loadData(DEFAULT_DATA);
+  appendActivity(ctx.opts["no-push"] ? "deploy" : "publish", null, { message, posts: (data.posts || []).length, inventory: (data.inventory || []).length });
+  git(["add", "data/activity.jsonl"]);
+  const commit = git(["commit", "-m", message]);
+  if (commit.status !== 0) die(`git commit failed: ${(commit.stderr || commit.stdout || "").trim()}`);
+  log((commit.stdout || "").trim().split("\n")[0]);
+  if (ctx.opts["no-push"]) { log("committed (push skipped via --no-push)"); return; }
+  const push = git(["push"]);
+  if (push.status !== 0) {
+    const out = (push.stderr || "").trim();
+    if (/non-fast-forward|fetch first|rejected/i.test(out)) die("push rejected (non-fast-forward). Run `git pull --rebase`, re-run tools/calctl validate, then `git push`. Never force-push.");
+    die(`git push failed: ${out}`);
+  }
+  log("pushed. Live shortly at https://morganb180.github.io/opendoor-content-calendar/");
+}
+function canvaSetupGuide() {
+  return [
+    "calctl canva pull needs a Canva Connect integration (one-time setup):",
+    "",
+    "  1. Sign in at https://www.canva.com/developers/ and create an integration",
+    "     (Developers → Your integrations → Create an integration → \"Public\" or \"Private\").",
+    "  2. Under \"Scopes\", enable:  design:meta:read",
+    "  3. Under \"Authentication → Redirect URLs\", add:  http://127.0.0.1/callback",
+    "     (Canva accepts any 127.0.0.1 port for a loopback redirect; the CLI picks a free one.)",
+    "  4. Copy the Client ID. Provide it one of these two ways:",
+    "        export CANVA_CLIENT_ID=OC-xxxxxxxxxxxx",
+    "     or ~/.config/opendoor-calendar/config.json:  { \"clientId\": \"OC-xxxx\" }",
+    "     If your integration issued a client secret, add CANVA_CLIENT_SECRET / \"clientSecret\" too.",
+    "",
+    "Then re-run:  tools/calctl canva pull --all",
+    "Until then, use  tools/calctl import-canva  to register Canva links by hand.",
+  ].join("\n");
+}
+// Resolve access to the Connect API: cached tokens, else run the local OAuth flow.
+async function canvaClient(config) {
+  let tokens = canva.readTokens();
+  if (!tokens) {
+    tokens = await canva.authorizeInteractive(config, { log });
+    canva.writeTokens(tokens);
+    log("Canva authorized; token cached at ~/.config/opendoor-calendar/tokens.json (0600).");
+  }
+  return canva.createClient(config, tokens, { onTokens: t => canva.writeTokens(t) });
+}
+async function cmdCanvaPull(ctx) {
+  const config = canva.readConnectConfig();
+  if (!config.clientId) { console.error(canvaSetupGuide()); process.exit(1); }
+  const force = !!ctx.opts.force;
+  const data = loadData(ctx.dataPath);
+  const all = [...data.posts, ...data.inventory];
+  let targets;
+  if (ctx.opts.all) targets = all.filter(r => extractCanvaId(r.canva));
+  else {
+    const ref = ctx.opts._[1];
+    if (!ref) die("canva pull requires a design id (or --all)");
+    const wantId = extractCanvaId(ref) || ref;
+    targets = all.filter(r => extractCanvaId(r.canva) === wantId);
+    if (!targets.length) die(`no calendar record has Canva id ${wantId}; add one first (import-canva) or check the id`);
+  }
+  if (!targets.length) { log("no records with a Canva id to pull"); return; }
+  const client = await canvaClient(config);
+  let updated = 0, unchanged = 0, failed = 0;
+  for (const record of targets) {
+    const designId = extractCanvaId(record.canva);
+    try {
+      const design = await client.getDesign(designId);
+      const plan = canva.planDesignUpdate(record, design, { force });
+      const changed = [];
+      if (plan.title) { record.title = plan.title; changed.push("title"); }
+      if (plan.needsImg) {
+        const rel = `previews/canva/${designId}.jpg`;
+        await canva.downloadTo(design.thumbnailUrl, path.join(ROOT, "previews", "canva", `${designId}.jpg`));
+        optimizeCopy(path.join(ROOT, "previews", "canva", `${designId}.jpg`), message => console.warn(`WARN ${message}`));
+        record.media = record.media || { img: "", slides: [], video: "" };
+        record.media.img = rel;
+        changed.push("media.img");
+      }
+      if (changed.length) {
+        record.updatedAt = nowISO();
+        appendActivity("canva-pull", record, { canva: designId, fields: changed });
+        log(`${record.id} pulled ${designId}: updated ${changed.join(", ")} — "${record.title}"`);
+        updated++;
+      } else { log(`${record.id} pulled ${designId}: no changes (title/image already curated; use --force to overwrite)`); unchanged++; }
+    } catch (err) {
+      if (err instanceof canva.CanvaAuthError) { console.error(`calctl: Canva auth failed: ${err.message}`); process.exit(1); }
+      warn(ctx, `${record.id} (${designId}): ${err.message}`);
+      failed++;
+    }
+  }
+  if (updated) saveData(ctx.dataPath, data);
+  log(`canva pull: ${updated} updated, ${unchanged} unchanged${failed ? `, ${failed} failed` : ""}`);
+  finish(ctx);
+}
+async function cmdCanva(argv) {
+  const ctx = context(argv);
+  const sub = ctx.opts._[0];
+  if (sub === "pull") return cmdCanvaPull(ctx);
+  if (sub === "logout") { canva.clearTokens(); return log("cleared cached Canva tokens"); }
+  if (sub === "selftest") return canvaSelftest();
+  usage();
+}
+
+// Hidden subcommand: exercises the Connect plumbing that can't touch the real
+// API (PKCE math, auth-URL shape, token cache I/O, exchange/refresh bodies,
+// 401→refresh→retry, thumbnail download, and the pure pull-plan logic) against
+// mocked fetch + a temp dir. `node tools/calctl canva selftest`
+async function canvaSelftest() {
+  const os = require("os"), assert = require("assert");
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "calctl-canva-"));
+  let n = 0; const ok = (name) => { n++; log(`ok ${n} - ${name}`); };
+  try {
+    // 1. PKCE: recompute S256 independently and confirm the verifier is RFC-legal.
+    const verifier = canva.createVerifier();
+    assert.match(verifier, /^[A-Za-z0-9_-]{43,128}$/, "verifier charset/length");
+    const expect = require("crypto").createHash("sha256").update(verifier).digest("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    assert.strictEqual(canva.challengeFor(verifier), expect, "S256 challenge");
+    ok("PKCE verifier + S256 challenge");
+
+    // 2. Authorize URL shape.
+    const url = new URL(canva.buildAuthorizeUrl({ clientId: "OC-test", redirectUri: "http://127.0.0.1:5555/callback", codeChallenge: expect, state: "st8", scopes: canva.SCOPES }));
+    assert.strictEqual(url.origin + url.pathname, "https://www.canva.com/api/oauth/authorize");
+    assert.strictEqual(url.searchParams.get("response_type"), "code");
+    assert.strictEqual(url.searchParams.get("client_id"), "OC-test");
+    assert.strictEqual(url.searchParams.get("redirect_uri"), "http://127.0.0.1:5555/callback");
+    assert.strictEqual(url.searchParams.get("scope"), "design:meta:read");
+    assert.strictEqual(url.searchParams.get("code_challenge_method"), "S256");
+    assert.strictEqual(url.searchParams.get("code_challenge"), expect);
+    assert.strictEqual(url.searchParams.get("state"), "st8");
+    ok("authorize URL construction");
+
+    // 3. Token cache read/write with 0600 perms.
+    const tokFile = path.join(tmp, "tokens.json");
+    canva.writeTokens({ access_token: "a", refresh_token: "r", expires_in: 3600 }, tokFile);
+    assert.strictEqual(fs.statSync(tokFile).mode & 0o777, 0o600, "token file perms 0600");
+    assert.strictEqual(canva.readTokens(tokFile).access_token, "a", "token round-trip");
+    assert.strictEqual(canva.readTokens(path.join(tmp, "nope.json")), null, "missing token file → null");
+    ok("token cache read/write (0600)");
+
+    // 4. exchangeCode / refreshTokens: correct endpoint + urlencoded body.
+    let captured;
+    const okJson = (obj) => ({ ok: true, status: 200, json: async () => obj });
+    const capFetch = (u, opts) => { captured = { u, opts, body: opts.body.toString(), headers: opts.headers }; return okJson({ access_token: "AT", refresh_token: "RT", expires_in: 3600 }); };
+    const pub = { clientId: "OC-pub", clientSecret: "" };
+    await canva.exchangeCode(pub, { code: "CODE", codeVerifier: verifier, redirectUri: "http://127.0.0.1:1/callback" }, capFetch);
+    assert.strictEqual(captured.u, "https://api.canva.com/rest/v1/oauth/token");
+    const bp = new URLSearchParams(captured.body);
+    assert.strictEqual(bp.get("grant_type"), "authorization_code");
+    assert.strictEqual(bp.get("code"), "CODE");
+    assert.strictEqual(bp.get("code_verifier"), verifier);
+    assert.strictEqual(bp.get("redirect_uri"), "http://127.0.0.1:1/callback");
+    assert.strictEqual(bp.get("client_id"), "OC-pub", "public client → client_id in body");
+    assert.ok(!captured.headers.Authorization, "public client → no Basic header");
+    // Confidential client → Basic auth header, no client_id in body.
+    await canva.refreshTokens({ clientId: "OC-conf", clientSecret: "sh" }, "RT", capFetch);
+    assert.strictEqual(new URLSearchParams(captured.body).get("grant_type"), "refresh_token");
+    assert.strictEqual(captured.headers.Authorization, "Basic " + Buffer.from("OC-conf:sh").toString("base64"), "confidential → Basic header");
+    ok("token exchange + refresh request bodies");
+
+    // 5. designs response normalization.
+    const norm = canva.normalizeDesignResponse({ design: { id: "DAH1", title: "  Fireworks  ", thumbnail: { url: "https://x/y.jpg" } } });
+    assert.deepStrictEqual(norm, { id: "DAH1", title: "Fireworks", thumbnailUrl: "https://x/y.jpg" });
+    ok("design response normalization");
+
+    // 6. client 401 → refresh → retry, persisting new tokens.
+    let calls = 0, saved = null;
+    const flakyFetch = (u, opts) => {
+      if (u.startsWith("https://api.canva.com/rest/v1/designs/")) {
+        calls++;
+        if (opts.headers.Authorization === "Bearer AT") return okJson({ design: { id: "DAHx", title: "T", thumbnail: { url: "u" } } });
+        return { ok: false, status: 401, text: async () => "expired" };
+      }
+      return okJson({ access_token: "AT", refresh_token: "RT2", expires_in: 3600 }); // refresh
+    };
+    const client = canva.createClient(pub, { access_token: "OLD", refresh_token: "RT" }, { fetchImpl: flakyFetch, onTokens: t => { saved = t; } });
+    const design = await client.getDesign("DAHx");
+    assert.strictEqual(design.title, "T");
+    assert.strictEqual(calls, 2, "one 401 then one success");
+    assert.strictEqual(saved.access_token, "AT", "refreshed token persisted via onTokens");
+    ok("client 401 → refresh → retry");
+
+    // 7. 403 / 404 → typed CanvaApiError.
+    for (const code of [403, 404]) {
+      const c = canva.createClient(pub, { access_token: "AT", refresh_token: "RT" }, { fetchImpl: async () => ({ ok: false, status: code, text: async () => "" }) });
+      await assert.rejects(() => c.getDesign("DAHz"), e => e instanceof canva.CanvaApiError && e.status === code);
+    }
+    ok("403/404 → CanvaApiError");
+
+    // 8. planDesignUpdate: placeholder titles/empty img update; curated ones are protected unless --force.
+    const design8 = { id: "D", title: "Real Title", thumbnailUrl: "https://t/x.jpg" };
+    assert.deepStrictEqual(canva.planDesignUpdate({ title: "Canva design D", media: { img: "" } }, design8), { title: "Real Title", needsImg: true }, "placeholder + no img → both");
+    assert.deepStrictEqual(canva.planDesignUpdate({ title: "Curated Name", media: { img: "previews/x.png" } }, design8), { title: null, needsImg: false }, "curated → protected");
+    assert.deepStrictEqual(canva.planDesignUpdate({ title: "Curated Name", media: { img: "previews/x.png" } }, design8, { force: true }), { title: "Real Title", needsImg: true }, "force overrides");
+    assert.deepStrictEqual(canva.planDesignUpdate({ title: "Untitled Canva import", media: { img: "previews/x.png" } }, design8), { title: "Real Title", needsImg: false }, "placeholder title but keep existing img");
+    ok("planDesignUpdate title/image protection + force");
+
+    // 9. thumbnail download to a temp file via mocked fetch.
+    const bytes = Buffer.from([0xff, 0xd8, 0xff, 0x00, 0x11, 0x22]);
+    const dest = path.join(tmp, "thumb.jpg");
+    const size = await canva.downloadTo("https://t/x.jpg", dest, async () => ({ ok: true, status: 200, arrayBuffer: async () => bytes }));
+    assert.strictEqual(size, bytes.length);
+    assert.deepStrictEqual(fs.readFileSync(dest), bytes, "downloaded bytes match");
+    ok("thumbnail download");
+
+    log(`# all ${n} Canva selftest checks passed`);
+  } finally {
+    try { fs.rmSync(tmp, { recursive: true, force: true }); } catch { /* best effort */ }
+  }
+}
+
+const [cmd, ...argv] = process.argv.slice(2);
+(async () => {
+  if (!cmd || cmd === "help" || cmd === "--help") usage();
+  else if (cmd === "add") cmdAdd(argv);
+  else if (cmd === "schedule") cmdSchedule(argv);
+  else if (cmd === "move") cmdMove(argv);
+  else if (cmd === "set") cmdSet(argv);
+  else if (cmd === "rm") cmdRm(argv);
+  else if (cmd === "list") cmdList(argv);
+  else if (cmd === "import-canva") cmdImportCanva(argv);
+  else if (cmd === "canva") await cmdCanva(argv);
+  else if (cmd === "validate") cmdValidate(argv);
+  else if (cmd === "optimize-images") cmdOptimizeImages(argv);
+  else if (cmd === "deploy") cmdDeploy(argv);
+  else die(`unknown command: ${cmd}`);
+})().catch(err => die(err.message));

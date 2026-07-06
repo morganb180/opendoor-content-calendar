@@ -250,9 +250,13 @@ function dataToState(d){
 }
 function stateToData(){return {version:7,updatedAt:nowISO(),config:{cadence:"Mon/Wed/Fri + event specials",timezone:"America/Los_Angeles",themes:Object.fromEntries(Object.entries(THEME).map(([k,v])=>[k,{color:v.color,label:v.label}]))},markers:Object.fromEntries(Object.entries(MARKERS).map(([date,value])=>[date,Array.isArray(value)?value.map(markerToData):markerToData(value)])),posts:posts.map(p=>appToDataItem(p,"post")),inventory:customInv.map(it=>appToDataItem(it,"inventory")),comments:normalizeCommentKeys(comments)};}
 function migrateV6(d){
-  const now=nowISO();
+  // v6 records carry no per-entity updatedAt. Unknown ages stamp as the EPOCH, not now():
+  // a now() stamp lets stale local seeds beat freshly published remote data in
+  // mergeByUpdatedAt (resurrecting deleted preview paths). User-added items with unique
+  // ids survive the merge regardless of timestamp, so nothing real is lost.
+  const EPOCH="1970-01-01T00:00:00.000Z";
   const rawPosts=Array.isArray(d)?d:(d.posts||[]), rawInv=d.customInventory||[];
-  return {version:7,updatedAt:d.exportedAt||now,config:{cadence:"Mon/Wed/Fri + event specials",timezone:"America/Los_Angeles",themes:Object.fromEntries(Object.entries(THEME).map(([k,v])=>[k,{color:v.color,label:v.label}]))},markers:Object.fromEntries(Object.entries(MARKERS).map(([date,value])=>[date,Array.isArray(value)?value.map(markerToData):markerToData(value)])),posts:rawPosts.map(p=>appToDataItem({...p,updatedAt:p.updatedAt||d.exportedAt||now},"post")),inventory:rawInv.map(it=>appToDataItem({...it,updatedAt:it.updatedAt||d.exportedAt||now},"inventory")),comments:normalizeCommentKeys(d.comments||comments||{})};
+  return {version:7,updatedAt:d.exportedAt||EPOCH,config:{cadence:"Mon/Wed/Fri + event specials",timezone:"America/Los_Angeles",themes:Object.fromEntries(Object.entries(THEME).map(([k,v])=>[k,{color:v.color,label:v.label}]))},markers:Object.fromEntries(Object.entries(MARKERS).map(([date,value])=>[date,Array.isArray(value)?value.map(markerToData):markerToData(value)])),posts:rawPosts.map(p=>appToDataItem({...p,updatedAt:p.updatedAt||EPOCH},"post")),inventory:rawInv.map(it=>appToDataItem({...it,updatedAt:it.updatedAt||EPOCH},"inventory")),comments:normalizeCommentKeys(d.comments||comments||{})};
 }
 function normalizeCommentKeys(input){const out={};Object.entries(input||{}).forEach(([key,list])=>{const k=key.startsWith("inv-inv-")?key.slice(4):key;out[k]=Array.isArray(list)?list:[];});return out;}
 function buildPayload(){cleanupComments();return stateToData();}

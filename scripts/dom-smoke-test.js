@@ -144,7 +144,12 @@ async function settle(predicate) {
   assert(JSON.stringify(round.comments) === before.comments, "comments changed across export/import round-trip");
 
   // Regression for finding #3: a v6 localStorage user's custom inventory + comments must survive first load.
-  localStorageData.set("opendoor_calendar_v2", JSON.stringify([{ id: "v6-post", title: "V6 Local Post", date: "2026-07-20", theme: "brand", status: "scheduled", fmt: "Static · 3:4", caption: "", img: "previews/busy-month.png", updatedAt: "2026-07-01T00:00:00.000Z" }]));
+  // The second post is a stale copy of a REMOTE seed with NO updatedAt (the true v6 shape):
+  // the remote version must win the merge, or dead preview paths resurrect (epoch-stamp bug).
+  localStorageData.set("opendoor_calendar_v2", JSON.stringify([
+    { id: "v6-post", title: "V6 Local Post", date: "2026-07-20", theme: "brand", status: "scheduled", fmt: "Static · 3:4", caption: "", img: "previews/busy-month.png", updatedAt: "2026-07-01T00:00:00.000Z" },
+    { id: data.posts[0].id, title: "Stale Seed Copy", date: data.posts[0].date, theme: "meme", fmt: "Static · 3:4", caption: "", img: "previews/deleted-legacy.png" }
+  ]));
   localStorageData.set("opendoor_inv_custom_v1", JSON.stringify([{ id: "v6-inv", title: "V6 Custom Inventory", theme: "brand", status: "ready", fmt: "Static · 4:5", caption: "", img: "previews/busy-month.png", updatedAt: "2026-07-01T00:00:00.000Z" }]));
   localStorageData.set("opendoor_comments_v1", JSON.stringify({ "v6-inv": [{ id: "c-v6", author: "Legacy", text: "legacy note on a custom item", ts: 1730000000000 }] }));
   await context.loadInitialData();
@@ -155,6 +160,9 @@ async function settle(predicate) {
   assert(invAfter.some(it => it.id === data.inventory[0].id), "remote inventory was lost merging local custom inventory");
   assert(postsAfter.some(p => p.id === "v6-post"), "v6 local post was lost on load");
   assert(postsAfter.some(p => p.id === data.posts[0].id), "remote posts were lost on load");
+  const seedAfter = postsAfter.find(p => p.id === data.posts[0].id);
+  assert(seedAfter.title !== "Stale Seed Copy" && seedAfter.img === (data.posts[0].media && data.posts[0].media.img || data.posts[0].img),
+    "stale unstamped v6 seed copy beat the remote record in the merge");
   assert(commentsAfter["v6-inv"] && commentsAfter["v6-inv"].length === 1, "v6 comment on a custom item was lost on load");
 
   console.log("DOM smoke test passed");

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-03T00:39:04.476Z",
+  "updatedAt": "2026-07-06T19:44:16.893Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -338,7 +338,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-1",
@@ -357,7 +357,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-2",
@@ -376,7 +376,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-3",
@@ -395,7 +395,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-4",
@@ -414,7 +414,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-5",
@@ -433,7 +433,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-6",
@@ -452,7 +452,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-7",
@@ -479,7 +479,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-8",
@@ -498,7 +498,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-9",
@@ -517,7 +517,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-10",
@@ -536,7 +536,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-11",
@@ -555,7 +555,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-12",
@@ -582,7 +582,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-13",
@@ -601,7 +601,7 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/crest_circular_ring_take1-ae33672a49.mp4"
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-14",
@@ -633,7 +633,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-15",
@@ -660,7 +660,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-16",
@@ -684,7 +684,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-17",
@@ -703,7 +703,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-18",
@@ -722,7 +722,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-19",
@@ -741,7 +741,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-20",
@@ -760,7 +760,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-21",
@@ -779,7 +779,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-22",
@@ -798,7 +798,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "seed-23",
@@ -817,7 +817,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     }
   ],
   "inventory": [
@@ -840,7 +840,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-make-it-better-chatgpt-for-sale-sign",
@@ -858,7 +858,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-tired-too-sis-27-showings-alternate",
@@ -876,7 +876,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-doctor-s-rx-handwritten-scribble",
@@ -894,7 +894,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-what-you-re-doing-variant-2",
@@ -912,7 +912,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-what-you-re-doing-variant-3",
@@ -930,7 +930,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-opendoor-in-the-clouds-city-skylines",
@@ -952,7 +952,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-opendoor-in-the-clouds-plain-template",
@@ -974,7 +974,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-the-showing-paper-collage-narrative",
@@ -992,7 +992,7 @@
         "video": "~/opendoor/finals/the-showing/the_showing_papercollage_v3_VO.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-good-dogs-clay-stop-motion",
@@ -1010,7 +1010,7 @@
         "video": "~/opendoor/finals/good-dogs/good-dogs-clips/gooddogs_15s_scored.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-cash-now-more-later-ui-motion",
@@ -1028,7 +1028,7 @@
         "video": "~/opendoor/finals/cashnow/opendoor_cashnow_final_vertical.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-my-friend-vs-me-comparison",
@@ -1046,7 +1046,7 @@
         "video": "~/opendoor/finals/friend-vs-me/opendoor_vs_guys.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-pov-phone-walk-app-demo",
@@ -1064,7 +1064,7 @@
         "video": "~/opendoor/finals/phone-walk/opendoor_phone_walk.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-whiteboard-teach-comparison-ugc",
@@ -1082,7 +1082,7 @@
         "video": "~/opendoor/finals/whiteboard/opendoor_whiteboard_teach_v5.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-the-other-door-unaware-ad",
@@ -1100,7 +1100,7 @@
         "video": "~/opendoor/finals/unaware/opendoor_unaware_captioned.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-review-wall-social-proof",
@@ -1118,7 +1118,7 @@
         "video": "~/opendoor/finals/review-wall/seller_reviewwall_30s_v1.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-skip-to-sold-panorama-fly-through",
@@ -1136,7 +1136,7 @@
         "video": "~/opendoor/finals/sold/opendoor_sold_flythrough.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-kicks-to-offer-giant-phone-in-a-field",
@@ -1154,7 +1154,7 @@
         "video": "~/opendoor/finals/kicks-offer/opendoor_kicks_offer_picturelock.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-offer-confidence-slate-pixar-spots",
@@ -1172,7 +1172,7 @@
         "video": "~/opendoor/finals/offer-confidence/offer-confidence-previews/phoenix-jennifer_preview.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-green-guy-reaction-greenscreen-stitch",
@@ -1190,7 +1190,7 @@
         "video": "~/opendoor/finals/greenguy/opendoor_greenguy_reaction.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-ugc-talking-head-spots",
@@ -1208,7 +1208,7 @@
         "video": "~/opendoor/finals/ugc-spots/opendoor_ugc_FINAL_notext.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-skip-to-sold-copy-machine-reveal",
@@ -1226,7 +1226,7 @@
         "video": ""
       },
       "localOnly": false,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-seasons-split-dallas-ranch",
@@ -1244,7 +1244,7 @@
         "video": "~/opendoor/finals/seasons-split-dallas/seasons_dallas.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-what-s-it-worth-tofu-curiosity-spot",
@@ -1262,7 +1262,7 @@
         "video": "~/opendoor/projects/whats-it-worth/output/worth_preview.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-the-situation-inherited-home",
@@ -1280,7 +1280,7 @@
         "video": "~/opendoor/projects/the-situation-inherited/output/inherited_preview.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-jennifer-chen-the-overlap-both",
@@ -1298,7 +1298,7 @@
         "video": "~/opendoor/finals/jennifer-both/pixar-both-clips/jennifer_both_pixar_FINAL_silent.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-dream-home-mug-steam-reveal",
@@ -1316,7 +1316,7 @@
         "video": "~/opendoor/finals/dream-home-mug/dream_home_mug_omniflash_v2_steam.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-move-in-found-footage",
@@ -1334,7 +1334,7 @@
         "video": "~/opendoor/finals/movein-homevideo/movein_natural_foundfootage_v2.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     },
     {
       "id": "inv-jersey-crest-reveal-alternate-styles",
@@ -1352,7 +1352,7 @@
         "video": "~/opendoor/projects/jersey-patch-embroidery/omni_out/crest_modern_minimal_take1.mp4"
       },
       "localOnly": true,
-      "updatedAt": "2026-07-03T00:23:46.865Z"
+      "updatedAt": "2026-07-06T19:44:16.893Z"
     }
   ],
   "comments": {}

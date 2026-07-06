@@ -174,6 +174,9 @@ async function authorizeInteractive(config, { log = () => {}, scopes = SCOPES, f
   const port = server.address().port;
   const redirectUri = `http://127.0.0.1:${port}/callback`;
   const authUrl = buildAuthorizeUrl({ clientId: config.clientId, redirectUri, codeChallenge, state, scopes });
+  // Print + open BEFORE awaiting the callback — awaiting first deadlocks until timeout.
+  log(`Opening your browser to authorize Canva access (scopes: ${scopes.join(", ")}).\nIf it does not open, paste this into a browser:\n${authUrl}`);
+  openBrowser(authUrl);
   const code = await new Promise((resolve, reject) => {
     const timer = setTimeout(() => { server.close(); reject(new CanvaAuthError("timed out waiting for Canva authorization (5 min)")); }, timeoutMs);
     server.on("request", (req, res) => {
@@ -189,8 +192,6 @@ async function authorizeInteractive(config, { log = () => {}, scopes = SCOPES, f
       resolve(got);
     });
   });
-  log(`Opening your browser to authorize Canva access (scopes: ${scopes.join(", ")}).\nIf it does not open, paste this into a browser:\n${authUrl}`);
-  openBrowser(authUrl);
   return exchangeCode(config, { code, codeVerifier: verifier, redirectUri }, fetchImpl);
 }
 

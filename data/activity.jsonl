@@ -16,3 +16,5 @@
 {"ts":"2026-07-07T08:52:49.609Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"optimize preview images","posts":25,"inventory":33}}
 {"ts":"2026-07-07T09:23:56.880Z","actor":"morganbrown","action":"set","id":"p-mradljgl5ey","title":"Seasons Split — Don't Wait for Spring (Dallas)","detail":{"fields":["media.video","caption"]}}
 {"ts":"2026-07-07T09:23:57.043Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Seasons-split Dallas: blue-field end card (v3)","posts":25,"inventory":33}}
+{"ts":"2026-07-07T13:33:07.885Z","actor":"morganbrown","action":"add","id":"p-mraovrl03wc","title":"Sold In Days — blur-frame timeline carousel","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-07T13:33:07.996Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add: Sold In Days blur-frame carousel","posts":25,"inventory":34}}

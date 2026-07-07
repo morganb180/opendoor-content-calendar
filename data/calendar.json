@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T09:23:56.880Z",
+  "updatedAt": "2026-07-07T13:33:07.885Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1466,6 +1466,29 @@
         "video": ""
       },
       "updatedAt": "2026-07-07T08:52:18.300Z"
+    },
+    {
+      "id": "p-mraovrl03wc",
+      "status": "ready",
+      "title": "Sold In Days — blur-frame timeline carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4 · 6 slides",
+      "caption": "Selling on your own: DAY 1 hopeful, MONTH 3 still signing paperwork. Or skip to SOLD. Opendoor buys your house in days.",
+      "socialCaption": "",
+      "canva": "DAHOteWPuNM",
+      "media": {
+        "img": "previews/slide1.jpg",
+        "slides": [
+          "previews/slides/p-mraovrl03wc/slide1.jpg",
+          "previews/slides/p-mraovrl03wc/slide2.jpg",
+          "previews/slides/p-mraovrl03wc/slide3.jpg",
+          "previews/slides/p-mraovrl03wc/slide4.jpg",
+          "previews/slides/p-mraovrl03wc/slide5.jpg",
+          "previews/slides/p-mraovrl03wc/slide6.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-07T13:33:07.884Z"
     }
   ],
   "comments": {}

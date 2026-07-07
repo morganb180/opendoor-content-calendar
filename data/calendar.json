@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T14:06:25.578Z",
+  "updatedAt": "2026-07-07T15:16:15.547Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -835,6 +835,25 @@
       },
       "updatedAt": "2026-07-07T09:23:56.879Z",
       "date": "2026-08-31",
+      "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mraske2i4w5",
+      "status": "scheduled",
+      "title": "Seasons Split — Strike While It's Hot (Charlotte)",
+      "theme": "seasonal",
+      "fmt": "Video · 9:16",
+      "caption": "Beat-locked seasons-mask reel #2: a Charlotte brick ranch strobes from drab early spring into peak summer (crepe myrtle bloom + sprinkler) in 97 accelerating cuts. Canva library asset VAHOtx8VyeI. Finals: ~/opendoor/finals/seasons-split-charlotte",
+      "socialCaption": "Strike while it's hot. ☀️",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/seasons_charlotte_beat-295af2b1b0.mp4"
+      },
+      "updatedAt": "2026-07-07T15:16:15.546Z",
+      "date": "2026-07-16",
       "holiday": "",
       "postedUrl": ""
     }

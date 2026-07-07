@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T08:52:18.302Z",
+  "updatedAt": "2026-07-07T08:52:49.398Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1434,11 +1434,11 @@
           "previews/slides/p-mracgegl2a4/slide_02.png",
           "previews/slides/p-mracgegl2a4/slide_03.png",
           "previews/slides/p-mracgegl2a4/slide_04.png",
-          "previews/slides/p-mracgegl2a4/slide_05.png",
-          "previews/slides/p-mracgegl2a4/slide_06.png",
-          "previews/slides/p-mracgegl2a4/slide_07.png",
-          "previews/slides/p-mracgegl2a4/slide_08.png",
-          "previews/slides/p-mracgegl2a4/slide_09.png"
+          "previews/slides/p-mracgegl2a4/slide_05.jpg",
+          "previews/slides/p-mracgegl2a4/slide_06.jpg",
+          "previews/slides/p-mracgegl2a4/slide_07.jpg",
+          "previews/slides/p-mracgegl2a4/slide_08.jpg",
+          "previews/slides/p-mracgegl2a4/slide_09.jpg"
         ],
         "video": ""
       },
@@ -1456,12 +1456,12 @@
       "media": {
         "img": "previews/contact.jpg",
         "slides": [
-          "previews/slides/p-mraeulg515n/slide_1.png",
-          "previews/slides/p-mraeulg515n/slide_2.png",
-          "previews/slides/p-mraeulg515n/slide_3.png",
-          "previews/slides/p-mraeulg515n/slide_4.png",
-          "previews/slides/p-mraeulg515n/slide_5.png",
-          "previews/slides/p-mraeulg515n/slide_6.png"
+          "previews/slides/p-mraeulg515n/slide_1.jpg",
+          "previews/slides/p-mraeulg515n/slide_2.jpg",
+          "previews/slides/p-mraeulg515n/slide_3.jpg",
+          "previews/slides/p-mraeulg515n/slide_4.jpg",
+          "previews/slides/p-mraeulg515n/slide_5.jpg",
+          "previews/slides/p-mraeulg515n/slide_6.jpg"
         ],
         "video": ""
       },

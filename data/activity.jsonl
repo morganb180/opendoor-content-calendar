@@ -14,3 +14,5 @@
 {"ts":"2026-07-07T08:52:18.304Z","actor":"morganbrown","action":"add","id":"p-mraeulg515n","title":"I'm This Close — pinch zoom carousel","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-07T08:52:18.758Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"add: I'm This Close pinch-zoom carousel","posts":25,"inventory":33}}
 {"ts":"2026-07-07T08:52:49.609Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"optimize preview images","posts":25,"inventory":33}}
+{"ts":"2026-07-07T09:23:56.880Z","actor":"morganbrown","action":"set","id":"p-mradljgl5ey","title":"Seasons Split — Don't Wait for Spring (Dallas)","detail":{"fields":["media.video","caption"]}}
+{"ts":"2026-07-07T09:23:57.043Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Seasons-split Dallas: blue-field end card (v3)","posts":25,"inventory":33}}

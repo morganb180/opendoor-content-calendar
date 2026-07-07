@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-06T22:55:39.211Z",
+  "updatedAt": "2026-07-07T00:08:48.546Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1374,6 +1374,30 @@
         "video": ""
       },
       "updatedAt": "2026-07-06T22:55:39.210Z"
+    },
+    {
+      "id": "p-mr9w5ehl3po",
+      "status": "ready",
+      "title": "Office Water Cooler",
+      "theme": "meme",
+      "fmt": "Static · 3:4 · 7 versions",
+      "caption": "Fake Slack screenshot set: coworkers discover someone sold their house with Opendoor. 3 polished 1:1s, 2 conversational 1:1s, 2 group channels.",
+      "socialCaption": "",
+      "canva": "DAHOqNHenFM",
+      "media": {
+        "img": "previews/slides/p-mr9w5ehl3po/water-cooler-v1.png",
+        "slides": [
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v1.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v2.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v3.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v4.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v5.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v6.png",
+          "previews/slides/p-mr9w5ehl3po/water-cooler-v7.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-07T00:08:48.545Z"
     }
   ],
   "comments": {}

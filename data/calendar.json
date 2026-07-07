@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T08:46:43.751Z",
+  "updatedAt": "2026-07-07T08:52:18.302Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1443,6 +1443,29 @@
         "video": ""
       },
       "updatedAt": "2026-07-07T07:45:16.424Z"
+    },
+    {
+      "id": "p-mraeulg515n",
+      "status": "ready",
+      "title": "I'm This Close — pinch zoom carousel",
+      "theme": "meme",
+      "fmt": "Carousel · 3:4",
+      "caption": "I'm this close to selling my house to Opendoor. Pinch-zoom reveal carousel, 6 slides: gesture gag then MINUTES / ZERO / DAYS payoff.",
+      "socialCaption": "",
+      "canva": "DAHOsO0n3ws",
+      "media": {
+        "img": "previews/contact.jpg",
+        "slides": [
+          "previews/slides/p-mraeulg515n/slide_1.png",
+          "previews/slides/p-mraeulg515n/slide_2.png",
+          "previews/slides/p-mraeulg515n/slide_3.png",
+          "previews/slides/p-mraeulg515n/slide_4.png",
+          "previews/slides/p-mraeulg515n/slide_5.png",
+          "previews/slides/p-mraeulg515n/slide_6.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-07T08:52:18.300Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T07:45:16.425Z",
+  "updatedAt": "2026-07-07T08:17:14.956Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -818,6 +818,25 @@
       },
       "postedUrl": "",
       "updatedAt": "2026-07-06T19:44:16.893Z"
+    },
+    {
+      "id": "p-mradljgl5ey",
+      "status": "scheduled",
+      "title": "Seasons Split — Don't Wait for Spring (Dallas)",
+      "theme": "seasonal",
+      "fmt": "Video · 9:16",
+      "caption": "Beat-locked seasons-mask reel: a typical $650k Dallas ranch flips summer to fall in 97 accelerating cuts. Canva library asset VAHOsFozvtk. Finals: ~/opendoor/finals/seasons-split-dallas",
+      "socialCaption": "Don't wait for spring. 🍂",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/seasons_dallas_beat-d5ef96f797.mp4"
+      },
+      "updatedAt": "2026-07-07T08:17:14.949Z",
+      "date": "2026-08-31",
+      "holiday": "",
+      "postedUrl": ""
     }
   ],
   "inventory": [

@@ -9,3 +9,5 @@
 {"ts":"2026-07-07T07:45:16.750Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Summer Reveal Carousel","posts":24,"inventory":32}}
 {"ts":"2026-07-07T08:17:14.956Z","actor":"morganbrown","action":"add","id":"p-mradljgl5ey","title":"Seasons Split — Don't Wait for Spring (Dallas)","detail":{"date":"2026-08-31","inventory":false}}
 {"ts":"2026-07-07T08:17:15.386Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add seasons-split Dallas reel (Aug 31)","posts":25,"inventory":32}}
+{"ts":"2026-07-07T08:46:43.753Z","actor":"morganbrown","action":"set","id":"p-mradljgl5ey","title":"Seasons Split — Don't Wait for Spring (Dallas)","detail":{"fields":["media.video","caption"]}}
+{"ts":"2026-07-07T08:46:43.908Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Seasons-split Dallas: v2 end-card typography","posts":25,"inventory":32}}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T13:33:07.885Z",
+  "updatedAt": "2026-07-07T14:06:25.578Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1489,6 +1489,25 @@
         "video": ""
       },
       "updatedAt": "2026-07-07T13:33:07.884Z"
+    },
+    {
+      "id": "p-mraq2l2e48s",
+      "status": "ready",
+      "title": "Connect the Dots — SOLD IN DAYS",
+      "theme": "meme",
+      "fmt": "Carousel · 3:4",
+      "caption": "Connect the dots. It spells out how this ends: SOLD IN DAYS.",
+      "socialCaption": "",
+      "canva": "DAHOtpJLoLM",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/slide2-12cf350534.png",
+        "slides": [
+          "previews/slides/p-mraq2l2e48s/slide1.png",
+          "previews/slides/p-mraq2l2e48s/slide2.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-07T14:06:25.577Z"
     }
   ],
   "comments": {}

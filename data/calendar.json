@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-07T00:08:48.546Z",
+  "updatedAt": "2026-07-07T07:45:16.425Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1398,6 +1398,32 @@
         "video": ""
       },
       "updatedAt": "2026-07-07T00:08:48.545Z"
+    },
+    {
+      "id": "p-mracgegl2a4",
+      "status": "ready",
+      "title": "Summer Reveal Carousel",
+      "theme": "seasonal",
+      "fmt": "Carousel · 3:4 · 9 slides",
+      "caption": "9-slide progressive-reveal: golden-hour home uncovered tile by tile; SELLING YOUR HOME / DOESN'T HAVE TO / MEAN SKIPPING SUMMER, final word in Opendoor blue. Assets uploaded to Canva individually (Summer Reveal Carousel 01-09).",
+      "socialCaption": "Selling your home doesn't have to mean skipping summer. Get a cash offer from Opendoor, pick your close date, and stay for every last golden hour. ☀️ #Opendoor #SellYourHome #SummerVibes #RealEstate #MovingDay",
+      "canva": "",
+      "media": {
+        "img": "previews/slides/p-mracgegl2a4/slide_01.png",
+        "slides": [
+          "previews/slides/p-mracgegl2a4/slide_01.png",
+          "previews/slides/p-mracgegl2a4/slide_02.png",
+          "previews/slides/p-mracgegl2a4/slide_03.png",
+          "previews/slides/p-mracgegl2a4/slide_04.png",
+          "previews/slides/p-mracgegl2a4/slide_05.png",
+          "previews/slides/p-mracgegl2a4/slide_06.png",
+          "previews/slides/p-mracgegl2a4/slide_07.png",
+          "previews/slides/p-mracgegl2a4/slide_08.png",
+          "previews/slides/p-mracgegl2a4/slide_09.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-07T07:45:16.424Z"
     }
   ],
   "comments": {}

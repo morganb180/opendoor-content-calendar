@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T06:46:54.242Z",
+  "updatedAt": "2026-07-09T07:42:43.699Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1559,6 +1559,29 @@
         "video": ""
       },
       "updatedAt": "2026-07-09T06:46:54.240Z"
+    },
+    {
+      "id": "p-mrd78u3xu5",
+      "status": "ready",
+      "title": "Dreaming of Houses — art styles carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4",
+      "caption": "A shared folder of dream homes: kid crayon, watercolor, art deco, blueprint, oil, cross-stitch and more. CTA: Get your offer.",
+      "socialCaption": "",
+      "canva": "DAHO3x6y4lk",
+      "media": {
+        "img": "previews/01_opener.png",
+        "slides": [
+          "previews/slides/p-mrd78u3xu5/01_opener.png",
+          "previews/slides/p-mrd78u3xu5/02_preview.png",
+          "previews/slides/p-mrd78u3xu5/03_featured.png",
+          "previews/slides/p-mrd78u3xu5/04_ruth.png",
+          "previews/slides/p-mrd78u3xu5/05_dana.png",
+          "previews/slides/p-mrd78u3xu5/06_closer.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T07:42:43.697Z"
     }
   ],
   "comments": {}

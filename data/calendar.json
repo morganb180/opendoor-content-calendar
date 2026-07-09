@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-08T11:07:14.737Z",
+  "updatedAt": "2026-07-09T06:46:54.242Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1543,6 +1543,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-08T11:07:14.736Z"
+    },
+    {
+      "id": "p-mrd5925c7db",
+      "status": "ready",
+      "title": "Sell Without … — Skip Straight to Sold (Google search)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Sell without stress. Skip straight to sold.",
+      "socialCaption": "",
+      "canva": "DAHO3gJKfAQ",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/sell_without_google-fa23900e5c.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T06:46:54.240Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T07:42:43.699Z",
+  "updatedAt": "2026-07-09T07:43:04.533Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1573,11 +1573,11 @@
         "img": "previews/01_opener.png",
         "slides": [
           "previews/slides/p-mrd78u3xu5/01_opener.png",
-          "previews/slides/p-mrd78u3xu5/02_preview.png",
-          "previews/slides/p-mrd78u3xu5/03_featured.png",
-          "previews/slides/p-mrd78u3xu5/04_ruth.png",
-          "previews/slides/p-mrd78u3xu5/05_dana.png",
-          "previews/slides/p-mrd78u3xu5/06_closer.png"
+          "previews/slides/p-mrd78u3xu5/02_preview.jpg",
+          "previews/slides/p-mrd78u3xu5/03_featured.jpg",
+          "previews/slides/p-mrd78u3xu5/04_ruth.jpg",
+          "previews/slides/p-mrd78u3xu5/05_dana.jpg",
+          "previews/slides/p-mrd78u3xu5/06_closer.jpg"
         ],
         "video": ""
       },

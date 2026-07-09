@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T07:43:04.533Z",
+  "updatedAt": "2026-07-09T08:01:48.467Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1582,6 +1582,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-09T07:42:43.697Z"
+    },
+    {
+      "id": "p-mrd7xdu7oz",
+      "status": "ready",
+      "title": "99 problems, 1 solution — emoji static",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "99 problems. 1 solution. Selling the old way vs one cash offer from Opendoor.",
+      "socialCaption": "",
+      "canva": "DAHO4Gu4wLI",
+      "media": {
+        "img": "previews/emoji_99_problems_1080x1440.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T08:01:48.466Z"
     }
   ],
   "comments": {}

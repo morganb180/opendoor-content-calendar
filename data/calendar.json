@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T08:01:48.467Z",
+  "updatedAt": "2026-07-09T14:09:30.260Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1598,6 +1598,134 @@
         "video": ""
       },
       "updatedAt": "2026-07-09T08:01:48.466Z"
+    },
+    {
+      "id": "p-mrdl28k073e",
+      "status": "ready",
+      "title": "Notes Ad — you just stopped scrolling (static)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHO5gQh1Wk",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-stopped-scrolling-5d397149d8.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T14:09:29.808Z"
+    },
+    {
+      "id": "p-mrdl28m6647",
+      "status": "ready",
+      "title": "Notes Ad — things i won't miss (static)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHO5u2QJVo",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-wont-miss-0695727908.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T14:09:29.888Z"
+    },
+    {
+      "id": "p-mrdl28o82vy",
+      "status": "ready",
+      "title": "Notes Ad — note to self (static)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHO5ussCFA",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-note-to-self-1a11e956ad.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T14:09:29.960Z"
+    },
+    {
+      "id": "p-mrdl28pt3um",
+      "status": "ready",
+      "title": "Notes Ad — we sold the house today (static)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHO5po7_K8",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-sold-today-497605ec01.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T14:09:30.017Z"
+    },
+    {
+      "id": "p-mrdl28ru149",
+      "status": "ready",
+      "title": "Notes Ad — you just stopped scrolling (video)",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-stopped-scrolling-5d397149d8.png",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/video-stopped-scrolling-9523538184.mp4"
+      },
+      "updatedAt": "2026-07-09T14:09:30.090Z"
+    },
+    {
+      "id": "p-mrdl28t71n4",
+      "status": "ready",
+      "title": "Notes Ad — things i won't miss (video)",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-wont-miss-0695727908.png",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/video-wont-miss-7f931c4005.mp4"
+      },
+      "updatedAt": "2026-07-09T14:09:30.139Z"
+    },
+    {
+      "id": "p-mrdl28ul1qc",
+      "status": "ready",
+      "title": "Notes Ad — note to self (video)",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-note-to-self-1a11e956ad.png",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/video-note-to-self-cfa817da55.mp4"
+      },
+      "updatedAt": "2026-07-09T14:09:30.189Z"
+    },
+    {
+      "id": "p-mrdl28wi594",
+      "status": "ready",
+      "title": "Notes Ad — we sold the house today (video)",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/static-sold-today-497605ec01.png",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/video-sold-today-7cb8fc04a3.mp4"
+      },
+      "updatedAt": "2026-07-09T14:09:30.258Z"
     }
   ],
   "comments": {}

@@ -31,3 +31,12 @@
 {"ts":"2026-07-09T07:43:04.626Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"optimize slide previews","posts":26,"inventory":38}}
 {"ts":"2026-07-09T08:01:48.467Z","actor":"morganbrown","action":"add","id":"p-mrd7xdu7oz","title":"99 problems, 1 solution — emoji static","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-09T08:01:48.561Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"99 problems, 1 solution — emoji static","posts":26,"inventory":39}}
+{"ts":"2026-07-09T14:09:29.812Z","actor":"morganbrown","action":"add","id":"p-mrdl28k073e","title":"Notes Ad — you just stopped scrolling (static)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:29.892Z","actor":"morganbrown","action":"add","id":"p-mrdl28m6647","title":"Notes Ad — things i won't miss (static)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:29.963Z","actor":"morganbrown","action":"add","id":"p-mrdl28o82vy","title":"Notes Ad — note to self (static)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:30.042Z","actor":"morganbrown","action":"add","id":"p-mrdl28pt3um","title":"Notes Ad — we sold the house today (static)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:30.093Z","actor":"morganbrown","action":"add","id":"p-mrdl28ru149","title":"Notes Ad — you just stopped scrolling (video)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:30.141Z","actor":"morganbrown","action":"add","id":"p-mrdl28t71n4","title":"Notes Ad — things i won't miss (video)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:30.193Z","actor":"morganbrown","action":"add","id":"p-mrdl28ul1qc","title":"Notes Ad — note to self (video)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:30.261Z","actor":"morganbrown","action":"add","id":"p-mrdl28wi594","title":"Notes Ad — we sold the house today (video)","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-09T14:09:43.030Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Notes Ads x4 (Apple Notes format): statics + videos to inventory","posts":26,"inventory":47}}

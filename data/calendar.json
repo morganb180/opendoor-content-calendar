@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T14:09:30.260Z",
+  "updatedAt": "2026-07-09T23:19:22.450Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1726,6 +1726,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/video-sold-today-7cb8fc04a3.mp4"
       },
       "updatedAt": "2026-07-09T14:09:30.258Z"
+    },
+    {
+      "id": "p-mre4pdu633r",
+      "status": "ready",
+      "title": "Beach Sold — selling your home from the beach?",
+      "theme": "meme",
+      "fmt": "static 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHO76jayAE",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/beach_sold_1080x1440-0ded9bab90.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-09T23:19:22.446Z"
     }
   ],
   "comments": {}

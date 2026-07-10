@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-10T08:17:15.055Z",
+  "updatedAt": "2026-07-10T09:20:31.127Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1774,6 +1774,30 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/circle_v2-644664957a.mp4"
       },
       "updatedAt": "2026-07-10T08:17:15.054Z"
+    },
+    {
+      "id": "p-mreq6g7018g",
+      "status": "ready",
+      "title": "Selling Your House — New Yorker Cartoon Carousel",
+      "theme": "meme",
+      "fmt": "Carousel · 7 slides",
+      "caption": "Ironic observations on selling your house, drawn as classic single-panel cartoons. Ends on: sell your house without becoming a cartoon.",
+      "socialCaption": "",
+      "canva": "DAHO-Z_HWI8",
+      "media": {
+        "img": "previews/01_staging.png",
+        "slides": [
+          "previews/slides/p-mreq6g7018g/01_staging.png",
+          "previews/slides/p-mreq6g7018g/02_showing-exile.png",
+          "previews/slides/p-mreq6g7018g/03_wide-angle.png",
+          "previews/slides/p-mreq6g7018g/04_open-house.png",
+          "previews/slides/p-mreq6g7018g/05_backout.png",
+          "previews/slides/p-mreq6g7018g/06_inspection.png",
+          "previews/slides/p-mreq6g7018g/07_endcard.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-10T09:20:31.126Z"
     }
   ],
   "comments": {}

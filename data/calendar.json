@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-10T09:20:31.127Z",
+  "updatedAt": "2026-07-10T12:20:33.307Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1798,6 +1798,38 @@
         "video": ""
       },
       "updatedAt": "2026-07-10T09:20:31.126Z"
+    },
+    {
+      "id": "p-mrewlxsy68k",
+      "status": "ready",
+      "title": "Sold on Mars — Opendoor 2045",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Are they gonna start buying homes on the Moon and Mars too? Earth: today. Mars: 2045.",
+      "socialCaption": "",
+      "canva": "DAHO_NEmT3w",
+      "media": {
+        "img": "previews/mars_final_v5.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-10T12:20:31.201Z"
+    },
+    {
+      "id": "p-mrewly1n1qv",
+      "status": "ready",
+      "title": "Sold on the Moon — Opendoor 2040",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Are they gonna start buying homes on the Moon and Mars too? Earth: today. Moon: 2040.",
+      "socialCaption": "",
+      "canva": "DAHO_D_lh_Y",
+      "media": {
+        "img": "previews/moon_final_v5.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-10T12:20:31.532Z"
     }
   ],
   "comments": {}

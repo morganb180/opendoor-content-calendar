@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-09T23:19:22.450Z",
+  "updatedAt": "2026-07-10T08:17:15.055Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1742,6 +1742,38 @@
         "video": ""
       },
       "updatedAt": "2026-07-09T23:19:22.446Z"
+    },
+    {
+      "id": "p-mrenx3ij5bw",
+      "status": "ready",
+      "title": "Circle effect: What kind of home do you love?",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Pause-the-video engagement game, 9 home styles, jumping hand-drawn circle",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/circle_v1_poster.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/circle_v1-bcbedb5dbf.mp4"
+      },
+      "updatedAt": "2026-07-10T08:17:15.019Z"
+    },
+    {
+      "id": "p-mrenx3jh3am",
+      "status": "ready",
+      "title": "Circle effect: Time you saved selling to Opendoor",
+      "theme": "seasonal",
+      "fmt": "Video · 9:16",
+      "caption": "Pause-the-video engagement game, 9 summer activities, ties to Opendoor time-saved message",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/circle_v2_poster.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/circle_v2-644664957a.mp4"
+      },
+      "updatedAt": "2026-07-10T08:17:15.054Z"
     }
   ],
   "comments": {}

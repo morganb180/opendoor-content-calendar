@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-10T12:20:33.307Z",
+  "updatedAt": "2026-07-11T07:40:35.210Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1830,6 +1830,27 @@
         "video": ""
       },
       "updatedAt": "2026-07-10T12:20:31.532Z"
+    },
+    {
+      "id": "p-mrg21sf52ey",
+      "status": "ready",
+      "title": "Manifest Offer — You will sell your house without a single showing",
+      "theme": "meme",
+      "fmt": "Carousel · 3:4 · 4 slides",
+      "caption": "Manifestation carousel: hand holding a phone with an Opendoor cash offer, 4 skin-tone slides, reskin of @skincaregem money-hand format",
+      "socialCaption": "",
+      "canva": "DAHPDygnQgU",
+      "media": {
+        "img": "previews/card2_light.png",
+        "slides": [
+          "previews/slides/p-mrg21sf52ey/card2_brown.png",
+          "previews/slides/p-mrg21sf52ey/card2_deep.png",
+          "previews/slides/p-mrg21sf52ey/card2_light.png",
+          "previews/slides/p-mrg21sf52ey/card2_tan.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-11T07:40:35.209Z"
     }
   ],
   "comments": {}

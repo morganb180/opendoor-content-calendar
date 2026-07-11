@@ -51,3 +51,5 @@
 {"ts":"2026-07-10T12:20:31.204Z","actor":"morganbrown","action":"add","id":"p-mrewlxsy68k","title":"Sold on Mars — Opendoor 2045","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-10T12:20:31.535Z","actor":"morganbrown","action":"add","id":"p-mrewly1n1qv","title":"Sold on the Moon — Opendoor 2040","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-10T12:20:33.487Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Mars + Moon sold statics","posts":26,"inventory":53}}
+{"ts":"2026-07-11T07:40:35.211Z","actor":"morganbrown","action":"add","id":"p-mrg21sf52ey","title":"Manifest Offer — You will sell your house without a single showing","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-11T07:40:35.392Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Manifest Offer carousel (4 slides)","posts":26,"inventory":54}}

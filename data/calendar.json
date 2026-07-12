@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-11T07:40:35.210Z",
+  "updatedAt": "2026-07-12T10:31:53.837Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1851,6 +1851,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-11T07:40:35.209Z"
+    },
+    {
+      "id": "p-mrhnlyi35tg",
+      "status": "ready",
+      "title": "Treadmill Fail Meme — Skip the Selling Treadmill",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "when the buyer's offer falls through / skip the selling treadmill with Opendoor",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/treadmill_fail_opendoor-56b6719061.mp4"
+      },
+      "updatedAt": "2026-07-12T10:31:53.835Z"
     }
   ],
   "comments": {}

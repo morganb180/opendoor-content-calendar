@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T07:08:03.165Z",
+  "updatedAt": "2026-07-13T08:47:07.296Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1878,11 +1878,11 @@
       "socialCaption": "",
       "canva": "",
       "media": {
-        "img": "previews/slide1.png",
+        "img": "previews/slide1.jpg",
         "slides": [
-          "previews/slides/p-mrivrmx56i3/slide1.png",
-          "previews/slides/p-mrivrmx56i3/slide2.png",
-          "previews/slides/p-mrivrmx56i3/slide3.png"
+          "previews/slides/p-mrivrmx56i3/slide1.jpg",
+          "previews/slides/p-mrivrmx56i3/slide2.jpg",
+          "previews/slides/p-mrivrmx56i3/slide3.jpg"
         ],
         "video": ""
       },

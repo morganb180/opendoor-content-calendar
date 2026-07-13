@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T15:38:45.757Z",
+  "updatedAt": "2026-07-13T20:41:51.856Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1935,6 +1935,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/egg_roll_cards_picturelock-32b5ca6267.mp4"
       },
       "updatedAt": "2026-07-13T15:38:45.756Z"
+    },
+    {
+      "id": "p-mrjou8dqwc",
+      "status": "ready",
+      "title": "Camera Roll Meme — Social Media Manager's Homes",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Our social media manager is out today so here's a screenshot of her camera roll",
+      "socialCaption": "",
+      "canva": "DAHPTMRN6l4",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/final-8685b0390b.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-13T20:41:51.855Z"
     }
   ],
   "comments": {}

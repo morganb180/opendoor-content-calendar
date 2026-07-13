@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-12T10:31:53.837Z",
+  "updatedAt": "2026-07-13T07:08:03.165Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1867,6 +1867,26 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/treadmill_fail_opendoor-56b6719061.mp4"
       },
       "updatedAt": "2026-07-12T10:31:53.835Z"
+    },
+    {
+      "id": "p-mrivrmx56i3",
+      "status": "ready",
+      "title": "Less/More Split-Frame Carousel (open houses, showings, deep cleans)",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4 · 3 slides",
+      "caption": "less open houses, more open weekends / less showings, more sunshine / less deep cleans, more deep breaths",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/slide1.png",
+        "slides": [
+          "previews/slides/p-mrivrmx56i3/slide1.png",
+          "previews/slides/p-mrivrmx56i3/slide2.png",
+          "previews/slides/p-mrivrmx56i3/slide3.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-13T07:08:03.163Z"
     }
   ],
   "comments": {}

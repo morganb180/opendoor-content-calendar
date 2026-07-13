@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T15:21:35.923Z",
+  "updatedAt": "2026-07-13T15:38:45.757Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1919,6 +1919,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-13T15:21:35.921Z"
+    },
+    {
+      "id": "p-mrje0fwc2ml",
+      "status": "ready",
+      "title": "Egg Roll Cards — Selling Simple Fast Certain",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/egg_roll_cards_picturelock-32b5ca6267.mp4"
+      },
+      "updatedAt": "2026-07-13T15:38:45.756Z"
     }
   ],
   "comments": {}

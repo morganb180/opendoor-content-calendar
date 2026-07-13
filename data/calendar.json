@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T08:47:07.296Z",
+  "updatedAt": "2026-07-13T10:58:15.706Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1887,6 +1887,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-13T07:08:03.163Z"
+    },
+    {
+      "id": "p-mrj3zpqx1sm",
+      "status": "ready",
+      "title": "Office Laptop Reveal — It's Time To Sell Your House",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 10s",
+      "caption": "Deadpan office prop gag: coworker wakes a laptop and the page says it all. Silent picture-lock; music/color in CapCut. Canva media asset: VAHPQvzUw2g",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/office_laptop_reveal_picturelock-609d1e38da.mp4"
+      },
+      "updatedAt": "2026-07-13T10:58:15.705Z"
     }
   ],
   "comments": {}

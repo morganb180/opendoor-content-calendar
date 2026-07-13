@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T10:58:15.706Z",
+  "updatedAt": "2026-07-13T15:21:35.923Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1903,6 +1903,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/office_laptop_reveal_picturelock-609d1e38da.mp4"
       },
       "updatedAt": "2026-07-13T10:58:15.705Z"
+    },
+    {
+      "id": "p-mrjded9rj",
+      "status": "ready",
+      "title": "Beach Text — Selling My House",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHPR6i5zIY",
+      "media": {
+        "img": "previews/beach_text_1080x1440.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-13T15:21:35.921Z"
     }
   ],
   "comments": {}

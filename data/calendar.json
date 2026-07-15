@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-15T06:12:56.193Z",
+  "updatedAt": "2026-07-15T06:28:50.392Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1991,6 +1991,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/tomorrow_teaser_lock-5617bc6425.mp4"
       },
       "updatedAt": "2026-07-15T06:12:56.191Z"
+    },
+    {
+      "id": "p-mrlp8xue4da",
+      "status": "ready",
+      "title": "Final Form Meme — how it feels helping people sell",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "The 'make me more excited' ChatGPT escalation meme, Opendoor sell-side: teammate helps a family sell, escalates to final spiritual form as the ultimate way to sell your home.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/final_form_picturelock-fc67bd9e4a.mp4"
+      },
+      "updatedAt": "2026-07-15T06:28:50.390Z"
     }
   ],
   "comments": {}

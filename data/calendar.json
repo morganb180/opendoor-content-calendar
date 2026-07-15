@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-15T05:49:35.279Z",
+  "updatedAt": "2026-07-15T06:12:56.193Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1975,6 +1975,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-15T05:49:35.277Z"
+    },
+    {
+      "id": "p-mrloohkv2bw",
+      "status": "ready",
+      "title": "Tomorrow Teaser — blueprint reveal",
+      "theme": "brand",
+      "fmt": "reel",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/tomorrow_teaser_lock-5617bc6425.mp4"
+      },
+      "updatedAt": "2026-07-15T06:12:56.191Z"
     }
   ],
   "comments": {}

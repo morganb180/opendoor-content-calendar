@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-15T06:28:50.392Z",
+  "updatedAt": "2026-07-15T10:27:35.241Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2007,6 +2007,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/final_form_picturelock-fc67bd9e4a.mp4"
       },
       "updatedAt": "2026-07-15T06:28:50.390Z"
+    },
+    {
+      "id": "p-mrlxryyv22d",
+      "status": "ready",
+      "title": "President Sees Opendoor (meme reel)",
+      "theme": "meme",
+      "fmt": "Reel · 9:16 · 12s",
+      "caption": "when the President sees you're selling your house to Opendoor",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/poster-b7746aacc2.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/prez_sees_opendoor_picturelock-49ad11f1a5.mp4"
+      },
+      "updatedAt": "2026-07-15T10:27:35.239Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-13T20:41:51.856Z",
+  "updatedAt": "2026-07-15T05:49:35.279Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -1951,6 +1951,30 @@
         "video": ""
       },
       "updatedAt": "2026-07-13T20:41:51.855Z"
+    },
+    {
+      "id": "p-mrlnugmc5l3",
+      "status": "ready",
+      "title": "Sell Fortunes — fortune cookie carousel",
+      "theme": "meme",
+      "fmt": "Carousel · 7 slides",
+      "caption": "there will be Opendoor in your future. 7-slide fortune-cookie carousel, one home-selling fortune per swipe.",
+      "socialCaption": "",
+      "canva": "DAHPbY_X9rw",
+      "media": {
+        "img": "previews/slide_1.jpg",
+        "slides": [
+          "previews/slides/p-mrlnugmc5l3/slide_1.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_2.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_3.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_4.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_5.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_6.jpg",
+          "previews/slides/p-mrlnugmc5l3/slide_7.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-15T05:49:35.277Z"
     }
   ],
   "comments": {}

@@ -1,8 +1,10 @@
 # Opendoor — Social Content Calendar
 
-A self-contained static content calendar for scheduling Opendoor social assets. Month grid +
-schedule list + unscheduled inventory, drag-and-drop, full-asset preview lightbox, holiday/event
-markers, and cross-machine sync via committed `data/calendar.json`.
+A self-contained static content calendar for scheduling Opendoor social assets. Month grid with an
+**Unscheduled rail** alongside it — drag a card onto a day to schedule (or tap-to-place on touch),
+drag a chip back onto the rail to unschedule — plus a schedule list, a full inventory management tab,
+a full-asset preview lightbox, holiday/event markers, and cross-machine sync via committed
+`data/calendar.json`.
 
 The app has no build step:
 
@@ -26,6 +28,34 @@ to keep casual eyes out, not for anything confidential.
   printf %s 'your-new-password' | shasum -a 256
   ```
   Commit + push. Everyone re-enters the new password on next load.
+
+## Scheduling from the rail
+
+The month grid has an **Unscheduled rail** on the right listing every ready inventory item (compact
+card: thumbnail, theme accent, title, format, ▶ VIDEO / LOCAL ONLY badges, a "new" dot for items you
+haven't seen, and any comment count). Three ways to schedule:
+
+- **Drag** a rail card onto a day cell. Drag over the ‹ / › arrows to flip months mid-drag.
+- **Tap-to-place** — click **Schedule →** on a card (or **Add to schedule →** in the lightbox /
+  inventory tab), then click the target day. A banner shows the pending item; **Esc** or **Cancel**
+  aborts. This is the primary path on touch, where HTML5 drag-and-drop isn't available.
+- Dragging a scheduled **chip back onto the rail** unschedules it (returns it to inventory).
+
+Scheduling **moves** the item out of inventory into the calendar keeping the same id (so its comments
+follow it) — matching `tools/calctl schedule` semantics. The rail header collapses to a thin tab
+(state remembered per browser); the full **Unscheduled** tab remains the place to edit, delete, and
+restore inventory. On narrow screens the rail becomes a horizontal strip above the grid.
+
+Both the rail and the Unscheduled tab split their items into **Ready to schedule** and a collapsed
+**Already on calendar** group. An inventory item lands in the latter when it matches a scheduled post
+by Canva design id, shared media (image / video / carousel slide path), or normalized title — client-side
+detection over live state, so it also catches duplicates that only exist in a browser's localStorage.
+Matched cards are de-emphasized and non-draggable: they show **On &lt;date&gt; →** (jumps the calendar to
+that month and briefly flashes the post's chip), a per-card **Archive** and a group **Archive all** that
+reversibly hide them (restore from the Unscheduled tab), and — in the tab only — **Add again →** to re-post
+a fresh copy. The **Unscheduled (N)** counts everywhere reflect only the truly-unscheduled (ready) items.
+Separately, scheduled posts with no social caption are flagged with a small **✍ / "Needs caption"** marker
+on chips, cards, and the lightbox, and totalled in a **Missing captions** header stat.
 
 ## Sync across machines
 
@@ -111,9 +141,11 @@ it on start, and `data/activity.jsonl` is an append-only audit trail of writes (
 
 Two ways to edit it:
 
-- **Through the UI** — drag, **+ Add post**, **+ Add inventory item**, edit modal. Changes persist
-  to `localStorage` immediately; use **Publish changes** to write them to `data/calendar.json` (see
-  below) and **Sync ↓** to pull another machine's changes.
+- **Through the UI** — drag a card from the **Unscheduled rail** onto a day (or **Schedule →** /
+  tap-to-place), drag a chip back to the rail to unschedule, move chips between days, **+ Add post**,
+  **+ Add inventory item**, edit modal. Changes persist to `localStorage` immediately and mark an
+  amber **unpublished-edits** dot on **Publish changes**; use **Publish changes** to write them to
+  `data/calendar.json` (see below) and **Sync ↓** to pull another machine's changes.
 - **Through `tools/calctl`** — the one-command CLI write path for registering finished assets from
   a Claude Code session. See `CLAUDE.md` and `docs/WORKFLOW.md` for the exact commands (`calctl add`,
   `calctl schedule`, `calctl deploy`, …).

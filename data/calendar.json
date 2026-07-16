@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-16T11:35:50.468Z",
+  "updatedAt": "2026-07-16T16:06:07.841Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -327,7 +327,7 @@
       "fmt": "Carousel · 2 slides",
       "holiday": "",
       "caption": "Monthly opener. Packed calendar of chores vs. a wide-open beach month with Opendoor.",
-      "socialCaption": "",
+      "socialCaption": "your whole month, gone. or your whole month, yours. 🏖️",
       "canva": "DAHN-8eHiBA",
       "media": {
         "img": "previews/busy-month.png",
@@ -338,7 +338,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.310Z"
     },
     {
       "id": "seed-1",
@@ -349,7 +349,7 @@
       "fmt": "Video · 9:16",
       "holiday": "USA · 1st knockout",
       "caption": "⚽ Always rooting for the home team — we're on your side when you make your move. (USA vs. Bosnia & Herzegovina, the US's first knockout match, Round of 32, Levi's Stadium.)",
-      "socialCaption": "",
+      "socialCaption": "knockouts start today. always rooting for the home team. ⚽",
       "canva": "DAHOFqh_g5g",
       "media": {
         "img": "previews/worldcup.png",
@@ -357,7 +357,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.340Z"
     },
     {
       "id": "seed-2",
@@ -387,7 +387,7 @@
       "fmt": "Static · 3:4",
       "holiday": "🎾 Wimbledon",
       "caption": "🎾 Grass-season brand post for Wimbledon week 1. A 3×3 grid of green front doors (middle-America mix); 'the grass is truly greener' on the other side of an Opendoor.",
-      "socialCaption": "",
+      "socialCaption": "turns out the grass really is greener over here. 🎾",
       "canva": "DAHOKZYzGc4",
       "media": {
         "img": "previews/wimbledon-doors.jpg",
@@ -395,7 +395,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.368Z"
     },
     {
       "id": "seed-4",
@@ -406,7 +406,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "Hot dogs + the 4th. Home + Opendoor. The 'go together' series, July edition.",
-      "socialCaption": "",
+      "socialCaption": "some things just belong together in july. 🇺🇸",
       "canva": "DAHN_aEi-KM",
       "media": {
         "img": "previews/go-together-july.png",
@@ -414,7 +414,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.397Z"
     },
     {
       "id": "seed-5",
@@ -425,7 +425,7 @@
       "fmt": "Video · 9:16",
       "holiday": "July 4th",
       "caption": "🎆 Independence Day hero post. Opendoor wordmark amongst the fireworks finale. (3 cuts: gold / finale / blue.)",
-      "socialCaption": "",
+      "socialCaption": "happy 4th from all of us. 🎆",
       "canva": "DAHOFu7Evxs",
       "media": {
         "img": "previews/fireworks.jpg",
@@ -433,7 +433,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.425Z"
     },
     {
       "id": "seed-6",
@@ -444,7 +444,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "iMessage meme. Relatable hook with the opendoor.com punchline.",
-      "socialCaption": "",
+      "socialCaption": "finally, a prescription we can actually read. opendoor.com",
       "canva": "DAHOClozijM",
       "media": {
         "img": "previews/doctor-rx.png",
@@ -452,7 +452,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.453Z"
     },
     {
       "id": "seed-7",
@@ -463,7 +463,7 @@
       "fmt": "Carousel · 7 slides",
       "holiday": "",
       "caption": "Calculator-meme carousel — what selling the old way really 'costs' you.",
-      "socialCaption": "",
+      "socialCaption": "we ran the numbers. they say stop waiting. opendoor.com",
       "canva": "DAHN-WGEddY",
       "media": {
         "img": "previews/calculator-carousel.jpg",
@@ -479,7 +479,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.482Z"
     },
     {
       "id": "seed-8",
@@ -490,7 +490,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "Summer weather-meme. Sunny, optimistic.",
-      "socialCaption": "",
+      "socialCaption": "today's forecast: sunny with a 100% chance of an offer. ☀️",
       "canva": "DAHOECZyDlE",
       "media": {
         "img": "previews/forecast-offer.jpg",
@@ -498,7 +498,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.510Z"
     },
     {
       "id": "seed-9",
@@ -509,7 +509,7 @@
       "fmt": "Static · 3:4",
       "holiday": "🎾 Wimbledon Final",
       "caption": "🎾 Finals-day post (Gentlemen's Singles Final). Photoreal striped-lawn backyard: 'the best seat this summer is your own Center Court.'",
-      "socialCaption": "",
+      "socialCaption": "the best seat this summer is your own backyard. 🎾",
       "canva": "DAHOKau9MAw",
       "media": {
         "img": "previews/wimbledon-centercourt.jpg",
@@ -517,7 +517,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.538Z"
     },
     {
       "id": "seed-10",
@@ -528,7 +528,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "PB&J / flag & apple pie / home & Opendoor. The evergreen anchor of the series.",
-      "socialCaption": "",
+      "socialCaption": "some things just go together. 🏠",
       "canva": "DAHN-Qf43Ko",
       "media": {
         "img": "previews/go-together-home.png",
@@ -536,7 +536,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:05:50.565Z"
     },
     {
       "id": "seed-11",
@@ -547,7 +547,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "Warm, human brand-story beat to balance the meme run.",
-      "socialCaption": "",
+      "socialCaption": "real families. real moves. real progress. this is the part we love.",
       "canva": "DAHODWLscvU",
       "media": {
         "img": "previews/real-progress-hero.jpg",
@@ -555,7 +555,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.620Z"
     },
     {
       "id": "seed-12",
@@ -566,7 +566,7 @@
       "fmt": "Carousel · 7 slides",
       "holiday": "World Cup knockouts",
       "caption": "⚽ Soccer-ref 'red card' carousel timed to the later World Cup rounds (semis Jul 14–15 → final Jul 19). 6 old-way clichés + a goal-celebration Opendoor payoff slide.",
-      "socialCaption": "",
+      "socialCaption": "red card to the old way. skip it all and just win. ⚽",
       "canva": "DAHOFdzTB74",
       "media": {
         "img": "previews/slides/redcard-1.jpg",
@@ -582,7 +582,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.649Z"
     },
     {
       "id": "seed-13",
@@ -612,7 +612,7 @@
       "fmt": "Carousel · 12 slides",
       "holiday": "",
       "caption": "Text-exchange series. High-save, screenshot-y format.",
-      "socialCaption": "",
+      "socialCaption": "when you finally put them onto opendoor.com. 🙏",
       "canva": "DAHOCjs2zTE",
       "media": {
         "img": "previews/try-opendoor-series.png",
@@ -633,7 +633,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.682Z"
     },
     {
       "id": "seed-15",
@@ -644,7 +644,7 @@
       "fmt": "Carousel · 7 slides",
       "holiday": "",
       "caption": "Per-market price-cut charts. Data/credibility post — real numbers.",
-      "socialCaption": "",
+      "socialCaption": "who's cutting prices in 2026? we pulled the numbers, market by market. 👀",
       "canva": "DAHN_TrpnVc",
       "media": {
         "img": "previews/price-cut-cards.png",
@@ -660,7 +660,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.709Z"
     },
     {
       "id": "seed-16",
@@ -671,7 +671,7 @@
       "fmt": "Carousel · 4 slides",
       "holiday": "",
       "caption": "Group-chat meme set — friends gassing each other up to just go to opendoor.com.",
-      "socialCaption": "",
+      "socialCaption": "every family group chat, eventually. 💚",
       "canva": "DAHODtsvdCM",
       "media": {
         "img": "previews/group-text-memes.png",
@@ -684,7 +684,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.734Z"
     },
     {
       "id": "seed-17",
@@ -695,7 +695,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "Selling hassle vs. beach + Opendoor. Emoji comparison — fast, shareable.",
-      "socialCaption": "",
+      "socialCaption": "what you're doing vs. what you could be doing. 🏝️",
       "canva": "DAHN_wrVczk",
       "media": {
         "img": "previews/what-im-doing-beach.png",
@@ -703,7 +703,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.761Z"
     },
     {
       "id": "seed-18",
@@ -714,7 +714,7 @@
       "fmt": "Static · 9:16",
       "holiday": "",
       "caption": "Story-friendly progress grid. Closes the month on an authentic note.",
-      "socialCaption": "",
+      "socialCaption": "hundreds of moves, one open door. real progress looks like this.",
       "canva": "DAHOCnuVRsg",
       "media": {
         "img": "previews/real-progress-grid.jpg",
@@ -722,7 +722,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.787Z"
     },
     {
       "id": "seed-19",
@@ -733,7 +733,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "Summer 'go together' cap on July, bridging into August.",
-      "socialCaption": "",
+      "socialCaption": "some things just go together. summer edition. ☀️",
       "canva": "DAHN_eXM9GE",
       "media": {
         "img": "previews/go-together-summer.png",
@@ -741,7 +741,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.813Z"
     },
     {
       "id": "seed-20",
@@ -809,7 +809,7 @@
       "fmt": "Static · 3:4",
       "holiday": "",
       "caption": "AUGUST teaser — slot to your late-Aug back-to-school cadence.",
-      "socialCaption": "",
+      "socialCaption": "the back-to-school starter pack, real estate edition. 🎒",
       "canva": "DAHN_QCvB9g",
       "media": {
         "img": "previews/go-together-school.png",
@@ -817,7 +817,7 @@
         "video": ""
       },
       "postedUrl": "",
-      "updatedAt": "2026-07-06T19:44:16.893Z"
+      "updatedAt": "2026-07-16T16:06:07.841Z"
     },
     {
       "id": "p-mradljgl5ey",

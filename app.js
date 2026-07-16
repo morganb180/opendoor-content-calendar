@@ -29,6 +29,17 @@ let pendingExtra=null;          // slides/file carried into Add from inventory
 let pendingCanvaImports=[];
 let lbItem=null, lbIdx=0, lbSlides=[];
 let activity=[];
+let drag=null;                  // unified drag payload {kind:'post'|'inv', id}
+let placeInvId=null;            // active tap-to-place inventory id (null = off)
+let placeCopy=false;            // when true, tap-to-place COPIES (re-post) instead of MOVING
+let navFlipT=0;                 // throttle timestamp for drag-over month nav
+const RAIL_COLLAPSED_KEY="opendoor_rail_collapsed_v1";
+let railCollapsed=storage.get(RAIL_COLLAPSED_KEY)==="1";
+const RAIL_SCHED_COLLAPSED_KEY="opendoor_rail_sched_collapsed_v1"; // "already on calendar" group, default collapsed
+let railSchedCollapsed=storage.get(RAIL_SCHED_COLLAPSED_KEY)!=="0";
+const DIRTY_KEY="opendoor_dirty_v1";
+let appReady=false;             // gate dirty-marking until initial load finishes
+let dirty=storage.get(DIRTY_KEY)==="1";
 const INV_HIDDEN_KEY="opendoor_inv_hidden_v2";   // hidden inventory ids
 const INV_CUSTOM_KEY="opendoor_inv_custom_v1";   // user-added inventory items
 let invHidden=loadHidden(), customInv=loadCustom();
@@ -54,7 +65,7 @@ function markInvSeen(){let ch=false;allInv().forEach(it=>{if(!invHidden.has(it.i
 
 /* ===== COMMENTS ===== */
 function loadComments(){return storage.getJSON(COMMENTS_KEY,{});}
-function saveComments(){storage.setJSON(COMMENTS_KEY,comments);}
+function saveComments(){storage.setJSON(COMMENTS_KEY,comments);markDirty();}
 let comments=loadComments();
 function getCommentAuthor(){return storage.get(COMMENT_AUTHOR_KEY);}
 function setCommentAuthor(a){storage.set(COMMENT_AUTHOR_KEY,a);}
@@ -292,7 +303,11 @@ async function loadInitialData(){
   if(localPosts||(localInv&&localInv.length)||Object.keys(localComments||{}).length){applyPayload({version:6,exportedAt:storage.get(LAST_SYNC_KEY)||"",posts:localPosts||[],customInventory:localInv||[],comments:localComments},true);}
 }
 function touchItem(item){item.updatedAt=nowISO();return item;}
-function save(){posts.forEach(p=>{if(!p.updatedAt)p.updatedAt=nowISO();});customInv.forEach(it=>{if(!it.updatedAt)it.updatedAt=nowISO();});storage.setJSON(STORE_KEY,posts);saveCustom();render();}
+function save(){posts.forEach(p=>{if(!p.updatedAt)p.updatedAt=nowISO();});customInv.forEach(it=>{if(!it.updatedAt)it.updatedAt=nowISO();});storage.setJSON(STORE_KEY,posts);saveCustom();markDirty();render();}
+/* ===== DIRTY / UNPUBLISHED-EDITS INDICATOR ===== */
+function markDirty(){if(!appReady)return;if(!dirty){dirty=true;storage.set(DIRTY_KEY,"1");}updateDirtyUI();}
+function clearDirty(){if(dirty){dirty=false;storage.remove(DIRTY_KEY);}updateDirtyUI();}
+function updateDirtyUI(){const b=document.querySelector('[data-action="sync-up"]');if(b)b.classList.toggle("dirty",dirty);updateDataAsOf();}
 function parseActivity(text){return text.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(line=>{try{return JSON.parse(line);}catch(e){return null;}}).filter(Boolean);}
 async function loadActivity(){try{const res=await fetch("data/activity.jsonl?t="+(+new Date()),{cache:"no-store"});if(res.ok){activity=parseActivity(await res.text());renderActivity();}}catch(e){}}
 function actionLabel(a){return ({add:"Added",schedule:"Scheduled",move:"Moved",set:"Updated",rm:"Removed","import-canva":"Imported Canva",migrate:"Migrated",publish:"Published"})[a]||a;}
@@ -324,8 +339,10 @@ function isLocalOnlyVideo(p){return !!(p.localOnly||/^~\//.test(p.video||""));}
 /* ===== STATS ===== */
 function stats(){
   document.getElementById("s-posts").textContent=posts.length;
-  const vis=allInv().filter(it=>!invHidden.has(it.id)).length, nw=newInvCount();
-  document.getElementById("btn-inv").innerHTML="Unscheduled ("+vis+")"+(nw?'<span class="newdot" title="'+nw+' new">'+nw+'</span>':'');
+  const idx=buildSchedIndex();
+  const readyN=allInv().filter(it=>!invHidden.has(it.id)&&!scheduledMatch(it,idx)).length, nw=newInvCount();
+  document.getElementById("btn-inv").innerHTML="Unscheduled ("+readyN+")"+(nw?'<span class="newdot" title="'+nw+' new">'+nw+'</span>':'');
+  const nocapEl=document.getElementById("s-nocap");if(nocapEl)nocapEl.textContent=posts.filter(needsCaption).length;
   if(!posts.length){document.getElementById("s-range").textContent="—";return;}
   const s=[...posts].sort((a,b)=>a.date.localeCompare(b.date));
   const a=parse(s[0].date),b=parse(s[s.length-1].date);
@@ -334,8 +351,32 @@ function stats(){
 }
 function statusLabel(s){return ({draft:"Draft",ready:"Ready",scheduled:"Scheduled",posted:"Posted"})[s||""]||"Ready";}
 function statusChip(p){return '<span class="status-chip st-'+escAttr(p.status||"ready")+'">'+esc(statusLabel(p.status))+'</span>';}
-function updateDataAsOf(){const el=document.getElementById("dataAsOf");if(!el)return;const raw=storage.get("opendoor_calendar_updated_at");el.textContent="data as of "+(raw?new Date(raw).toLocaleString():"local edits")+" · Sync ↓ for latest";}
-function schedTitles(){return new Set(posts.map(p=>p.title));}
+function updateDataAsOf(){const el=document.getElementById("dataAsOf");if(!el)return;const raw=storage.get("opendoor_calendar_updated_at");el.textContent="data as of "+(raw?new Date(raw).toLocaleString():"local edits")+" · Sync ↓ for latest"+(dirty?" · unpublished local edits":"");}
+function shortDate(d){const dt=parse(d);return MON3[dt.getMonth()]+" "+dt.getDate();}
+function needsCaption(p){return !(p.socialCaption||"").trim()&&p.status!=="posted";}
+/* ===== SCHEDULED-MATCH (dedupe inventory already on the calendar) ===== */
+function normTitleKey(s){return (s||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();}
+// Build a lookup from scheduled posts ONCE per pass (canva id / img / video / slide / normalized title → post).
+function buildSchedIndex(){
+  const idx={canva:new Map(),img:new Map(),video:new Map(),slide:new Map(),title:new Map()};
+  const add=(m,k,p)=>{const key=(k||"").trim();if(key&&!m.has(key))m.set(key,p);};
+  posts.forEach(p=>{
+    const cid=extractCanvaId(p.canva);add(idx.canva,cid,p);
+    add(idx.img,p.img,p);add(idx.video,p.video,p);
+    (p.slides||[]).forEach(s=>add(idx.slide,s,p));
+    add(idx.title,normTitleKey(p.title),p);
+  });
+  return idx;
+}
+// Return the matching scheduled post for an inventory item (or null): canva id, shared media, or normalized title.
+function scheduledMatch(it,idx){
+  const cid=extractCanvaId(it.canva);if(cid&&idx.canva.has(cid))return idx.canva.get(cid);
+  const img=(it.img||"").trim();if(img&&idx.img.has(img))return idx.img.get(img);
+  const vid=(it.video||"").trim();if(vid&&idx.video.has(vid))return idx.video.get(vid);
+  for(const s of (it.slides||[])){const k=(s||"").trim();if(k&&idx.slide.has(k))return idx.slide.get(k);}
+  const tk=normTitleKey(it.title);if(tk&&idx.title.has(tk))return idx.title.get(tk);
+  return null;
+}
 
 /* ===== MONTH GRID ===== */
 function buildGrid(){
@@ -355,6 +396,7 @@ function buildGrid(){
       inner+='<div class="chip '+(p.status==="posted"?'posted':'')+'" draggable="true" data-id="'+escAttr(p.id)+'" data-action="open-preview" style="border-left-color:'+escAttr(t.color)+'">'+
              '<img src="'+escAttr(safeURL(p.img,"img"))+'" alt="">'+
              '<span class="ct">'+(isVideo(p)?'▶ ':'')+esc(p.title)+'</span>'+
+             (needsCaption(p)?'<span class="needcap" title="No social caption yet">✍</span>':'')+
              statusChip(p)+
              (cc?'<span class="chip-comment">💬 '+cc+'</span>':'')+'</div>';
     });
@@ -363,19 +405,138 @@ function buildGrid(){
   const rem=(7-((firstDow+days)%7))%7; for(let i=0;i<rem;i++)html+='<div class="cell dim"></div>';
   grid.innerHTML=html; wireDnD();
 }
-let dragId=null;
 function wireDnD(){
   document.querySelectorAll(".chip[draggable]").forEach(ch=>{
-    ch.addEventListener("dragstart",e=>{dragId=ch.dataset.id;ch.classList.add("dragging");e.dataTransfer.effectAllowed="move";});
-    ch.addEventListener("dragend",()=>{ch.classList.remove("dragging");dragId=null;});
+    ch.addEventListener("dragstart",e=>{drag={kind:"post",id:ch.dataset.id};ch.classList.add("dragging");e.dataTransfer.effectAllowed="move";try{e.dataTransfer.setData("text/plain",ch.dataset.id);}catch(_){}});
+    ch.addEventListener("dragend",()=>{ch.classList.remove("dragging");drag=null;});
   });
   document.querySelectorAll(".cell[data-date]").forEach(cell=>{
-    cell.addEventListener("dragover",e=>{e.preventDefault();cell.classList.add("dragover");});
+    cell.addEventListener("dragover",e=>{if(!drag)return;e.preventDefault();cell.classList.add("dragover");});
     cell.addEventListener("dragleave",()=>cell.classList.remove("dragover"));
     cell.addEventListener("drop",e=>{e.preventDefault();cell.classList.remove("dragover");
-      if(!dragId)return;const p=posts.find(x=>x.id===dragId);
-      if(p&&p.date!==cell.dataset.date){p.date=cell.dataset.date;p.status=p.status||"scheduled";touchItem(p);save();}});
+      if(!drag)return;
+      if(drag.kind==="inv"){scheduleInvToDate(drag.id,cell.dataset.date);}
+      else{const p=posts.find(x=>x.id===drag.id);if(p&&p.date!==cell.dataset.date){p.date=cell.dataset.date;p.status=p.status||"scheduled";touchItem(p);save();}}
+    });
   });
+}
+// MOVE an inventory item onto a date: leaves customInv, becomes a scheduled post keeping the SAME id (comments survive).
+// copy=true (re-post use case) COPIES instead: item stays in inventory, a fresh post with a NEW id is added.
+function scheduleInvToDate(id,dateStr,copy){
+  const it=findInv(id);if(!it)return;
+  if(copy){
+    const {id:_omit,builtin,localOnly,...rest}=it;
+    posts.push(touchItem({...rest,id:uid(),date:dateStr,status:"scheduled",holiday:"",postedUrl:""}));
+    save();
+    toast('Added a copy of "'+it.title+'" → '+fmtFull(dateStr));
+    return;
+  }
+  customInv=customInv.filter(x=>x.id!==id);saveCustom();
+  const np=touchItem({...it,id,date:dateStr,status:"scheduled",holiday:"",postedUrl:""});
+  posts.push(np);
+  invSeen.add(id);saveSeen();
+  save();
+  toast('Scheduled "'+it.title+'" → '+fmtFull(dateStr));
+}
+// Reverse: a scheduled post dropped on the rail returns to inventory, same id, date/holiday/postedUrl dropped.
+function unscheduleToRail(id){
+  const p=posts.find(x=>x.id===id);if(!p)return;
+  posts=posts.filter(x=>x.id!==id);
+  const it={...p};delete it.date;delete it.holiday;delete it.postedUrl;it.status="ready";touchItem(it);
+  customInv.push(it);
+  save();
+  toast('Unscheduled "'+p.title+'" → inventory');
+}
+/* ===== UNSCHEDULED RAIL ===== */
+// Compact rail card: draggable "ready" variant, or de-emphasized "matched" variant (m = matched post).
+function railCard(it,m){
+  const t=THEME[it.theme]||THEME.meme;
+  const cc=comments[it.id]?comments[it.id].length:0;
+  const isNew=!invSeen.has(it.id);
+  const badges='<div class="rc-badges">'+(it.video?'<span class="vbadge">▶ VIDEO</span>':'')+(isLocalOnlyVideo(it)?'<span class="vbadge local">LOCAL ONLY</span>':'')+(cc?'<span class="rc-cc">💬 '+cc+'</span>':'')+'</div>';
+  const thumb='<div class="rc-thumb"><img src="'+escAttr(safeURL(it.img,"img"))+'" alt="" loading="lazy">'+(it.video?'<span class="rc-play"></span>':'')+'</div>';
+  if(m){
+    return '<div class="rail-card matched" data-action="open-preview-inv" data-id="'+escAttr(it.id)+'" style="border-left-color:'+escAttr(t.color)+'">'+thumb+
+      '<div class="rc-body">'+
+        '<div class="rc-title">'+esc(it.title)+'</div>'+
+        (it.fmt?'<div class="rc-fmt">'+esc(it.fmt)+'</div>':'')+badges+
+        '<div class="rc-schedrow">'+
+          '<button class="rc-ondate" data-action="jump-to-post" data-post-id="'+escAttr(m.id)+'" title="Show on calendar">On '+esc(shortDate(m.date))+' →</button>'+
+          '<button class="rc-archive" data-action="archive-inv" data-id="'+escAttr(it.id)+'" title="Archive (hide from unscheduled)">Archive</button>'+
+        '</div>'+
+      '</div></div>';
+  }
+  return '<div class="rail-card" draggable="true" data-action="open-preview-inv" data-id="'+escAttr(it.id)+'" style="border-left-color:'+escAttr(t.color)+'">'+thumb+
+    '<div class="rc-body">'+
+      '<div class="rc-title">'+(isNew?'<span class="rcnew" title="New"></span>':'')+esc(it.title)+'</div>'+
+      (it.fmt?'<div class="rc-fmt">'+esc(it.fmt)+'</div>':'')+badges+
+      '<button class="rc-sched" data-action="place-inv" data-id="'+escAttr(it.id)+'">Schedule →</button>'+
+    '</div></div>';
+}
+function buildRail(){
+  const rail=document.getElementById("rail");if(!rail)return;
+  const idx=buildSchedIndex();
+  const ready=[],matched=[],matches=new Map();
+  allInv().filter(it=>!invHidden.has(it.id)).forEach(it=>{const m=scheduledMatch(it,idx);if(m){matched.push(it);matches.set(it.id,m);}else ready.push(it);});
+  document.getElementById("railCount").textContent=ready.length;   // "Unscheduled" = truly-unscheduled only
+  rail.classList.toggle("collapsed",railCollapsed);
+  const body=document.getElementById("railBody");
+  if(!ready.length&&!matched.length){
+    body.innerHTML='<div class="rail-empty">Nothing unscheduled right now.<span>Use <b>Import from Canva</b> or <b>+ Add inventory item</b> to add assets, then drag them onto a day.</span></div>';
+    return;
+  }
+  let html=ready.length
+    ? ready.map(it=>railCard(it,null)).join("")
+    : '<div class="rail-empty">Nothing ready to schedule — everything below is already on the calendar.</div>';
+  if(matched.length){
+    html+='<div class="rail-sched-group">'+
+      '<div class="rail-sched-head">'+
+        '<button class="rail-sched-toggle" data-action="toggle-rail-sched">Already on calendar ('+matched.length+') '+(railSchedCollapsed?'▸':'▾')+'</button>'+
+        '<button class="rail-sched-archiveall" data-action="archive-all-sched" title="Archive all already-scheduled items">Archive all</button>'+
+      '</div>'+
+      (railSchedCollapsed?'':'<div class="rail-sched-body">'+matched.map(it=>railCard(it,matches.get(it.id))).join("")+'</div>')+
+    '</div>';
+  }
+  body.innerHTML=html;
+  body.querySelectorAll(".rail-card[draggable]").forEach(c=>{
+    c.addEventListener("dragstart",e=>{drag={kind:"inv",id:c.dataset.id};c.classList.add("dragging");e.dataTransfer.effectAllowed="move";try{e.dataTransfer.setData("text/plain",c.dataset.id);}catch(_){}});
+    c.addEventListener("dragend",()=>{c.classList.remove("dragging");drag=null;});
+  });
+}
+function toggleRail(){railCollapsed=!railCollapsed;storage.set(RAIL_COLLAPSED_KEY,railCollapsed?"1":"0");const r=document.getElementById("rail");if(r)r.classList.toggle("collapsed",railCollapsed);}
+function toggleRailSched(){railSchedCollapsed=!railSchedCollapsed;storage.set(RAIL_SCHED_COLLAPSED_KEY,railSchedCollapsed?"1":"0");buildRail();}
+// Navigate the calendar to a scheduled post's month and briefly flash its chip.
+function jumpToPost(id){
+  const p=posts.find(x=>x.id===id);if(!p)return;
+  if(view!=="month")setView("month");
+  const d=parse(p.date);viewY=d.getFullYear();viewM=d.getMonth();buildGrid();   // buildGrid is synchronous — chip exists immediately
+  const chip=document.querySelector('.chip[data-id="'+(window.CSS&&CSS.escape?CSS.escape(id):id)+'"]');
+  if(chip){chip.classList.add("sched-flash");chip.scrollIntoView({block:"center",behavior:"smooth"});setTimeout(()=>chip.classList.remove("sched-flash"),2000);}
+}
+// Archive (reversibly hide) a single already-scheduled inventory item; restore lives in the Unscheduled tab.
+function archiveInv(id){if(!findInv(id))return;invHidden.add(id);saveHidden();stats();buildRail();buildInv();toast("Archived · Restore all lives in the Unscheduled tab");}
+// Archive ALL currently-visible already-scheduled inventory items in one go.
+function archiveAllSched(){
+  const idx=buildSchedIndex();
+  const ids=allInv().filter(it=>!invHidden.has(it.id)&&scheduledMatch(it,idx)).map(it=>it.id);
+  if(!ids.length)return;
+  ids.forEach(id=>invHidden.add(id));saveHidden();stats();buildRail();buildInv();
+  toast("Archived "+ids.length+" already-scheduled item"+(ids.length===1?"":"s")+" · Restore all lives in the Unscheduled tab");
+}
+/* ===== TAP-TO-PLACE PLACEMENT MODE ===== */
+function enterPlaceMode(id,copy){
+  const it=findInv(id);if(!it)return;
+  if(view!=="month")setView("month");
+  placeInvId=id;placeCopy=!!copy;
+  document.body.classList.add("placing");
+  document.getElementById("placeBannerText").innerHTML=(copy?'Pick a day to re-post "<b>':'Pick a day for "<b>')+esc(it.title)+'</b>"';
+  document.getElementById("placeBanner").classList.add("show");
+}
+function exitPlaceMode(){
+  if(!placeInvId&&!document.body.classList.contains("placing"))return;
+  placeInvId=null;placeCopy=false;
+  document.body.classList.remove("placing");
+  const b=document.getElementById("placeBanner");if(b)b.classList.remove("show");
 }
 
 /* ===== LIST ===== */
@@ -387,7 +548,7 @@ function postCard(p){
     '<div class="tags">'+(isVideo(p)?'<span class="vbadge">▶ VIDEO</span>':'')+(isLocalOnlyVideo(p)?'<span class="vbadge local">LOCAL ONLY</span>':'')+'</div>'+
     '<img src="'+escAttr(safeURL(p.img,"img"))+'" alt="" loading="lazy">'+
     (isVideo(p)?'<div class="play"><span></span></div>':'')+'</div>'+
-    '<div class="cbody"><div class="ctop"><span class="badge '+escAttr(t.cls)+'">'+esc(t.label)+'</span>'+statusChip(p)+'<span class="fmt">'+esc(p.fmt||"")+'</span></div>'+
+    '<div class="cbody"><div class="ctop"><span class="badge '+escAttr(t.cls)+'">'+esc(t.label)+'</span>'+statusChip(p)+(needsCaption(p)?'<span class="needcap-pill">Needs caption</span>':'')+'<span class="fmt">'+esc(p.fmt||"")+'</span></div>'+
     '<div class="ctitle">'+esc(p.title)+'</div><div class="caption">'+esc(p.caption||"")+'</div></div></div>';
 }
 function buildList(){
@@ -405,22 +566,32 @@ function buildList(){
 }
 
 /* ===== INVENTORY ===== */
+// Full inventory card. m = matched scheduled post (null = truly unscheduled).
+function invCard(it,m){
+  const t=THEME[it.theme]||THEME.meme;
+  return '<div class="card'+(m?' matched':'')+'"><div class="thumb" data-action="open-preview-inv" data-id="'+escAttr(it.id)+'">'+
+    '<button class="inv-del" title="Remove from inventory" data-action="delete-inv" data-id="'+escAttr(it.id)+'">×</button>'+
+    '<div class="tags">'+(it.builtin?"":'<span class="vbadge" style="background:rgba(31,128,255,.92)">ADDED</span>')+(it.video?'<span class="vbadge">▶ VIDEO</span>':'')+(isLocalOnlyVideo(it)?'<span class="vbadge local">LOCAL ONLY</span>':'')+'</div>'+
+    '<img src="'+escAttr(safeURL(it.img,"img"))+'" alt="" loading="lazy">'+
+    (it.video?'<div class="play"><span></span></div>':'')+
+    (m?'<span class="sched-pill">✓ On '+esc(shortDate(m.date))+'</span>':'')+'</div>'+
+    '<div class="cbody"><div class="ctop"><span class="badge '+escAttr(t.cls)+'">'+esc(t.label)+'</span>'+statusChip(it)+'<span class="fmt">'+esc(it.fmt||"")+'</span></div>'+
+    '<div class="ctitle">'+esc(it.title)+'</div><div class="caption">'+esc(it.caption||"")+'</div>'+
+    (m
+      ? '<div class="inv-matchrow"><button class="cta ghost-cta" data-action="jump-to-post" data-post-id="'+escAttr(m.id)+'">On '+esc(shortDate(m.date))+' →</button>'+
+        '<button class="cta" data-action="add-again-inv" data-id="'+escAttr(it.id)+'" title="Re-post a fresh copy">Add again →</button></div>'
+      : '<button class="cta" data-action="add-from-inv" data-id="'+escAttr(it.id)+'">Add to schedule →</button>')+
+    '</div></div>';
+}
 function buildInv(){
-  const scheduled=schedTitles();
-  document.getElementById("invCards").innerHTML=allInv().map(it=>{
-    if(invHidden.has(it.id))return "";
-    const t=THEME[it.theme]||THEME.meme;
-    const done=scheduled.has(it.title);
-    return '<div class="card"><div class="thumb" data-action="open-preview-inv" data-id="'+escAttr(it.id)+'">'+
-      '<button class="inv-del" title="Remove from inventory" data-action="delete-inv" data-id="'+escAttr(it.id)+'">×</button>'+
-      '<div class="tags">'+(it.builtin?"":'<span class="vbadge" style="background:rgba(31,128,255,.92)">ADDED</span>')+(it.video?'<span class="vbadge">▶ VIDEO</span>':'')+(isLocalOnlyVideo(it)?'<span class="vbadge local">LOCAL ONLY</span>':'')+'</div>'+
-      '<img src="'+escAttr(safeURL(it.img,"img"))+'" alt="" loading="lazy">'+
-      (it.video?'<div class="play"><span></span></div>':'')+
-      (done?'<span class="sched-pill">✓ Scheduled</span>':'')+'</div>'+
-      '<div class="cbody"><div class="ctop"><span class="badge '+escAttr(t.cls)+'">'+esc(t.label)+'</span>'+statusChip(it)+'<span class="fmt">'+esc(it.fmt||"")+'</span></div>'+
-      '<div class="ctitle">'+esc(it.title)+'</div><div class="caption">'+esc(it.caption||"")+'</div>'+
-      '<button class="cta" data-action="add-from-inv" data-id="'+escAttr(it.id)+'">'+(done?'Add again →':'Add to schedule →')+'</button></div></div>';
-  }).join("");
+  const idx=buildSchedIndex();
+  const ready=[],matched=[],matches=new Map();
+  allInv().filter(it=>!invHidden.has(it.id)).forEach(it=>{const m=scheduledMatch(it,idx);if(m){matched.push(it);matches.set(it.id,m);}else ready.push(it);});
+  document.getElementById("invCards").innerHTML=
+    ready.map(it=>invCard(it,null)).join("")+
+    (matched.length
+      ? '<div class="inv-sched-sep">Already on calendar ('+matched.length+') — de-duplicated by Canva id, media, or title</div>'+matched.map(it=>invCard(it,matches.get(it.id))).join("")
+      : "");
   const hid=invHidden.size;
   document.getElementById("invHdrNote").innerHTML = hid
     ? '<b>'+hid+' removed.</b> <span class="restore" data-action="restore-inv">Restore all</span>'
@@ -450,6 +621,7 @@ function showLB(item,id){
   document.getElementById("lbBadge").className="badge "+t.cls; document.getElementById("lbBadge").textContent=t.label;
   document.getElementById("lbTitle").textContent=item.title;
   document.getElementById("lbFmt").textContent=(item.date?fmtFull(item.date)+" · ":"")+(item.fmt||"");
+  const ncEl=document.getElementById("lbNeedCap");if(ncEl)ncEl.style.display=(item.date&&needsCaption(item))?"":"none";
   document.getElementById("lbCaption").textContent=item.caption||"";
   const scEl=document.getElementById("lbSocialCaption");const scTxt=document.getElementById("lbSocialCaptionText");
   if(item.socialCaption){scEl.style.display="";scTxt.textContent=item.socialCaption;}else{scEl.style.display="none";}
@@ -544,12 +716,10 @@ function savePost(){
 function deletePost(){const id=document.getElementById("f-id").value;
   if(modalMode==="inv"){if(id&&confirm("Delete this inventory item?")){customInv=customInv.filter(x=>x.id!==id);saveCustom();closeModal();setView('inv');render();}return;}
   if(id&&confirm("Delete this post?")){posts=posts.filter(x=>x.id!==id);delete comments[id];saveComments();closeModal();save();}}
-function addFromInvId(id){const it=findInv(id);if(it){setView('month');openAdd(it);}}
-function addFromInvItem(){openAdd(lbItem);}
 
 /* ===== VIEW / EXPORT ===== */
-function render(){stats();buildGrid();buildList();buildInv();renderActivity();}
-function setView(v){view=v;
+function render(){stats();buildGrid();buildList();buildInv();buildRail();renderActivity();updateDirtyUI();}
+function setView(v){exitPlaceMode();view=v;
   document.getElementById("monthView").style.display=v==="month"?"block":"none";
   document.getElementById("listView").style.display=v==="list"?"block":"none";
   document.getElementById("invViewSec").style.display=v==="inv"?"block":"none";
@@ -579,6 +749,7 @@ let toastT=null;
 function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),3200);}
 
 function handleAction(e){
+  if(placeInvId){const cell=e.target.closest(".cell[data-date]");if(cell){e.stopPropagation();const iid=placeInvId,cp=placeCopy;exitPlaceMode();scheduleInvToDate(iid,cell.dataset.date,cp);return;}}
   const el=e.target.closest("[data-action]");if(!el)return;
   const action=el.dataset.action;
   if(action!=="open-preview")e.stopPropagation();
@@ -589,10 +760,12 @@ function handleAction(e){
     "open-canva-import":()=>openCanvaImport(),"close-canva-import":()=>closeCanvaImport(),"parse-canva-import":()=>parseCanvaImports(),"save-canva-import":()=>saveCanvaImports(),
     "sample-canva-import":()=>sampleCanvaImport(),"clear-canva-import":()=>clearCanvaImport(),"remove-canva-import":()=>removeCanvaImport(el.dataset.index),
     "shift-month":()=>shiftMonth(step),"go-today":()=>goToday(),"add-inventory":()=>addInventory(),
+    "toggle-rail":()=>toggleRail(),"toggle-rail-sched":()=>toggleRailSched(),"place-inv":()=>enterPlaceMode(id),"cancel-place":()=>exitPlaceMode(),
+    "jump-to-post":()=>jumpToPost(el.dataset.postId),"archive-inv":()=>archiveInv(id),"archive-all-sched":()=>archiveAllSched(),"add-again-inv":()=>enterPlaceMode(id,true),
     "copy-social-caption":()=>copySocialCaption(),"delete-post":()=>deletePost(),"close-modal":()=>closeModal(),"save-post":()=>savePost(),
     "close-lb":()=>closeLB(),"lb-step":()=>lbStep(step),"add-comment":()=>addComment(),"delete-comment":()=>deleteComment(el.dataset.commentId),
-    "open-preview":()=>openPreview(id),"open-preview-inv":()=>openPreviewInv(id),"delete-inv":()=>deleteInv(id),"add-from-inv":()=>addFromInvId(id),
-    "restore-inv":()=>restoreInv(),"edit-post":()=>{closeLB();openEdit(id);},"add-from-lb-inv":()=>{closeLB();addFromInvItem();},
+    "open-preview":()=>openPreview(id),"open-preview-inv":()=>openPreviewInv(id),"delete-inv":()=>deleteInv(id),"add-from-inv":()=>enterPlaceMode(id),
+    "restore-inv":()=>restoreInv(),"edit-post":()=>{closeLB();openEdit(id);},"add-from-lb-inv":()=>{const iid=lbItem&&lbItem.id;closeLB();if(iid)enterPlaceMode(iid);},
     "edit-inv":()=>{closeLB();editInvItem(id);}
   };
   if(actions[action])actions[action]();
@@ -621,7 +794,7 @@ async function submitGate(e){e.preventDefault();const h=await sha256(document.ge
 /* ===== GITHUB SYNC (Pages + committed JSON) ===== */
 const REPO={owner:"morganb180",repo:"opendoor-content-calendar",branch:"main",path:"data/calendar.json"};
 function applyState(d){
-  return applyPayload(d,true);}
+  const ok=applyPayload(d,true);if(ok)clearDirty();return ok;}
 function decodeGitHubContent(content){return JSON.parse(decodeURIComponent(escape(atob(content.replace(/\n/g,"")))));}
 function encodeGitHubContent(payload){return btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))));}
 async function pullFromRepo(silent){
@@ -647,7 +820,7 @@ async function pushToRepo(){
     if(g.ok){const remote=await g.json();sha=remote.sha;if(remote.content){const remotePayload=decodeGitHubContent(remote.content);applyPayload(remotePayload,true);cleanupComments();render();}}
     const payload=buildPayload(), content=encodeGitHubContent(payload);
     const put=await fetch(api,{method:"PUT",headers:H,body:JSON.stringify({message:"Update calendar "+new Date().toISOString(),content,branch:REPO.branch,sha})});
-    if(put.ok){rememberSync(payload);storage.set("opendoor_calendar_updated_at",payload.updatedAt);updateDataAsOf();await appendRemoteActivity(H,{ts:nowISO(),actor:"browser",action:"publish",id:"data/calendar.json",title:"Published calendar changes",detail:{posts:posts.length,inventory:customInv.length}});toast("Published to GitHub ✓ Other machines: Sync ↓");}
+    if(put.ok){rememberSync(payload);storage.set("opendoor_calendar_updated_at",payload.updatedAt);clearDirty();updateDataAsOf();await appendRemoteActivity(H,{ts:nowISO(),actor:"browser",action:"publish",id:"data/calendar.json",title:"Published calendar changes",detail:{posts:posts.length,inventory:customInv.length}});toast("Published to GitHub ✓ Other machines: Sync ↓");}
     else{const er=await put.json().catch(()=>({}));if(put.status===401||put.status===403){storage.remove(GH_TOKEN_KEY);}toast("Push failed: "+(er.message||put.status));}}
   catch(e){toast("Push error: "+e.message);}}
 async function appendRemoteActivity(H,entry){
@@ -667,24 +840,39 @@ async function initApp(){
   document.addEventListener("click",handleAction);
   document.addEventListener("input",handleInput);
   document.addEventListener("error",handleImageError,true);
-  document.getElementById("gateForm").addEventListener("submit",submitGate);
   document.getElementById("importer").addEventListener("change",importJSON);
   document.getElementById("f-uploadPrev").addEventListener("change",uploadPrev);
   document.getElementById("lbCommentInput").addEventListener("keydown",e=>{if(e.key==="Enter")addComment();});
-  document.addEventListener("keydown",e=>{if(document.getElementById("lb").classList.contains("open")){if(e.key==="Escape")closeLB();if(e.key==="ArrowLeft")lbStep(-1);if(e.key==="ArrowRight")lbStep(1);}});
+  document.addEventListener("keydown",e=>{if(document.getElementById("lb").classList.contains("open")){if(e.key==="Escape")closeLB();if(e.key==="ArrowLeft")lbStep(-1);if(e.key==="ArrowRight")lbStep(1);}
+    else if(e.key==="Escape"&&document.body.classList.contains("placing"))exitPlaceMode();});
+  // Rail as an unschedule drop target (drop a scheduled chip back to inventory).
+  const railEl=document.getElementById("rail");
+  railEl.addEventListener("dragover",e=>{if(drag&&drag.kind==="post"){e.preventDefault();railEl.classList.add("raildrop");}});
+  railEl.addEventListener("dragleave",e=>{if(!railEl.contains(e.relatedTarget))railEl.classList.remove("raildrop");});
+  railEl.addEventListener("drop",e=>{if(drag&&drag.kind==="post"){e.preventDefault();railEl.classList.remove("raildrop");unscheduleToRail(drag.id);}});
+  // Drag over the ‹ / › month-nav buttons to flip months mid-drag (throttled — a drag can't click).
+  document.querySelectorAll('.navbtn[data-action="shift-month"]').forEach(b=>{
+    b.addEventListener("dragover",e=>{if(!drag)return;e.preventDefault();const now=Date.now();if(now-navFlipT<600)return;navFlipT=now;shiftMonth(Number(b.dataset.step));});
+  });
+  // Best-effort global cleanup so a cancelled drag never leaves stale state/classes.
+  document.addEventListener("dragend",()=>{drag=null;document.querySelectorAll(".dragover,.raildrop").forEach(el=>el.classList.remove("dragover","raildrop"));});
   try{await loadInitialData();await loadActivity();}
   catch(e){toast(e.message||"Could not load calendar data.");}
+  appReady=true;
   render();
   document.getElementById("foot").innerHTML=
     "<b>Preview:</b> click any post (or inventory item) to open it full-size — carousels are swipeable (‹ ›/arrow keys), videos play inline. "+
-    "<b>Schedule:</b> drag posts between days; click → <b>Edit details</b>. <b>+ Add post</b> / <b>+ Add inventory item</b> for new content; use ‹ › for future months. "+
-    "<br><b>Sync across machines:</b> <b>Publish changes</b> writes <code>data/calendar.json</code> to GitHub (asks once for a token, stored only in this browser); <b>Sync ↓</b> pulls the latest. The app loads the committed data file on every open. "+
+    "<b>Schedule:</b> drag a card from the <b>Unscheduled rail</b> onto a day (or tap <b>Schedule →</b>, then tap a day — best on touch); drag a chip back onto the rail to unschedule; drag posts between days; click a chip → <b>Edit details</b>. Drag over ‹ › to flip months mid-drag. <b>+ Add post</b> / <b>+ Add inventory item</b> for new content. "+
+    "The rail (and Unscheduled tab) split into <b>Ready to schedule</b> and a collapsed <b>Already on calendar</b> group — items detected as duplicates of a scheduled post by Canva id, shared media, or title. Those show <b>On &lt;date&gt; →</b> to jump to the post, an <b>Archive</b> / <b>Archive all</b> to hide them, and <b>Add again →</b> to re-post a fresh copy. A <b>✍ / “Needs caption”</b> marker flags scheduled posts with no social caption (also totalled in the header stat). "+
+    "<br><b>Sync across machines:</b> <b>Publish changes</b> writes <code>data/calendar.json</code> to GitHub (asks once for a token, stored only in this browser); <b>Sync ↓</b> pulls the latest. An amber dot on <b>Publish changes</b> means you have unpublished local edits. The app loads the committed data file on every open. "+
     "<b>Export/Import</b> JSON also works for manual backup. "+
     "<br><b>Holidays/events</b> show as colored tags and update as you navigate months. Canva posts open <code>canva.com/design/&lt;id&gt;/view</code>. "+
     "<b>Social captions:</b> add the actual IG/FB caption in the edit form, then use <b>Copy caption</b> to paste into Canva. "+
     "<b>Comments:</b> leave internal feedback on any post or inventory item in the preview panel — comments sync with Publish changes / Sync ↓. "+
     "<i>Note: local-only videos are labeled; image previews &amp; carousels work on the hosted site.</i>";
 }
-// gate startup
+// gate startup — the submit listener must attach here (not in initApp), or a fresh browser's
+// Unlock does a native GET submit and just reloads the page.
+document.getElementById("gateForm").addEventListener("submit",submitGate);
 if(storage.get("cal_gate_ok")===GATE_HASH){document.getElementById("gate").style.display="none";initApp();}
 else{document.getElementById("gate").style.display="grid";document.getElementById("gatePass").focus();}

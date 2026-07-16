@@ -18,6 +18,10 @@
   </form>
 </div>
 <div class="toast" id="toast"></div>
+<div class="place-banner" id="placeBanner">
+  <span id="placeBannerText"></span>
+  <button class="btn" data-action="cancel-place">Cancel</button>
+</div>
 <div class="wrap">
   <header class="top">
     <div class="brand">
@@ -30,6 +34,7 @@
     <div class="stats">
       <div class="stat"><b id="s-posts">–</b><span>Posts queued</span></div>
       <div class="stat"><b id="s-range">–</b><span>Date range</span></div>
+      <div class="stat stat-nocap"><b id="s-nocap">–</b><span>Missing captions</span></div>
     </div>
   </header>
 
@@ -67,9 +72,19 @@
       <button class="btn ghost" data-action="go-today">Today</button>
       <span class="hint">Drag a post to another day · click it to preview &amp; edit</span>
     </div>
-    <div class="month">
-      <div class="dow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
-      <div class="grid" id="grid"></div>
+    <div class="month-layout">
+      <div class="month">
+        <div class="dow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <aside class="rail" id="rail">
+        <button class="rail-tab" data-action="toggle-rail" title="Show unscheduled">Unscheduled ›</button>
+        <div class="rail-head">
+          <span class="rail-title">Unscheduled (<span id="railCount">0</span>)</span>
+          <button class="rail-toggle" data-action="toggle-rail" title="Collapse / expand">›</button>
+        </div>
+        <div class="rail-body" id="railBody"></div>
+      </aside>
     </div>
   </section>
 
@@ -187,6 +202,7 @@
    <div class="lbinfo">
      <span class="badge" id="lbBadge"></span>
      <h4 id="lbTitle"></h4>
+     <span class="needcap-pill" id="lbNeedCap" style="display:none">Needs caption</span>
      <div class="lf" id="lbFmt"></div>
      <p id="lbCaption"></p>
      <div id="lbSocialCaption" style="display:none;margin-top:8px;padding:10px 12px;background:rgba(255,255,255,.06);border-radius:9px;border:1px solid rgba(255,255,255,.12)">

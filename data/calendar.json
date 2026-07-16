@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-16T09:28:39.541Z",
+  "updatedAt": "2026-07-16T11:35:50.468Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2081,6 +2081,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-16T09:28:39.540Z"
+    },
+    {
+      "id": "p-mrnfnlj74is",
+      "status": "ready",
+      "title": "Deal Dance — when you sell your house to Opendoor",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "when you sell your house to Opendoor",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/deal_dance_picturelock-067d49e333.mp4"
+      },
+      "updatedAt": "2026-07-16T11:35:50.467Z"
     }
   ],
   "comments": {}

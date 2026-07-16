@@ -81,3 +81,4 @@
 {"ts":"2026-07-16T09:10:47.145Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Logo Remix carousels: pools + house & home","posts":26,"inventory":67}}
 {"ts":"2026-07-16T09:28:39.542Z","actor":"morganbrown","action":"set","id":"p-mrnagpxrpz","title":"Logo Remix — House & Home carousel","detail":{"fields":["canva"]}}
 {"ts":"2026-07-16T09:28:39.682Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"House & Home carousel v2: +daisy lawn slide","posts":26,"inventory":67}}
+{"ts":"2026-07-16T09:29:12.066Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"House & Home carousel: daisy slide preview","posts":26,"inventory":67}}

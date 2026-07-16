@@ -76,3 +76,6 @@
 {"ts":"2026-07-15T10:27:35.337Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"President Sees Opendoor meme reel","posts":26,"inventory":64}}
 {"ts":"2026-07-16T06:07:26.454Z","actor":"morganbrown","action":"add","id":"p-mrn3x9tg51j","title":"Most Used Emojis — DM meme","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-16T06:07:26.535Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Most Used Emojis DM meme","posts":26,"inventory":65}}
+{"ts":"2026-07-16T09:10:31.476Z","actor":"morganbrown","action":"add","id":"p-mrnagpra7gs","title":"Logo Remix — Pools carousel","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-16T09:10:31.636Z","actor":"morganbrown","action":"add","id":"p-mrnagpxrpz","title":"Logo Remix — House & Home carousel","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-16T09:10:47.145Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Logo Remix carousels: pools + house & home","posts":26,"inventory":67}}

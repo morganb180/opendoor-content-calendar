@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-16T06:07:26.453Z",
+  "updatedAt": "2026-07-16T09:10:31.635Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2039,6 +2039,47 @@
         "video": ""
       },
       "updatedAt": "2026-07-16T06:07:26.452Z"
+    },
+    {
+      "id": "p-mrnagpra7gs",
+      "status": "ready",
+      "title": "Logo Remix — Pools carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4",
+      "caption": "The Opendoor mark, but make it a pool. 4 ways.",
+      "socialCaption": "",
+      "canva": "DAHPiai5NLo",
+      "media": {
+        "img": "previews/pools_02_palmsprings.jpg",
+        "slides": [
+          "previews/slides/p-mrnagpra7gs/pools_02_palmsprings.jpg",
+          "previews/slides/p-mrnagpra7gs/pools_04_resort.jpg",
+          "previews/slides/p-mrnagpra7gs/pools_05_float.jpg",
+          "previews/slides/p-mrnagpra7gs/pools_06_night.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-16T09:10:31.474Z"
+    },
+    {
+      "id": "p-mrnagpxrpz",
+      "status": "ready",
+      "title": "Logo Remix — House & Home carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4",
+      "caption": "Our logo keeps showing up around the house.",
+      "socialCaption": "",
+      "canva": "DAHPiaThU1M",
+      "media": {
+        "img": "previews/home_02_flowerbed.jpg",
+        "slides": [
+          "previews/slides/p-mrnagpxrpz/home_02_flowerbed.jpg",
+          "previews/slides/p-mrnagpxrpz/home_03_hose.jpg",
+          "previews/slides/p-mrnagpxrpz/home_08_knocker.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-16T09:10:31.634Z"
     }
   ],
   "comments": {}

@@ -398,7 +398,8 @@ function buildGrid(){
              '<span class="ct">'+(isVideo(p)?'▶ ':'')+esc(p.title)+'</span>'+
              (needsCaption(p)?'<span class="needcap" title="No social caption yet">✍</span>':'')+
              statusChip(p)+
-             (cc?'<span class="chip-comment">💬 '+cc+'</span>':'')+'</div>';
+             (cc?'<span class="chip-comment">💬 '+cc+'</span>':'')+
+             '<button class="chip-x" title="Remove from calendar (back to Unscheduled)" data-action="unschedule-post" data-id="'+escAttr(p.id)+'">×</button></div>';
     });
     html+='<div class="cell'+(ds===TODAY?" today":"")+'" data-date="'+ds+'">'+inner+'</div>';
   }
@@ -629,7 +630,8 @@ function showLB(item,id){
   if(item.canva){const href=canvaURL(item.canva);if(href)acts.push('<a class="canva" target="_blank" rel="noopener" href="'+escAttr(href)+'">Open in Canva ↗</a>');}
   if(item.video){const href=fileURL(item.video);if(href)acts.push('<a target="_blank" rel="noopener" href="'+escAttr(href)+'">▶ '+(isLocalOnlyVideo(item)?'Open local video (Morgan only)':'Open video file')+'</a>');}
   if(item.file){const href=fileURL(item.file);if(href)acts.push('<a target="_blank" rel="noopener" href="'+escAttr(href)+'">Open file ↗</a>');}
-  if(id)acts.push('<button data-action="edit-post" data-id="'+escAttr(id)+'">Edit details</button>');
+  if(id){acts.push('<button data-action="edit-post" data-id="'+escAttr(id)+'">Edit details</button>');
+         acts.push('<button data-action="unschedule-post" data-id="'+escAttr(id)+'">Remove from calendar →</button>');}
   else {acts.push('<button data-action="add-from-lb-inv">Add to schedule →</button>');
         if(item.builtin===false)acts.push('<button data-action="edit-inv" data-id="'+escAttr(item.id)+'">Edit item</button>');}
   document.getElementById("lbActs").innerHTML=acts.join("");
@@ -765,7 +767,8 @@ function handleAction(e){
     "copy-social-caption":()=>copySocialCaption(),"delete-post":()=>deletePost(),"close-modal":()=>closeModal(),"save-post":()=>savePost(),
     "close-lb":()=>closeLB(),"lb-step":()=>lbStep(step),"add-comment":()=>addComment(),"delete-comment":()=>deleteComment(el.dataset.commentId),
     "open-preview":()=>openPreview(id),"open-preview-inv":()=>openPreviewInv(id),"delete-inv":()=>deleteInv(id),"add-from-inv":()=>enterPlaceMode(id),
-    "restore-inv":()=>restoreInv(),"edit-post":()=>{closeLB();openEdit(id);},"add-from-lb-inv":()=>{const iid=lbItem&&lbItem.id;closeLB();if(iid)enterPlaceMode(iid);},
+    "restore-inv":()=>restoreInv(),"edit-post":()=>{closeLB();openEdit(id);},
+    "unschedule-post":()=>{if(document.getElementById("lb").classList.contains("open"))closeLB();unscheduleToRail(id);},"add-from-lb-inv":()=>{const iid=lbItem&&lbItem.id;closeLB();if(iid)enterPlaceMode(iid);},
     "edit-inv":()=>{closeLB();editInvItem(id);}
   };
   if(actions[action])actions[action]();

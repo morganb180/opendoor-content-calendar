@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-15T10:27:35.241Z",
+  "updatedAt": "2026-07-16T06:07:26.453Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2023,6 +2023,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/prez_sees_opendoor_picturelock-49ad11f1a5.mp4"
       },
       "updatedAt": "2026-07-15T10:27:35.239Z"
+    },
+    {
+      "id": "p-mrn3x9tg51j",
+      "status": "ready",
+      "title": "Most Used Emojis — DM meme",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Hey admin! What are your most used emojis? The Opendoor recent-emoji tray says it all: house, door, key, boxes, moving truck, cash, sparkles, handshake, happy tears, blue heart.",
+      "socialCaption": "",
+      "canva": "DAHPhiuBEyU",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/most_used_emojis_1080x1440-487ba19c1a.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-16T06:07:26.452Z"
     }
   ],
   "comments": {}

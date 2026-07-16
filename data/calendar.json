@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-16T09:10:31.635Z",
+  "updatedAt": "2026-07-16T09:28:39.541Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2069,7 +2069,7 @@
       "fmt": "Carousel · 3:4",
       "caption": "Our logo keeps showing up around the house.",
       "socialCaption": "",
-      "canva": "DAHPiaThU1M",
+      "canva": "DAHPiccrDfQ",
       "media": {
         "img": "previews/home_02_flowerbed.jpg",
         "slides": [
@@ -2079,7 +2079,7 @@
         ],
         "video": ""
       },
-      "updatedAt": "2026-07-16T09:10:31.634Z"
+      "updatedAt": "2026-07-16T09:28:39.540Z"
     }
   ],
   "comments": {}

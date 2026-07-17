@@ -43,9 +43,9 @@
   .hint{font-size:12px;color:var(--muted);margin-left:auto}
   /* GRID */
   .month{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-  .dow{display:grid;grid-template-columns:repeat(7,1fr);background:#fafbfe;border-bottom:1px solid var(--line)}
+  .dow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));background:#fafbfe;border-bottom:1px solid var(--line)}
   .dow div{padding:10px 12px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-  .grid{display:grid;grid-template-columns:repeat(7,1fr)}
+  .grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
   .cell{min-height:124px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:7px;position:relative;transition:background .12s}
   .cell:nth-child(7n){border-right:0}
   .cell.dim{background:#fcfdff}

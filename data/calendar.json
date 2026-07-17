@@ -218,10 +218,6 @@
       "label": "Boss's Day",
       "type": "evt"
     },
-    "2026-10-18": {
-      "label": "Diwali",
-      "type": "hol"
-    },
     "2026-10-24": {
       "label": "Make a Difference Day",
       "type": "evt"
@@ -237,6 +233,10 @@
     "2026-11-03": {
       "label": "🗳️ Election Day",
       "type": "evt"
+    },
+    "2026-11-08": {
+      "label": "Diwali",
+      "type": "hol"
     },
     "2026-11-11": {
       "label": "Veterans Day",
@@ -266,12 +266,12 @@
       "label": "Giving Tuesday",
       "type": "mkt"
     },
-    "2026-12-07": {
-      "label": "Pearl Harbor Remembrance Day",
+    "2026-12-04": {
+      "label": "Hanukkah begins",
       "type": "hol"
     },
-    "2026-12-13": {
-      "label": "Hanukkah begins",
+    "2026-12-07": {
+      "label": "Pearl Harbor Remembrance Day",
       "type": "hol"
     },
     "2026-12-21": {
@@ -308,14 +308,16 @@
       "label": "Martin Luther King Jr. Day",
       "type": "hol"
     },
-    "2027-02-07": {
-      "label": "Super Bowl LXI",
-      "type": "evt"
-    },
-    "2027-02-14": {
-      "label": "Valentine's Day",
-      "type": "hol"
-    }
+    "2027-02-14": [
+      {
+        "label": "Valentine's Day",
+        "type": "hol"
+      },
+      {
+        "label": "Super Bowl LXI",
+        "type": "evt"
+      }
+    ]
   },
   "posts": [
     {

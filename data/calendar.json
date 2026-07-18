@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-16T16:06:07.841Z",
+  "updatedAt": "2026-07-18T06:29:18.565Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2099,6 +2099,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/deal_dance_picturelock-067d49e333.mp4"
       },
       "updatedAt": "2026-07-16T11:35:50.467Z"
+    },
+    {
+      "id": "p-mrpzl3ky5nu",
+      "status": "ready",
+      "title": "Ways to say I love you",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Ways to say I love you: the fourth one comes with a cash offer.",
+      "socialCaption": "",
+      "canva": "DAHPttg2w3c",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ways_to_say_1080x1440-832335c9b9.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-18T06:29:18.562Z"
     }
   ],
   "comments": {}

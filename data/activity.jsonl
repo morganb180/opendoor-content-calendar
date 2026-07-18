@@ -104,3 +104,5 @@
 {"ts":"2026-07-16T16:06:07.814Z","actor":"morganbrown","action":"set","id":"seed-19","title":"Go Together — Summer Edition","detail":{"fields":["socialCaption"]}}
 {"ts":"2026-07-16T16:06:07.841Z","actor":"morganbrown","action":"set","id":"seed-23","title":"Go Together — Back to School","detail":{"fields":["socialCaption"]}}
 {"ts":"2026-07-17T16:39:15.386Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Fix 2026 holiday markers seeded from 2025: Diwali → Nov 8, Hanukkah → Dec 4, Super Bowl LXI → Feb 14","posts":26,"inventory":68}}
+{"ts":"2026-07-18T06:29:18.567Z","actor":"morganbrown","action":"add","id":"p-mrpzl3ky5nu","title":"Ways to say I love you","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-18T06:29:18.828Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Ways to say I love you (PayPal love-language reskin)","posts":26,"inventory":69}}

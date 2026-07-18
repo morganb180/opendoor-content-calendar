@@ -106,3 +106,6 @@
 {"ts":"2026-07-17T16:39:15.386Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Fix 2026 holiday markers seeded from 2025: Diwali → Nov 8, Hanukkah → Dec 4, Super Bowl LXI → Feb 14","posts":26,"inventory":68}}
 {"ts":"2026-07-18T06:29:18.567Z","actor":"morganbrown","action":"add","id":"p-mrpzl3ky5nu","title":"Ways to say I love you","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-18T06:29:18.828Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Ways to say I love you (PayPal love-language reskin)","posts":26,"inventory":69}}
+{"ts":"2026-07-18T08:13:02.935Z","actor":"morganbrown","action":"add","id":"p-mrq3aic436i","title":"Sold in Under a Week — review-song music video","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-18T08:13:03.017Z","actor":"morganbrown","action":"add","id":"p-mrq3aiee6gj","title":"Sold in Under a Week — 30s chorus reel","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-18T08:13:19.587Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add review-song music video + 30s chorus reel","posts":26,"inventory":71}}

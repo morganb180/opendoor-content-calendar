@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-18T06:29:18.565Z",
+  "updatedAt": "2026-07-18T08:13:03.016Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2115,6 +2115,38 @@
         "video": ""
       },
       "updatedAt": "2026-07-18T06:29:18.562Z"
+    },
+    {
+      "id": "p-mrq3aic436i",
+      "status": "ready",
+      "title": "Sold in Under a Week — review-song music video",
+      "theme": "brand",
+      "fmt": "Video · 9:16 · 3:00",
+      "caption": "Full music video: a Suno pop song built from 50 genuine 5-star reviews. Review cards land in sync with the lyric they are, over a craftsman home with the Opendoor for-sale sign. Ends on a zoom to the sign + big SOLD on the chant. Master: finals/review-wall/reviewsong_full_9x16_v1.mp4 (this URL is the compressed delivery copy).",
+      "socialCaption": "We turned our 5-star reviews into a song. Every lyric is a real review. 🎵🏡",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/reviewsong_full_9x16_delivery-0fb734953c.mp4"
+      },
+      "updatedAt": "2026-07-18T08:13:02.932Z"
+    },
+    {
+      "id": "p-mrq3aiee6gj",
+      "status": "ready",
+      "title": "Sold in Under a Week — 30s chorus reel",
+      "theme": "brand",
+      "fmt": "Reel · 9:16 · 29s",
+      "caption": "First-chorus cutdown of the review-song music video. Opens mid 'way too easy' pulse, chorus card slams, ends on the blue 'My only regret is not selling sooner.' hook card. No title card, instant content.",
+      "socialCaption": "my only regret is not selling sooner 🎵 (every lyric = a real review)",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/reviewsong_chorus30_9x16_v1-1144dc94c3.mp4"
+      },
+      "updatedAt": "2026-07-18T08:13:03.014Z"
     }
   ],
   "comments": {}

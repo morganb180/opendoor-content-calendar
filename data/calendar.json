@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-19T11:33:26.484Z",
+  "updatedAt": "2026-07-19T18:22:10.519Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2163,6 +2163,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-19T11:33:26.481Z"
+    },
+    {
+      "id": "p-mrs4hpar5ud",
+      "status": "ready",
+      "title": "Ramp Offer Reveal (skate bait-and-switch)",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "Watch him send it. The camera pans down to a cash offer you can accept from a parking lot.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ramp_offer_reveal_lock-150d1885c7.mp4"
+      },
+      "updatedAt": "2026-07-19T18:22:10.515Z"
     }
   ],
   "comments": {}

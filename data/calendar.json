@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-18T08:13:03.016Z",
+  "updatedAt": "2026-07-19T11:33:26.484Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2147,6 +2147,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/reviewsong_chorus30_9x16_v1-1144dc94c3.mp4"
       },
       "updatedAt": "2026-07-18T08:13:03.014Z"
+    },
+    {
+      "id": "p-mrrpw2fk3qp",
+      "status": "ready",
+      "title": "Focus Mode: Selling to Opendoor On",
+      "theme": "meme",
+      "fmt": "static 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHP026x8og",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/focus_A-d676b35726.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-19T11:33:26.481Z"
     }
   ],
   "comments": {}

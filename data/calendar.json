@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-19T18:22:10.519Z",
+  "updatedAt": "2026-07-20T09:25:10.423Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2179,6 +2179,28 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ramp_offer_reveal_lock-150d1885c7.mp4"
       },
       "updatedAt": "2026-07-19T18:22:10.515Z"
+    },
+    {
+      "id": "p-mrt0qtre50c",
+      "status": "ready",
+      "title": "Emoji line game carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4 · 5 slides (slide 1 video)",
+      "caption": "Let the emoji pick how you sell your house. Follow your line: cash offer in minutes, sold without a showing, or you pick the close date. Drop \"offer\" for the link.",
+      "socialCaption": "",
+      "canva": "DAHP6dXylHM",
+      "media": {
+        "img": "previews/B_s1.png",
+        "slides": [
+          "previews/slides/p-mrt0qtre50c/B_s1.png",
+          "previews/slides/p-mrt0qtre50c/B_s2.png",
+          "previews/slides/p-mrt0qtre50c/B_s3.png",
+          "previews/slides/p-mrt0qtre50c/B_s4.png",
+          "previews/slides/p-mrt0qtre50c/B_s5.png"
+        ],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/B_s1_video-1d2ed37f42.mp4"
+      },
+      "updatedAt": "2026-07-20T09:25:10.381Z"
     }
   ],
   "comments": {}

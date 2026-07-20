@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-20T09:25:10.423Z",
+  "updatedAt": "2026-07-20T13:45:39.798Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2201,6 +2201,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/B_s1_video-1d2ed37f42.mp4"
       },
       "updatedAt": "2026-07-20T09:25:10.381Z"
+    },
+    {
+      "id": "p-mrta1yhf4qp",
+      "status": "ready",
+      "title": "Might just sell to Opendoor to focus on summer",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHP7fJ3g1o",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/A_house-6ed15fff2b.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-20T13:45:39.796Z"
     }
   ],
   "comments": {}

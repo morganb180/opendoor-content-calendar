@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-20T13:45:39.798Z",
+  "updatedAt": "2026-07-20T14:39:02.807Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2217,6 +2217,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-20T13:45:39.796Z"
+    },
+    {
+      "id": "p-mrtbylxs6f2",
+      "status": "ready",
+      "title": "Realtor Skit: Better Way To Sell",
+      "theme": "meme",
+      "fmt": "Video · 9:16",
+      "caption": "How 89.7% of realtors do their job. There's a better way to sell.",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/poster.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/better-way-final-a7a28acfc6.mp4"
+      },
+      "updatedAt": "2026-07-20T14:39:02.802Z"
     }
   ],
   "comments": {}

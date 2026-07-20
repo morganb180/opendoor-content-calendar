@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-20T14:39:02.807Z",
+  "updatedAt": "2026-07-20T16:02:50.894Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2233,6 +2233,29 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/better-way-final-a7a28acfc6.mp4"
       },
       "updatedAt": "2026-07-20T14:39:02.802Z"
+    },
+    {
+      "id": "p-mrteya7h68",
+      "status": "ready",
+      "title": "Opendoor meme carousel (Shopify reskin)",
+      "theme": "meme",
+      "fmt": "Carousel · 3:4 · 6 slides",
+      "caption": "Shopify meme-carousel format reskinned for Opendoor: kid's first sale vs biggest sale, showing feedback rage, canceled showings, that first cash offer feeling",
+      "socialCaption": "",
+      "canva": "DAHP8HaxqFc",
+      "media": {
+        "img": "previews/slide1_grid-mrteya7h.png",
+        "slides": [
+          "previews/slides/p-mrteya7h68/slide1_grid.png",
+          "previews/slides/p-mrteya7h68/slide2_bird.png",
+          "previews/slides/p-mrteya7h68/slide3_monkey.png",
+          "previews/slides/p-mrteya7h68/slide4_pacha.png",
+          "previews/slides/p-mrteya7h68/slide5_fish.png",
+          "previews/slides/p-mrteya7h68/slide6_cat.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-20T16:02:50.892Z"
     }
   ],
   "comments": {}

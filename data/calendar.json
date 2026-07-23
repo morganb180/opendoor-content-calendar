@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-20T16:02:50.894Z",
+  "updatedAt": "2026-07-23T10:44:15.306Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2190,13 +2190,13 @@
       "socialCaption": "",
       "canva": "DAHP6dXylHM",
       "media": {
-        "img": "previews/B_s1.png",
+        "img": "previews/B_s1.jpg",
         "slides": [
-          "previews/slides/p-mrt0qtre50c/B_s1.png",
-          "previews/slides/p-mrt0qtre50c/B_s2.png",
-          "previews/slides/p-mrt0qtre50c/B_s3.png",
-          "previews/slides/p-mrt0qtre50c/B_s4.png",
-          "previews/slides/p-mrt0qtre50c/B_s5.png"
+          "previews/slides/p-mrt0qtre50c/B_s1.jpg",
+          "previews/slides/p-mrt0qtre50c/B_s2.jpg",
+          "previews/slides/p-mrt0qtre50c/B_s3.jpg",
+          "previews/slides/p-mrt0qtre50c/B_s4.jpg",
+          "previews/slides/p-mrt0qtre50c/B_s5.jpg"
         ],
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/B_s1_video-1d2ed37f42.mp4"
       },
@@ -2247,15 +2247,36 @@
         "img": "previews/slide1_grid-mrteya7h.png",
         "slides": [
           "previews/slides/p-mrteya7h68/slide1_grid.png",
-          "previews/slides/p-mrteya7h68/slide2_bird.png",
-          "previews/slides/p-mrteya7h68/slide3_monkey.png",
-          "previews/slides/p-mrteya7h68/slide4_pacha.png",
-          "previews/slides/p-mrteya7h68/slide5_fish.png",
-          "previews/slides/p-mrteya7h68/slide6_cat.png"
+          "previews/slides/p-mrteya7h68/slide2_bird.jpg",
+          "previews/slides/p-mrteya7h68/slide3_monkey.jpg",
+          "previews/slides/p-mrteya7h68/slide4_pacha.jpg",
+          "previews/slides/p-mrteya7h68/slide5_fish.jpg",
+          "previews/slides/p-mrteya7h68/slide6_cat.jpg"
         ],
         "video": ""
       },
       "updatedAt": "2026-07-20T16:02:50.892Z"
+    },
+    {
+      "id": "p-mrxdvvpw5ar",
+      "status": "ready",
+      "title": "Billboard logic: why do that when you can sell to Opendoor",
+      "theme": "meme",
+      "fmt": "Carousel · 4 slides",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHQMn3hsi4",
+      "media": {
+        "img": "previews/slides/p-mrxdvvpw5ar/01.jpg",
+        "slides": [
+          "previews/slides/p-mrxdvvpw5ar/01.jpg",
+          "previews/slides/p-mrxdvvpw5ar/02.jpg",
+          "previews/slides/p-mrxdvvpw5ar/03.jpg",
+          "previews/slides/p-mrxdvvpw5ar/04.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-23T10:43:59.958Z"
     }
   ],
   "comments": {}

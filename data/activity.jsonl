@@ -124,3 +124,5 @@
 {"ts":"2026-07-23T10:43:59.959Z","actor":"morganbrown","action":"add","id":"p-mrxdvvpw5ar","title":"Billboard logic: why do that when you can sell to Opendoor","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-23T10:44:15.426Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Billboard logic carousel (sell to Opendoor)","posts":26,"inventory":78}}
 {"ts":"2026-07-24T15:11:31.618Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price why wait carousel","posts":26,"inventory":78}}
+{"ts":"2026-07-24T15:12:08.152Z","actor":"morganbrown","action":"add","id":"p-mrz2wki5303","title":"Below list price, why wait carousel","detail":{"date":"","inventory":true}}
+{"ts":"2026-07-24T15:12:08.645Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price why wait carousel","posts":26,"inventory":79}}

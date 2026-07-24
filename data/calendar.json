@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-23T10:44:15.306Z",
+  "updatedAt": "2026-07-24T15:12:08.151Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2277,6 +2277,26 @@
         "video": ""
       },
       "updatedAt": "2026-07-23T10:43:59.958Z"
+    },
+    {
+      "id": "p-mrz2wki5303",
+      "status": "ready",
+      "title": "Below list price, why wait carousel",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4",
+      "caption": "8 in 10 homes in the 10 slowest metros sold below original list price in May. Why wait? Get a competitive cash offer and get a move on today.",
+      "socialCaption": "",
+      "canva": "DAHQTyezRkQ",
+      "media": {
+        "img": "previews/01_hero_map.png",
+        "slides": [
+          "previews/slides/p-mrz2wki5303/01_hero_map.png",
+          "previews/slides/p-mrz2wki5303/02_ranked_bars.png",
+          "previews/slides/p-mrz2wki5303/03_why_wait.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-07-24T15:12:08.147Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-27T21:52:11.977Z",
+  "updatedAt": "2026-07-29T08:36:08.716Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2313,6 +2313,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-27T21:52:11.975Z"
+    },
+    {
+      "id": "p-ms5tyky27a4",
+      "status": "ready",
+      "title": "Fast Food Sign Sayings",
+      "theme": "meme",
+      "fmt": "carousel 3:4 x10",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHQwHO7vb4",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/sign_01-d7f47d929e.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-29T08:36:08.714Z"
     }
   ],
   "comments": {}

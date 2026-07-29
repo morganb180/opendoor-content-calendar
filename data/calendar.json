@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-29T08:36:08.716Z",
+  "updatedAt": "2026-07-29T09:21:08.847Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2329,6 +2329,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-29T08:36:08.714Z"
+    },
+    {
+      "id": "p-ms5vkgdp19e",
+      "status": "ready",
+      "title": "Which one is Opendoor blue? (doors quiz)",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Engagement-bait color quiz: which door is Opendoor blue? Answer: 3",
+      "socialCaption": "",
+      "canva": "DAHQwZEYTrU",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/B_doors-fcfa1ca6bd.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-29T09:21:08.845Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-29T09:21:08.847Z",
+  "updatedAt": "2026-07-29T13:40:33.829Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2345,6 +2345,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-29T09:21:08.845Z"
+    },
+    {
+      "id": "p-ms64u2ag4si",
+      "status": "ready",
+      "title": "Translate meme: cash now, more later",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "buzzword: opendoor's cash now, more later -> what it means: a really good decision. Alt copy variant in Canva: get paid today, and again when it resells (DAHQxSuDcFA).",
+      "socialCaption": "",
+      "canva": "DAHQxbY41fQ",
+      "media": {
+        "img": "previews/translate_buzzword_final_decision.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-29T13:40:33.827Z"
     }
   ],
   "comments": {}

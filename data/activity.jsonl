@@ -147,3 +147,5 @@
 {"ts":"2026-07-31T19:19:28.267Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Comic panel hassle ad units (3)","posts":26,"inventory":88}}
 {"ts":"2026-07-31T19:27:34.608Z","actor":"morganbrown","action":"add","id":"p-ms9c412w1r3","title":"Things That Go Together (Summer Edition)","detail":{"date":"","inventory":true}}
 {"ts":"2026-07-31T19:27:46.006Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Things That Go Together (Summer Edition)","posts":26,"inventory":89}}
+{"ts":"2026-07-31T19:30:14.563Z","actor":"morganbrown","action":"set","id":"p-ms9c412w1r3","title":"Things That Go Together (Summer Edition)","detail":{"fields":["canva"]}}
+{"ts":"2026-07-31T19:30:14.657Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Attach Canva design to Summer Edition","posts":26,"inventory":89}}

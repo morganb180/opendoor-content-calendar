@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-31T17:15:21.845Z",
+  "updatedAt": "2026-07-31T17:15:44.906Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2356,7 +2356,7 @@
       "socialCaption": "",
       "canva": "DAHQxbY41fQ",
       "media": {
-        "img": "previews/translate_buzzword_final_decision.png",
+        "img": "previews/translate_buzzword_final_decision.jpg",
         "slides": [],
         "video": ""
       },
@@ -2388,7 +2388,7 @@
       "socialCaption": "",
       "canva": "",
       "media": {
-        "img": "previews/B_many_homes_v2.png",
+        "img": "previews/B_many_homes_v2.jpg",
         "slides": [],
         "video": ""
       },

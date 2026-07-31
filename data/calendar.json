@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-31T19:19:17.045Z",
+  "updatedAt": "2026-07-31T19:27:34.608Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2441,6 +2441,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-31T19:19:17.043Z"
+    },
+    {
+      "id": "p-ms9c412w1r3",
+      "status": "ready",
+      "title": "Things That Go Together (Summer Edition)",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "Sunglasses + sunshine. Pool + flamingo floaty. Your home + Opendoor.",
+      "socialCaption": "Some things just belong together.",
+      "canva": "",
+      "media": {
+        "img": "previews/go_together_summer_pool_FINAL.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-31T19:27:34.606Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-31T17:15:44.906Z",
+  "updatedAt": "2026-07-31T17:25:36.733Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2386,13 +2386,13 @@
       "fmt": "Static · 3:4",
       "caption": "",
       "socialCaption": "",
-      "canva": "",
+      "canva": "DAHQ-YDyMeE",
       "media": {
         "img": "previews/B_many_homes_v2.jpg",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-07-31T17:15:21.843Z"
+      "updatedAt": "2026-07-31T17:25:36.732Z"
     }
   ],
   "comments": {}

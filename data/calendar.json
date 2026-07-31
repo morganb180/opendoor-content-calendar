@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-29T13:40:33.829Z",
+  "updatedAt": "2026-07-31T17:13:48.100Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2361,6 +2361,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-29T13:40:33.827Z"
+    },
+    {
+      "id": "p-ms97bzuo7f1",
+      "status": "ready",
+      "title": "Oregon Trail: died waiting for your house to sell",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "Oregon Trail death-screen meme, Opendoor edition. Approved set of 3: A faithful ('You have died of waiting for your house to sell.'), B adds 'Press SPACE BAR to sell to Opendoor instead', C tombstone ('Here lies your home sale'). Files: finals/oregon-trail-died-waiting/. Hosted: A https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/oregon_trail_A_faithful-18e714ce94.png B https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/oregon_trail_B_spacebar-c0c0ca49ee.png C https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/oregon_trail_C_tombstone-18b5f743e5.png",
+      "socialCaption": "",
+      "canva": "",
+      "media": {
+        "img": "previews/oregon_trail_A_faithful.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-31T17:13:48.098Z"
     }
   ],
   "comments": {}

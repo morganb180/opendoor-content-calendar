@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-31T17:25:36.733Z",
+  "updatedAt": "2026-07-31T19:19:17.045Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2393,6 +2393,54 @@
         "video": ""
       },
       "updatedAt": "2026-07-31T17:25:36.732Z"
+    },
+    {
+      "id": "p-ms9btd223fx",
+      "status": "ready",
+      "title": "Comic Panel — Showing In An Hour",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Retro romance-comic ad unit (EcomTable format: paint the scenario, then the line they actually hear). Short-notice showing chaos. Build: ~/opendoor/projects/comic-panel-hassle",
+      "socialCaption": "They want to see it in an hour. Or you could just get an offer.",
+      "canva": "",
+      "media": {
+        "img": "previews/A.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-31T19:19:16.883Z"
+    },
+    {
+      "id": "p-ms9btd4j7d2",
+      "status": "ready",
+      "title": "Comic Panel — $12,000 Off After The Inspection",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Retro romance-comic ad unit. Post-inspection renegotiation. Build: ~/opendoor/projects/comic-panel-hassle",
+      "socialCaption": "The offer after the offer. 🫠",
+      "canva": "",
+      "media": {
+        "img": "previews/B.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-31T19:19:16.968Z"
+    },
+    {
+      "id": "p-ms9btd6r1p2",
+      "status": "ready",
+      "title": "Comic Panel — Their Loan Fell Through",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Retro romance-comic ad unit. Financing falls through, back on the market. Build: ~/opendoor/projects/comic-panel-hassle",
+      "socialCaption": "Back on the market. Again.",
+      "canva": "",
+      "media": {
+        "img": "previews/C.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-07-31T19:19:17.043Z"
     }
   ],
   "comments": {}

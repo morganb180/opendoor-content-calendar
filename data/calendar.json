@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-04T12:33:02.580Z",
+  "updatedAt": "2026-08-04T12:59:39.072Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2473,6 +2473,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-04T12:33:02.577Z"
+    },
+    {
+      "id": "p-mseo0kai2oe",
+      "status": "ready",
+      "title": "Important events in history: you sold your house from your phone",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Reskin of the @spritz 'important events in history' timeline meme. Sliced bread, the computer, and 2026: you sold your house from your phone. All type, arrows and the phone's cash-offer UI are code-drawn (Poppins, Opendoor blue); bread/computer/phone plates are Nano Banana Pro cut-outs. Build: ~/opendoor/projects/history-timeline-meme/build.py",
+      "socialCaption": "best thing since sliced bread",
+      "canva": "DAHRVJtDjDs",
+      "media": {
+        "img": "previews/timeline_phone_1080.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-04T12:59:39.068Z"
     }
   ],
   "comments": {}

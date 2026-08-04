@@ -153,3 +153,5 @@
 {"ts":"2026-08-04T12:33:08.755Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Selling your house cartoons, round 2","posts":26,"inventory":90}}
 {"ts":"2026-08-04T12:59:39.073Z","actor":"morganbrown","action":"add","id":"p-mseo0kai2oe","title":"Important events in history: you sold your house from your phone","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-04T12:59:44.434Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Important events in history: you sold your house from your phone","posts":26,"inventory":91}}
+{"ts":"2026-08-04T15:12:27.351Z","actor":"morganbrown","action":"set","id":"p-ms97e0343o5","title":"Storage full camera roll - houses upon houses","detail":{"fields":["canva","media.img"]}}
+{"ts":"2026-08-04T15:12:27.878Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"storage-full meme: 7x7 aspirational final","posts":26,"inventory":91}}

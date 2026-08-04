@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-04T12:59:39.072Z",
+  "updatedAt": "2026-08-04T15:12:27.350Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2386,13 +2386,13 @@
       "fmt": "Static · 3:4",
       "caption": "",
       "socialCaption": "",
-      "canva": "DAHQ-YDyMeE",
+      "canva": "DAHRV-OZIf4",
       "media": {
-        "img": "previews/B_many_homes_v2.jpg",
+        "img": "/Users/morganbrown/opendoor/projects/storage-full-meme/out/B_many_homes_v3_7x7.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-07-31T17:25:36.732Z"
+      "updatedAt": "2026-08-04T15:12:27.349Z"
     },
     {
       "id": "p-ms9btd223fx",

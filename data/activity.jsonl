@@ -149,3 +149,5 @@
 {"ts":"2026-07-31T19:27:46.006Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Things That Go Together (Summer Edition)","posts":26,"inventory":89}}
 {"ts":"2026-07-31T19:30:14.563Z","actor":"morganbrown","action":"set","id":"p-ms9c412w1r3","title":"Things That Go Together (Summer Edition)","detail":{"fields":["canva"]}}
 {"ts":"2026-07-31T19:30:14.657Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Attach Canva design to Summer Edition","posts":26,"inventory":89}}
+{"ts":"2026-08-04T12:33:02.581Z","actor":"morganbrown","action":"add","id":"p-msen2cbk5h8","title":"Selling your house cartoons, round 2","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-04T12:33:08.755Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Selling your house cartoons, round 2","posts":26,"inventory":90}}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-07-31T19:30:14.563Z",
+  "updatedAt": "2026-08-04T12:33:02.580Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2457,6 +2457,22 @@
         "video": ""
       },
       "updatedAt": "2026-07-31T19:30:14.562Z"
+    },
+    {
+      "id": "p-msen2cbk5h8",
+      "status": "ready",
+      "title": "Selling your house cartoons, round 2",
+      "theme": "meme",
+      "fmt": "Carousel · 10 slides",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHRVDtWI64",
+      "media": {
+        "img": "previews/01_list-high.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-04T12:33:02.577Z"
     }
   ],
   "comments": {}

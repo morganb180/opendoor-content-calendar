@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-04T15:13:06.562Z",
+  "updatedAt": "2026-08-05T17:00:19.041Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2286,7 +2286,7 @@
       "fmt": "Carousel · 3:4",
       "caption": "8 in 10 homes in the 10 slowest metros sold below original list price in May. Why wait? Get a competitive cash offer and get a move on today.",
       "socialCaption": "",
-      "canva": "DAHQTyezRkQ",
+      "canva": "DAHRcMW6_bE",
       "media": {
         "img": "previews/01_hero_map.png",
         "slides": [
@@ -2296,7 +2296,7 @@
         ],
         "video": ""
       },
-      "updatedAt": "2026-07-24T15:12:08.147Z"
+      "updatedAt": "2026-08-05T17:00:19.040Z"
     },
     {
       "id": "p-ms3rilzb51g",

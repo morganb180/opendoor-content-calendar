@@ -158,3 +158,5 @@
 {"ts":"2026-08-04T15:13:05.503Z","actor":"morganbrown","action":"set","id":"p-ms97e0343o5","title":"Storage full camera roll - houses upon houses","detail":{"fields":["media.img"]}}
 {"ts":"2026-08-04T15:13:06.718Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"fix preview path for storage-full 7x7","posts":26,"inventory":91}}
 {"ts":"2026-08-05T16:49:28.158Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price carousel — date chip demoted, latest-available wording","posts":26,"inventory":91}}
+{"ts":"2026-08-05T17:00:19.042Z","actor":"morganbrown","action":"set","id":"p-mrz2wki5303","title":"Below list price, why wait carousel","detail":{"fields":["canva"]}}
+{"ts":"2026-08-05T17:00:19.143Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price carousel — repoint to v3B Canva design (date folded into source credit)","posts":26,"inventory":91}}

@@ -160,3 +160,8 @@
 {"ts":"2026-08-05T16:49:28.158Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price carousel — date chip demoted, latest-available wording","posts":26,"inventory":91}}
 {"ts":"2026-08-05T17:00:19.042Z","actor":"morganbrown","action":"set","id":"p-mrz2wki5303","title":"Below list price, why wait carousel","detail":{"fields":["canva"]}}
 {"ts":"2026-08-05T17:00:19.143Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Below list price carousel — repoint to v3B Canva design (date folded into source credit)","posts":26,"inventory":91}}
+{"ts":"2026-08-14T08:43:50.983Z","actor":"morganbrown","action":"add","id":"p-msspa4at5l8","title":"Testimonial — Abernethy Authenticity 30","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-14T08:43:51.014Z","actor":"morganbrown","action":"add","id":"p-msspa4bp1yw","title":"Testimonial — Abernethy Logic 15","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-14T08:43:51.043Z","actor":"morganbrown","action":"add","id":"p-msspa4ci1uh","title":"Testimonial — Gina & Mike 30","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-14T08:43:51.072Z","actor":"morganbrown","action":"add","id":"p-msspa4db4zb","title":"Testimonial — Julie 41 Years","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-14T08:43:57.093Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"add 4 testimonial cutdowns to inventory (ready)","posts":26,"inventory":95}}

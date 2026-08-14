@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-05T17:00:19.041Z",
+  "updatedAt": "2026-08-14T08:43:51.072Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2489,6 +2489,70 @@
         "video": ""
       },
       "updatedAt": "2026-08-04T12:59:39.068Z"
+    },
+    {
+      "id": "p-msspa4at5l8",
+      "status": "ready",
+      "title": "Testimonial — Abernethy Authenticity 30",
+      "theme": "proof",
+      "fmt": "Video · 9:16",
+      "caption": "Agency master (already captioned + legal super), branded pass: O bug + Hanken end card. Canva asset VAHSQAsXAYs (branded) / VAHSQDYHO4k (as-is). Finals: ~/opendoor/finals/testimonial-cutdowns",
+      "socialCaption": "Three weeks to relocate with two kids and two dogs. “It was just a huge weight off our shoulders knowing that we could sell our house and move on to the next chapter with our family.” Kellie and Brian sold their Valdosta home to Opendoor and made the deadline.",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/GA_authenticity30_branded_9x16-5f165b16fb.mp4"
+      },
+      "updatedAt": "2026-08-14T08:43:50.981Z"
+    },
+    {
+      "id": "p-msspa4bp1yw",
+      "status": "ready",
+      "title": "Testimonial — Abernethy Logic 15",
+      "theme": "proof",
+      "fmt": "Video · 9:16",
+      "caption": "Agency master 15s logic cut, branded pass: O bug + Hanken end card. Canva asset VAHSQBEnYa8 (branded) / VAHSQPvKcLQ (as-is). Finals: ~/opendoor/finals/testimonial-cutdowns",
+      "socialCaption": "“It was so fast, so easy.” Selling the traditional way is complicated. When a new job came with a three-week clock, the Abernethys skipped it.",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/GA_logic15_branded_9x16-6829b01813.mp4"
+      },
+      "updatedAt": "2026-08-14T08:43:51.013Z"
+    },
+    {
+      "id": "p-msspa4ci1uh",
+      "status": "ready",
+      "title": "Testimonial — Gina & Mike 30",
+      "theme": "proof",
+      "fmt": "Video · 9:16",
+      "caption": "Agency master (subtitled + legal), branded pass: O bug + Hanken end card. Canva asset VAHSQN7B6qs (branded) / VAHSQO-Lhic (as-is). Finals: ~/opendoor/finals/testimonial-cutdowns",
+      "socialCaption": "“We’re just so ecstatic that we made our dream a reality.” Gina and Mike sold their Columbus home on their timeline and moved into the retirement home they had been dreaming about.",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ginamike30_branded_9x16-e59c8ff81a.mp4"
+      },
+      "updatedAt": "2026-08-14T08:43:51.042Z"
+    },
+    {
+      "id": "p-msspa4db4zb",
+      "status": "ready",
+      "title": "Testimonial — Julie 41 Years",
+      "theme": "proof",
+      "fmt": "Video · 9:16",
+      "caption": "Custom numeral-system cut (Playfair animated 41, review notes all resolved 7/15). Canva asset VAHSQHNU9e4. Music bed still master-inherited; CapCut pass optional. Finals: ~/opendoor/finals/testimonial-cutdowns/01_41years_15s_9x16.mp4",
+      "socialCaption": "41 years in one house. When Opendoor came in with an offer, Julie got to skip the work and head straight for her next chapter. “I just walk around all the time and say, I love it.”",
+      "canva": "",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/01_41years_15s_9x16-2d9112d42a.mp4"
+      },
+      "updatedAt": "2026-08-14T08:43:51.071Z"
     }
   ],
   "comments": {}

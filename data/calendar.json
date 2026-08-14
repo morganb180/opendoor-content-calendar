@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T14:13:57.079Z",
+  "updatedAt": "2026-08-14T14:35:41.581Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2553,6 +2553,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/01_41years_15s_9x16-2d9112d42a.mp4"
       },
       "updatedAt": "2026-08-14T08:43:51.071Z"
+    },
+    {
+      "id": "p-mst1ul9733h",
+      "status": "ready",
+      "title": "Screenshot of This Text",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Reskin of @americanrivers' iMessage-screenshot meme. Boss asks for a post about how easy selling to Opendoor is; the writer asks to just screenshot the thread; boss says No. The post is the screenshot. Code-rendered iOS card over an NBP colonial with the blue door. Build: ~/opendoor/projects/boss-text-meme/build.py",
+      "socialCaption": "what he doesn't know won't hurt him",
+      "canva": "DAHSRqKmaj4",
+      "media": {
+        "img": "previews/boss_text_A.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-14T14:35:41.580Z"
     }
   ],
   "comments": {}

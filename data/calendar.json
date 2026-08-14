@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T08:43:51.072Z",
+  "updatedAt": "2026-08-14T08:49:40.953Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2534,9 +2534,9 @@
       "media": {
         "img": "",
         "slides": [],
-        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ginamike30_branded_9x16-e59c8ff81a.mp4"
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/ginamike30_branded_9x16-32393a137a.mp4"
       },
-      "updatedAt": "2026-08-14T08:43:51.042Z"
+      "updatedAt": "2026-08-14T08:49:40.953Z"
     },
     {
       "id": "p-msspa4db4zb",

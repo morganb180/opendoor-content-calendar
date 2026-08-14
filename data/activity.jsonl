@@ -165,3 +165,5 @@
 {"ts":"2026-08-14T08:43:51.043Z","actor":"morganbrown","action":"add","id":"p-msspa4ci1uh","title":"Testimonial — Gina & Mike 30","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-14T08:43:51.072Z","actor":"morganbrown","action":"add","id":"p-msspa4db4zb","title":"Testimonial — Julie 41 Years","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-14T08:43:57.093Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"add 4 testimonial cutdowns to inventory (ready)","posts":26,"inventory":95}}
+{"ts":"2026-08-14T08:49:40.953Z","actor":"morganbrown","action":"set","id":"p-msspa4ci1uh","title":"Testimonial — Gina & Mike 30","detail":{"fields":["media.video"]}}
+{"ts":"2026-08-14T08:49:41.041Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"gina&mike: bug-only branded v2, drop redundant end card","posts":26,"inventory":95}}

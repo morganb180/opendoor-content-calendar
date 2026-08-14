@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T14:35:41.581Z",
+  "updatedAt": "2026-08-14T17:08:37.929Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2569,6 +2569,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-14T14:35:41.580Z"
+    },
+    {
+      "id": "p-mst7b9uu5cm",
+      "status": "ready",
+      "title": "Tic tac toe: three in a row",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Tic-tac-toe reskin of @pachaofficial's cherries post. Opendoor O-mark wins the diagonal.",
+      "socialCaption": "three in a row 🏠",
+      "canva": "DAHSSaa_tns",
+      "media": {
+        "img": "previews/B_sell.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-14T17:08:37.927Z"
     }
   ],
   "comments": {}

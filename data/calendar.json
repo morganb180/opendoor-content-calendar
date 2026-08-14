@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T20:19:09.874Z",
+  "updatedAt": "2026-08-14T20:45:14.610Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2601,6 +2601,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-14T20:19:09.872Z"
+    },
+    {
+      "id": "p-mstf1reg25b",
+      "status": "ready",
+      "title": "How's your home sale going",
+      "theme": "brand",
+      "fmt": "Reel · 9:16",
+      "caption": "Them: how's your home sale going? Me: (the montage). Get a cash offer in minutes.",
+      "socialCaption": "",
+      "canva": "VAHSTP8o2so",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/home_sale_going-34c9328743.mp4"
+      },
+      "updatedAt": "2026-08-14T20:45:14.609Z"
     }
   ],
   "comments": {}

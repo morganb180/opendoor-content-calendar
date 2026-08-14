@@ -181,3 +181,6 @@
 {"ts":"2026-08-14T17:08:40.566Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Tic tac toe: three in a row","posts":26,"inventory":97}}
 {"ts":"2026-08-14T20:19:09.874Z","actor":"morganbrown","action":"add","id":"p-mste4aqj2ca","title":"Emotional Emojis","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-14T20:19:13.236Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Emotional Emojis static","posts":26,"inventory":98}}
+{"ts":"2026-08-14T20:45:11.035Z","actor":"morganbrown","action":"add","id":"p-mstf1reg25b","title":"How's your home sale going","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-14T20:45:14.610Z","actor":"morganbrown","action":"set","id":"p-mstf1reg25b","title":"How's your home sale going","detail":{"fields":["canva"]}}
+{"ts":"2026-08-14T20:45:14.690Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"How's your home sale going reel","posts":26,"inventory":99}}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T17:08:37.929Z",
+  "updatedAt": "2026-08-14T20:19:09.874Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2585,6 +2585,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-14T17:08:37.927Z"
+    },
+    {
+      "id": "p-mste4aqj2ca",
+      "status": "ready",
+      "title": "Emotional Emojis",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Two-panel emoji comparison: selling the old fashioned way vs with Opendoor.",
+      "socialCaption": "",
+      "canva": "DAHSTF1jl_o",
+      "media": {
+        "img": "previews/emotional-emojis-opendoor.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-14T20:19:09.872Z"
     }
   ],
   "comments": {}

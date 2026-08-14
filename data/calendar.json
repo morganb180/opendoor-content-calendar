@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T08:55:59.776Z",
+  "updatedAt": "2026-08-14T14:13:57.079Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2553,54 +2553,6 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/01_41years_15s_9x16-2d9112d42a.mp4"
       },
       "updatedAt": "2026-08-14T08:43:51.071Z"
-    },
-    {
-      "id": "p-mssppqlj6bf",
-      "status": "draft",
-      "title": "Empire State — Some People Love Opendoor",
-      "theme": "meme",
-      "fmt": "Static · 3:4",
-      "caption": "Found in Canva sweep 2026-08-14: finished-looking static, never registered on the calendar. Review before scheduling.",
-      "socialCaption": "",
-      "canva": "DAHOLmYzk7I",
-      "media": {
-        "img": "",
-        "slides": [],
-        "video": ""
-      },
-      "updatedAt": "2026-08-14T08:55:59.719Z"
-    },
-    {
-      "id": "p-mssppqmb1wg",
-      "status": "draft",
-      "title": "Price-Cut Cards — Seller Reframe (Jun 2026)",
-      "theme": "proof",
-      "fmt": "Carousel · 7 slides",
-      "caption": "Found in Canva sweep 2026-08-14: 7-slide seller-reframe variant of the registered Price-Cut Cards (DAHN_TrpnVc). Distinct framing, never registered.",
-      "socialCaption": "",
-      "canva": "DAHOFdFMkII",
-      "media": {
-        "img": "",
-        "slides": [],
-        "video": ""
-      },
-      "updatedAt": "2026-08-14T08:55:59.747Z"
-    },
-    {
-      "id": "p-mssppqn359i",
-      "status": "draft",
-      "title": "Translate Meme — Get Paid Today, and Again",
-      "theme": "meme",
-      "fmt": "Static · 3:4",
-      "caption": "Found in Canva sweep 2026-08-14: alternate copy variant of the registered Translate meme (DAHQxbY41fQ). Could run as a second post or A/B.",
-      "socialCaption": "",
-      "canva": "DAHQxSuDcFA",
-      "media": {
-        "img": "",
-        "slides": [],
-        "video": ""
-      },
-      "updatedAt": "2026-08-14T08:55:59.775Z"
     }
   ],
   "comments": {}

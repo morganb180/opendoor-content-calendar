@@ -171,3 +171,7 @@
 {"ts":"2026-08-14T08:55:59.749Z","actor":"morganbrown","action":"add","id":"p-mssppqmb1wg","title":"Price-Cut Cards — Seller Reframe (Jun 2026)","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-14T08:55:59.777Z","actor":"morganbrown","action":"add","id":"p-mssppqn359i","title":"Translate Meme — Get Paid Today, and Again","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-14T08:55:59.917Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"canva sweep: add 3 unregistered designs to inventory (draft)","posts":26,"inventory":98}}
+{"ts":"2026-08-14T14:13:57.017Z","actor":"morganbrown","action":"rm","id":"p-mssppqlj6bf","title":"Empire State — Some People Love Opendoor","detail":{"kind":"inventory","hadComments":false}}
+{"ts":"2026-08-14T14:13:57.051Z","actor":"morganbrown","action":"rm","id":"p-mssppqmb1wg","title":"Price-Cut Cards — Seller Reframe (Jun 2026)","detail":{"kind":"inventory","hadComments":false}}
+{"ts":"2026-08-14T14:13:57.079Z","actor":"morganbrown","action":"rm","id":"p-mssppqn359i","title":"Translate Meme — Get Paid Today, and Again","detail":{"kind":"inventory","hadComments":false}}
+{"ts":"2026-08-14T14:13:57.176Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"remove 3 canva-sweep drafts: already posted","posts":26,"inventory":95}}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-14T20:45:14.610Z",
+  "updatedAt": "2026-08-17T15:03:43.390Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2560,15 +2560,15 @@
       "title": "Screenshot of This Text",
       "theme": "meme",
       "fmt": "Static · 3:4",
-      "caption": "Reskin of @americanrivers' iMessage-screenshot meme. Boss asks for a post about how easy selling to Opendoor is; the writer asks to just screenshot the thread; boss says No. The post is the screenshot. Code-rendered iOS card over an NBP colonial with the blue door. Build: ~/opendoor/projects/boss-text-meme/build.py",
+      "caption": "Reskin of @americanrivers' iMessage-screenshot meme. Boss asks for a post about how easy selling to Opendoor is; the writer asks to just screenshot the thread; boss says No. The post is the screenshot. Code-rendered iOS card over an NBP colonial with the blue door. v2 (2026-08-17): message window enlarged to 90% of canvas and the whole iOS UI scaled 1.78x for IG legibility; card height now follows its content, house plate pushed in so the blue door owns the band below the card. Build: ~/opendoor/projects/boss-text-meme/build.py big A",
       "socialCaption": "what he doesn't know won't hurt him",
       "canva": "DAHSRqKmaj4",
       "media": {
-        "img": "previews/boss_text_A.jpg",
+        "img": "/Users/morganbrown/opendoor/projects/boss-text-meme/out/boss_text_A_v2.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-08-14T14:35:41.580Z"
+      "updatedAt": "2026-08-17T15:03:43.389Z"
     },
     {
       "id": "p-mst7b9uu5cm",

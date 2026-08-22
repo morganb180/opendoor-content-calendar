@@ -187,3 +187,6 @@
 {"ts":"2026-08-17T15:03:31.252Z","actor":"morganbrown","action":"set","id":"p-mst1ul9733h","title":"Screenshot of This Text","detail":{"fields":["media.img"]}}
 {"ts":"2026-08-17T15:03:43.390Z","actor":"morganbrown","action":"set","id":"p-mst1ul9733h","title":"Screenshot of This Text","detail":{"fields":["caption"]}}
 {"ts":"2026-08-17T15:03:48.217Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Screenshot of This Text v2 — larger message window + bigger type","posts":26,"inventory":99}}
+{"ts":"2026-08-22T07:29:43.838Z","actor":"morganbrown","action":"set","id":"p-msspa4at5l8","title":"Testimonial — Abernethy Authenticity 30","detail":{"fields":["media.img"]}}
+{"ts":"2026-08-22T07:30:01.141Z","actor":"morganbrown","action":"set","id":"p-msspa4at5l8","title":"Testimonial — Abernethy Authenticity 30","detail":{"fields":["media.img"]}}
+{"ts":"2026-08-22T07:30:07.555Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add poster frame for Abernethy Authenticity 30 inventory entry","posts":26,"inventory":99}}

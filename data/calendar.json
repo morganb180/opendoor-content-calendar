@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-22T07:30:01.141Z",
+  "updatedAt": "2026-08-24T10:16:20.750Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2617,6 +2617,38 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/home_sale_going-34c9328743.mp4"
       },
       "updatedAt": "2026-08-14T20:45:14.609Z"
+    },
+    {
+      "id": "p-mt72z9zg2ea",
+      "status": "ready",
+      "title": "Daily Reminder: your offer is 5 minutes away",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "Handwritten affirmation format, aimed at a home sale.",
+      "socialCaption": "",
+      "canva": "DAHTMu4Rlik",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/B_brand-b18397defc.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T10:16:06.220Z"
+    },
+    {
+      "id": "p-mt72zl7027n",
+      "status": "ready",
+      "title": "Swipe to reveal: the home behind the offer",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4 · 14 slides",
+      "caption": "Progressive-reveal carousel: each swipe widens the window until the home and the Opendoor sign are fully revealed.",
+      "socialCaption": "",
+      "canva": "DAHTMpf4jzI",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/slide_01-9ba81ca850.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T10:16:20.749Z"
     }
   ],
   "comments": {}

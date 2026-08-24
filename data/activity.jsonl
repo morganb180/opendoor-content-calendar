@@ -190,3 +190,6 @@
 {"ts":"2026-08-22T07:29:43.838Z","actor":"morganbrown","action":"set","id":"p-msspa4at5l8","title":"Testimonial — Abernethy Authenticity 30","detail":{"fields":["media.img"]}}
 {"ts":"2026-08-22T07:30:01.141Z","actor":"morganbrown","action":"set","id":"p-msspa4at5l8","title":"Testimonial — Abernethy Authenticity 30","detail":{"fields":["media.img"]}}
 {"ts":"2026-08-22T07:30:07.555Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add poster frame for Abernethy Authenticity 30 inventory entry","posts":26,"inventory":99}}
+{"ts":"2026-08-24T10:16:06.222Z","actor":"morganbrown","action":"add","id":"p-mt72z9zg2ea","title":"Daily Reminder: your offer is 5 minutes away","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-24T10:16:20.751Z","actor":"morganbrown","action":"add","id":"p-mt72zl7027n","title":"Swipe to reveal: the home behind the offer","detail":{"date":"","inventory":true}}
+{"ts":"2026-08-24T10:16:31.573Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Daily Reminder static + Home Reveal carousel","posts":26,"inventory":101}}

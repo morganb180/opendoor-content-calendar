@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-24T14:54:05.233Z",
+  "updatedAt": "2026-08-24T15:01:29.144Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2700,6 +2700,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-24T14:54:05.232Z"
+    },
+    {
+      "id": "p-mt7d6a0t60v",
+      "status": "ready",
+      "title": "If u can see an Opendoor sign",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "if u can see an Opendoor sign, consider it as a sign 🪧",
+      "canva": "DAHTNh7PFBE",
+      "media": {
+        "img": "previews/its-a-sign.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T15:01:29.142Z"
     }
   ],
   "comments": {}

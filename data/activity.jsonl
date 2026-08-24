@@ -193,3 +193,5 @@
 {"ts":"2026-08-24T10:16:06.222Z","actor":"morganbrown","action":"add","id":"p-mt72z9zg2ea","title":"Daily Reminder: your offer is 5 minutes away","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-24T10:16:20.751Z","actor":"morganbrown","action":"add","id":"p-mt72zl7027n","title":"Swipe to reveal: the home behind the offer","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-24T10:16:31.573Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Daily Reminder static + Home Reveal carousel","posts":26,"inventory":101}}
+{"ts":"2026-08-24T12:58:54.996Z","actor":"morganbrown","action":"add","id":"p-mt78sni147t","title":"National Dog Day — 10/10 Good Doggos","detail":{"date":"2026-08-26","inventory":false}}
+{"ts":"2026-08-24T12:59:05.590Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"National Dog Day — 10/10 Good Doggos (Aug 26)","posts":27,"inventory":101}}

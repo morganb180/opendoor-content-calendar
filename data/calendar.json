@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-24T10:16:20.750Z",
+  "updatedAt": "2026-08-24T12:59:00.165Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -857,6 +857,25 @@
       "updatedAt": "2026-07-07T15:16:15.546Z",
       "date": "2026-07-16",
       "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mt78sni147t",
+      "status": "scheduled",
+      "title": "National Dog Day — 10/10 Good Doggos",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "National Dog Day feed static. Reframe of the supplied Opendoor tennis-ball yard-sign brand photo (6000x4000, 3:2) to the 1080x1440 feed canvas: subject-tight crop keeping the dog whole, the full sign copy and the live QR. No burned-in type — the sign already carries the wordmark and the 'Fetch a buyer for your home' headline. Build: ~/opendoor/projects/dog-day-post/build.py (C_tight)",
+      "socialCaption": "10/10 good doggos prefer selling their home with Opendoor. Happy National Dog Day. 🎾",
+      "canva": "DAHTNMowj4c",
+      "media": {
+        "img": "previews/C_tight.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T12:58:54.994Z",
+      "date": "2026-08-26",
+      "holiday": "National Dog Day",
       "postedUrl": ""
     }
   ],

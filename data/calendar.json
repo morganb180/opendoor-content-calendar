@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-24T12:59:00.165Z",
+  "updatedAt": "2026-08-24T14:30:05.308Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2668,6 +2668,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-24T10:16:20.749Z"
+    },
+    {
+      "id": "p-mt7c1wjd6n4",
+      "status": "ready",
+      "title": "Eye chart: sell your house to Opendoor",
+      "theme": "meme",
+      "fmt": "static",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHTNjVpWBU",
+      "media": {
+        "img": "previews/eye-chart-sell-your-house.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T14:30:05.306Z"
     }
   ],
   "comments": {}

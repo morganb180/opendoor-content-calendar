@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-24T14:30:05.308Z",
+  "updatedAt": "2026-08-24T14:54:05.233Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2684,6 +2684,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-24T14:30:05.306Z"
+    },
+    {
+      "id": "p-mt7cwrju26p",
+      "status": "ready",
+      "title": "It's OK To Get An Offer - Just Curious",
+      "theme": "brand",
+      "fmt": "static",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHTNleqtcU",
+      "media": {
+        "img": "previews/FINAL-just-curious-permission.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-24T14:54:05.232Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-24T15:01:29.144Z",
+  "updatedAt": "2026-08-25T18:26:21.294Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2716,6 +2716,27 @@
         "video": ""
       },
       "updatedAt": "2026-08-24T15:01:29.142Z"
+    },
+    {
+      "id": "p-mt8zxlgm37",
+      "status": "ready",
+      "title": "i'm a simple woman - all I need is",
+      "theme": "meme",
+      "fmt": "Carousel · 4 slides",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHTUvQrtas",
+      "media": {
+        "img": "previews/slides/p-mt8zxlgm37/1_water.png",
+        "slides": [
+          "previews/slides/p-mt8zxlgm37/1_water.png",
+          "previews/slides/p-mt8zxlgm37/2_wifi.png",
+          "previews/slides/p-mt8zxlgm37/3_flowers.png",
+          "previews/slides/p-mt8zxlgm37/4_iphone.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-08-25T18:26:21.292Z"
     }
   ],
   "comments": {}

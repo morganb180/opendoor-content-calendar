@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-25T18:26:21.294Z",
+  "updatedAt": "2026-08-26T14:53:22.837Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2737,6 +2737,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-25T18:26:21.292Z"
+    },
+    {
+      "id": "p-mta7rk7kec",
+      "status": "ready",
+      "title": "Gold Star Behavior",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Gold star behavior: doing none of it.\n\nNo Saturday spent driving in circles so strangers could open your closets. No emergency toilet repair the night before a showing. No pretending a family of four doesn't live here.\n\nOpendoor makes you a real offer on your home and you pick the day you move.\n\nSix for six.",
+      "canva": "DAHTZhH6F8I",
+      "media": {
+        "img": "previews/gold-star-behavior_FINAL.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-26T14:53:22.835Z"
     }
   ],
   "comments": {}

@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-27T19:57:34.889Z",
+  "updatedAt": "2026-08-27T20:14:36.309Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2789,6 +2789,27 @@
         "video": ""
       },
       "updatedAt": "2026-08-27T19:57:34.888Z"
+    },
+    {
+      "id": "p-mtbyoi935rv",
+      "status": "ready",
+      "title": "The Watsons: Bought, Sold, Mortgage",
+      "theme": "proof",
+      "fmt": "Carousel · 4 slides",
+      "caption": "",
+      "socialCaption": "Three moves, one door.\n\nThe Watsons sold their old house through Opendoor, bought their next one through Opendoor, and got the mortgage through Opendoor too. No listing, no double move, no three sets of strangers to chase.\n\nHear the whole story from them. Link in bio.",
+      "canva": "DAHThGGY6As",
+      "media": {
+        "img": "previews/slides/p-mtbyoi935rv/watsons-01.jpg",
+        "slides": [
+          "previews/slides/p-mtbyoi935rv/watsons-01.jpg",
+          "previews/slides/p-mtbyoi935rv/watsons-02.jpg",
+          "previews/slides/p-mtbyoi935rv/watsons-03.jpg",
+          "previews/slides/p-mtbyoi935rv/watsons-04.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-08-27T20:14:36.308Z"
     }
   ],
   "comments": {}

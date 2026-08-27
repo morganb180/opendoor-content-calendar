@@ -207,3 +207,5 @@
 {"ts":"2026-08-26T14:53:26.487Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Gold Star Behavior","posts":27,"inventory":106}}
 {"ts":"2026-08-27T14:01:55.487Z","actor":"morganbrown","action":"add","id":"p-mtbld8nw4jf","title":"Opendoor app launch film","detail":{"date":"","inventory":true}}
 {"ts":"2026-08-27T14:02:01.233Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add Opendoor app launch film (9:16 Instagram reframe)","posts":27,"inventory":107}}
+{"ts":"2026-08-27T14:10:03.035Z","actor":"morganbrown","action":"set","id":"p-mtbld8nw4jf","title":"Opendoor app launch film","detail":{"fields":["socialCaption"]}}
+{"ts":"2026-08-27T14:10:03.116Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Add social caption to Opendoor app launch film","posts":27,"inventory":107}}

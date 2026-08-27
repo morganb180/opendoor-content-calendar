@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-27T14:01:55.487Z",
+  "updatedAt": "2026-08-27T14:10:03.035Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2761,14 +2761,14 @@
       "theme": "brand",
       "fmt": "Video · 9:16",
       "caption": "The iOS app launch film, reframed from 16:9 to 9:16 for Reels and Stories. 31s, original audio, no re-cut.",
-      "socialCaption": "",
+      "socialCaption": "No calling to ask if 6:15 works.\nNo waiting on a callback.\nNo agent standing in the kitchen while you decide how you feel about the kitchen.\n\nFind it, book the tour, walk through the door. The whole thing lives in the app.\n\nThe new Opendoor app is out now.",
       "canva": "VAHTftW1kag",
       "media": {
         "img": "previews/poster_9x16.jpg",
         "slides": [],
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/opendoor_app_launch_9x16-a163bd60e3.mp4"
       },
-      "updatedAt": "2026-08-27T14:01:55.485Z"
+      "updatedAt": "2026-08-27T14:10:03.034Z"
     }
   ],
   "comments": {}

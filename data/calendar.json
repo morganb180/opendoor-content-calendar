@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-27T14:10:03.035Z",
+  "updatedAt": "2026-08-27T19:57:34.889Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2769,6 +2769,26 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/opendoor_app_launch_9x16-a163bd60e3.mp4"
       },
       "updatedAt": "2026-08-27T14:10:03.034Z"
+    },
+    {
+      "id": "p-mtby2m902ko",
+      "status": "ready",
+      "title": "6 Reasons You Shouldn't Use Opendoor",
+      "theme": "meme",
+      "fmt": "Carousel · 3:4 · 3 slides",
+      "caption": "Reskin of @coffeeholic101's 2-slide bait-and-switch carousel. Slide 1 promises a listicle, slide 2 is the empty list with the swipe arrow holding its exact position, slide 3 lands the mechanics. All type is code (Poppins Bold matched to the reference's measured ink widths), real wordmark in the handle slot.",
+      "socialCaption": "Six reasons you shouldn't use Opendoor.\n\nTake your time, we'll wait.\n\nNo showings. No repairs. No waiting. Get a free offer on your home and pick the day you move.",
+      "canva": "DAHTg_If14A",
+      "media": {
+        "img": "previews/reasons-bait-slide1.jpg",
+        "slides": [
+          "previews/slides/p-mtby2m902ko/reasons-bait-slide1.jpg",
+          "previews/slides/p-mtby2m902ko/reasons-bait-slide2.jpg",
+          "previews/slides/p-mtby2m902ko/reasons-bait-slide3.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-08-27T19:57:34.888Z"
     }
   ],
   "comments": {}

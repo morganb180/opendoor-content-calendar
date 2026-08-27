@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-26T14:53:22.837Z",
+  "updatedAt": "2026-08-27T14:01:55.487Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2753,6 +2753,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-26T14:53:22.835Z"
+    },
+    {
+      "id": "p-mtbld8nw4jf",
+      "status": "ready",
+      "title": "Opendoor app launch film",
+      "theme": "brand",
+      "fmt": "Video · 9:16",
+      "caption": "The iOS app launch film, reframed from 16:9 to 9:16 for Reels and Stories. 31s, original audio, no re-cut.",
+      "socialCaption": "",
+      "canva": "VAHTftW1kag",
+      "media": {
+        "img": "previews/poster_9x16.jpg",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/opendoor_app_launch_9x16-a163bd60e3.mp4"
+      },
+      "updatedAt": "2026-08-27T14:01:55.485Z"
     }
   ],
   "comments": {}

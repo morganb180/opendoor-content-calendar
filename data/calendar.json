@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-27T20:14:36.309Z",
+  "updatedAt": "2026-08-28T11:32:04.805Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2810,6 +2810,22 @@
         "video": ""
       },
       "updatedAt": "2026-08-27T20:14:36.308Z"
+    },
+    {
+      "id": "p-mtcvge2s3vd",
+      "status": "ready",
+      "title": "Trying Times: Open House Meme",
+      "theme": "meme",
+      "fmt": "Video · 9:16 · 14s",
+      "caption": "Green-screen Cher guy pops out over a realtor open house sign; hard cut to the better-way kinetic tag.",
+      "socialCaption": "",
+      "canva": "VAHTkybyOUI",
+      "media": {
+        "img": "",
+        "slides": [],
+        "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/open_house_trying_times-30cd97a802.mp4"
+      },
+      "updatedAt": "2026-08-28T11:32:04.804Z"
     }
   ],
   "comments": {}

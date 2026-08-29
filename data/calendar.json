@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-28T11:32:04.805Z",
+  "updatedAt": "2026-08-29T18:00:28.986Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -876,6 +876,25 @@
       "updatedAt": "2026-08-24T12:58:54.994Z",
       "date": "2026-08-26",
       "holiday": "National Dog Day",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mteorq9e32o",
+      "status": "ready",
+      "title": "Week 0 - O-mark college fans",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "Zero showings. Zero open houses. Zero kickoffs missed.",
+      "socialCaption": "",
+      "canva": "DAHTsYRfpag",
+      "media": {
+        "img": "previews/week0_e1.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-08-29T18:00:28.985Z",
+      "date": "2026-08-29",
+      "holiday": "",
       "postedUrl": ""
     }
   ],

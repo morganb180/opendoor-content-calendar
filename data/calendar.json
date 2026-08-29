@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-29T18:00:28.986Z",
+  "updatedAt": "2026-08-29T18:01:21.111Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -888,11 +888,11 @@
       "socialCaption": "",
       "canva": "DAHTsYRfpag",
       "media": {
-        "img": "previews/week0_e1.png",
+        "img": "previews/week0_e1.jpg",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-08-29T18:00:28.985Z",
+      "updatedAt": "2026-08-29T18:01:21.110Z",
       "date": "2026-08-29",
       "holiday": "",
       "postedUrl": ""

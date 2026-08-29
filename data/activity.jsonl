@@ -217,3 +217,4 @@
 {"ts":"2026-08-28T11:32:04.890Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Trying Times: Open House Meme","posts":27,"inventory":110}}
 {"ts":"2026-08-29T18:00:28.987Z","actor":"morganbrown","action":"add","id":"p-mteorq9e32o","title":"Week 0 - O-mark college fans","detail":{"date":"2026-08-29","inventory":false}}
 {"ts":"2026-08-29T18:00:29.108Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Week 0 O-mark college fans static","posts":28,"inventory":110}}
+{"ts":"2026-08-29T18:00:57.249Z","actor":"morganbrown","action":"deploy","id":"","title":"","detail":{"message":"compress week0 preview","posts":28,"inventory":110}}

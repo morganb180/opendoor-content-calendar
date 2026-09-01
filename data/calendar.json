@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-08-29T18:01:21.111Z",
+  "updatedAt": "2026-09-01T15:35:33.885Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2845,6 +2845,22 @@
         "video": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/open_house_trying_times-30cd97a802.mp4"
       },
       "updatedAt": "2026-08-28T11:32:04.804Z"
+    },
+    {
+      "id": "p-mtitwx6h10m",
+      "status": "ready",
+      "title": "Go Together — Back to School (superhero lunchbox)",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "also pairs well: first-day photos + a new front porch. if a move is on the syllabus this year, selling is the easy subject. 🎒",
+      "socialCaption": "",
+      "canva": "DAHT918e06M",
+      "media": {
+        "img": "previews/things_that_go_together_back_to_school_superhero.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-01T15:35:33.883Z"
     }
   ],
   "comments": {}

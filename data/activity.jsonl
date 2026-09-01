@@ -220,3 +220,5 @@
 {"ts":"2026-08-29T18:00:57.249Z","actor":"morganbrown","action":"deploy","id":"","title":"","detail":{"message":"compress week0 preview","posts":28,"inventory":110}}
 {"ts":"2026-08-29T18:01:21.111Z","actor":"morganbrown","action":"set","id":"p-mteorq9e32o","title":"Week 0 - O-mark college fans","detail":{"fields":["media.img"]}}
 {"ts":"2026-08-29T18:01:21.181Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"week0 preview as jpg","posts":28,"inventory":110}}
+{"ts":"2026-09-01T15:35:33.886Z","actor":"morganbrown","action":"add","id":"p-mtitwx6h10m","title":"Go Together — Back to School (superhero lunchbox)","detail":{"date":"","inventory":true}}
+{"ts":"2026-09-01T15:35:34.031Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Go Together back-to-school superhero lunchbox update","posts":28,"inventory":111}}

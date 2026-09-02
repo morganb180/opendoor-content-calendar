@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-02T23:25:07.844Z",
+  "updatedAt": "2026-09-02T23:26:42.717Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -949,7 +949,26 @@
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-09-02T23:25:07.842Z",
+      "updatedAt": "2026-09-02T23:26:27.498Z",
+      "date": "2026-09-06",
+      "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mtkq6o1n7ic",
+      "status": "ready",
+      "title": "Labor Day - Tribute card",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Happy Labor Day to everyone who gave their summer weekends to a house they're about to leave. Next time, skip the weekends. Sell as-is.",
+      "canva": "DAHUF7Xpmbw",
+      "media": {
+        "img": "previews/labor-day-tribute.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-02T23:26:42.714Z",
       "date": "2026-09-07",
       "holiday": "Labor Day",
       "postedUrl": ""

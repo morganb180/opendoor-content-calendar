@@ -226,3 +226,7 @@
 {"ts":"2026-09-02T23:25:07.574Z","actor":"morganbrown","action":"add","id":"p-mtkq4mol6cn","title":"Labor Day - Saturday Slate (CFB Week 1)","detail":{"date":"2026-09-05","inventory":false}}
 {"ts":"2026-09-02T23:25:07.845Z","actor":"morganbrown","action":"add","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"date":"2026-09-07","inventory":false}}
 {"ts":"2026-09-02T23:25:08.086Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day weekend set: OOO 9/4, Saturday slate 9/5, skip repairs 9/7","posts":31,"inventory":111}}
+{"ts":"2026-09-02T23:26:27.452Z","actor":"morganbrown","action":"move","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"from":"2026-09-07","date":"2026-09-06"}}
+{"ts":"2026-09-02T23:26:27.500Z","actor":"morganbrown","action":"set","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"fields":["holiday"]}}
+{"ts":"2026-09-02T23:26:42.717Z","actor":"morganbrown","action":"add","id":"p-mtkq6o1n7ic","title":"Labor Day - Tribute card","detail":{"date":"2026-09-07","inventory":false}}
+{"ts":"2026-09-02T23:26:42.921Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day: tribute card 9/7, skip-repairs moved to 9/6","posts":32,"inventory":111}}

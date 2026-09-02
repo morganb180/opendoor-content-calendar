@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-01T15:35:33.885Z",
+  "updatedAt": "2026-09-02T23:25:07.844Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -895,6 +895,63 @@
       "updatedAt": "2026-08-29T18:01:21.110Z",
       "date": "2026-08-29",
       "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mtkq4mn972d",
+      "status": "ready",
+      "title": "Labor Day - Out of Office auto-reply",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Out of office. Out of showings. Back Tuesday.",
+      "canva": "DAHUF3-uEHw",
+      "media": {
+        "img": "previews/labor-day-out-of-office.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-02T23:25:07.366Z",
+      "date": "2026-09-04",
+      "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mtkq4mol6cn",
+      "status": "ready",
+      "title": "Labor Day - Saturday Slate (CFB Week 1)",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Noon, 3:30, primetime. Nothing at 2. Sell without the showings.",
+      "canva": "DAHUFyQ5lNY",
+      "media": {
+        "img": "previews/labor-day-saturday-slate.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-02T23:25:07.571Z",
+      "date": "2026-09-05",
+      "holiday": "",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mtkq4mudma",
+      "status": "ready",
+      "title": "Labor Day - Kinda chic to skip repairs",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Kinda chic to skip the repairs. Sell as-is, pick your close date, spend the long weekend somewhere else.",
+      "canva": "DAHUF-8-MT8",
+      "media": {
+        "img": "previews/labor-day-skip-repairs.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-02T23:25:07.842Z",
+      "date": "2026-09-07",
+      "holiday": "Labor Day",
       "postedUrl": ""
     }
   ],

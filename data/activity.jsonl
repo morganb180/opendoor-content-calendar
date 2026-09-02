@@ -222,3 +222,7 @@
 {"ts":"2026-08-29T18:01:21.181Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"week0 preview as jpg","posts":28,"inventory":110}}
 {"ts":"2026-09-01T15:35:33.886Z","actor":"morganbrown","action":"add","id":"p-mtitwx6h10m","title":"Go Together — Back to School (superhero lunchbox)","detail":{"date":"","inventory":true}}
 {"ts":"2026-09-01T15:35:34.031Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Go Together back-to-school superhero lunchbox update","posts":28,"inventory":111}}
+{"ts":"2026-09-02T23:25:07.369Z","actor":"morganbrown","action":"add","id":"p-mtkq4mn972d","title":"Labor Day - Out of Office auto-reply","detail":{"date":"2026-09-04","inventory":false}}
+{"ts":"2026-09-02T23:25:07.574Z","actor":"morganbrown","action":"add","id":"p-mtkq4mol6cn","title":"Labor Day - Saturday Slate (CFB Week 1)","detail":{"date":"2026-09-05","inventory":false}}
+{"ts":"2026-09-02T23:25:07.845Z","actor":"morganbrown","action":"add","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"date":"2026-09-07","inventory":false}}
+{"ts":"2026-09-02T23:25:08.086Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day weekend set: OOO 9/4, Saturday slate 9/5, skip repairs 9/7","posts":31,"inventory":111}}

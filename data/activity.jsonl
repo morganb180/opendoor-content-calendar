@@ -230,3 +230,7 @@
 {"ts":"2026-09-02T23:26:27.500Z","actor":"morganbrown","action":"set","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"fields":["holiday"]}}
 {"ts":"2026-09-02T23:26:42.717Z","actor":"morganbrown","action":"add","id":"p-mtkq6o1n7ic","title":"Labor Day - Tribute card","detail":{"date":"2026-09-07","inventory":false}}
 {"ts":"2026-09-02T23:26:42.921Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day: tribute card 9/7, skip-repairs moved to 9/6","posts":32,"inventory":111}}
+{"ts":"2026-09-02T23:42:15.126Z","actor":"morganbrown","action":"rm","id":"p-mtkq6o1n7ic","title":"Labor Day - Tribute card","detail":{"kind":"post","hadComments":false}}
+{"ts":"2026-09-02T23:42:15.407Z","actor":"morganbrown","action":"add","id":"p-mtkqqnpg5ky","title":"Labor Day - Tribute card (alternate, unscheduled)","detail":{"date":"","inventory":true}}
+{"ts":"2026-09-02T23:42:38.035Z","actor":"morganbrown","action":"add","id":"p-mtkqr5651xg","title":"Labor Day - Happy No-Labor Day","detail":{"date":"2026-09-07","inventory":false}}
+{"ts":"2026-09-02T23:42:38.268Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day: No-Labor Day card on 9/7, tribute card to inventory","posts":32,"inventory":112}}

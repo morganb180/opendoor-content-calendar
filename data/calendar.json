@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-02T23:26:42.717Z",
+  "updatedAt": "2026-09-02T23:42:38.035Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -955,20 +955,20 @@
       "postedUrl": ""
     },
     {
-      "id": "p-mtkq6o1n7ic",
+      "id": "p-mtkqr5651xg",
       "status": "ready",
-      "title": "Labor Day - Tribute card",
+      "title": "Labor Day - Happy No-Labor Day",
       "theme": "seasonal",
       "fmt": "Static · 3:4",
       "caption": "",
-      "socialCaption": "Happy Labor Day to everyone who gave their summer weekends to a house they're about to leave. Next time, skip the weekends. Sell as-is.",
-      "canva": "DAHUF7Xpmbw",
+      "socialCaption": "Happy No-Labor Day. Sold as-is, no repairs, no showings. The ladder is decorative now.",
+      "canva": "DAHUF6RouBI",
       "media": {
-        "img": "previews/labor-day-tribute.png",
+        "img": "previews/labor-day-no-labor-day.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-09-02T23:26:42.714Z",
+      "updatedAt": "2026-09-02T23:42:38.032Z",
       "date": "2026-09-07",
       "holiday": "Labor Day",
       "postedUrl": ""
@@ -2937,6 +2937,22 @@
         "video": ""
       },
       "updatedAt": "2026-09-01T15:35:33.883Z"
+    },
+    {
+      "id": "p-mtkqqnpg5ky",
+      "status": "ready",
+      "title": "Labor Day - Tribute card (alternate, unscheduled)",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "",
+      "canva": "DAHUF7Xpmbw",
+      "media": {
+        "img": "previews/labor-day-tribute-mtkqqnph.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-02T23:42:15.404Z"
     }
   ],
   "comments": {}

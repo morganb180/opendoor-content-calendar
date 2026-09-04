@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-04T17:45:07.327Z",
+  "updatedAt": "2026-09-04T17:45:57.187Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3009,14 +3009,14 @@
       "theme": "brand",
       "fmt": "Static · 3:4",
       "caption": "",
-      "socialCaption": "Mortgages made honest. Opendoor Home Loans is now open. See today's rates at opendoor.com/mortgage.",
+      "socialCaption": "It's real, and it's fantastic. Opendoor Home Loans is now open. See today's rates at opendoor.com/mortgage.",
       "canva": "DAHUQQWdKS4",
       "media": {
         "img": "previews/mortgage-launch-D-twopanel.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-09-04T17:44:51.407Z"
+      "updatedAt": "2026-09-04T17:45:57.186Z"
     }
   ],
   "comments": {}

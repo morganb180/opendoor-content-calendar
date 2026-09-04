@@ -240,3 +240,5 @@
 {"ts":"2026-09-04T17:44:51.409Z","actor":"morganbrown","action":"add","id":"p-mtn8uqx942o","title":"Home Loans launch D: the rate my lender gave me (two-panel)","detail":{"date":"","inventory":true}}
 {"ts":"2026-09-04T17:44:51.720Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Home Loans launch: 4 IG statics to inventory","posts":32,"inventory":116}}
 {"ts":"2026-09-04T17:45:07.504Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Home Loans launch: optimize previews","posts":32,"inventory":116}}
+{"ts":"2026-09-04T17:45:57.187Z","actor":"morganbrown","action":"set","id":"p-mtn8uqx942o","title":"Home Loans launch D: the rate my lender gave me (two-panel)","detail":{"fields":["socialCaption"]}}
+{"ts":"2026-09-04T17:45:57.311Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Home Loans launch D: caption","posts":32,"inventory":116}}

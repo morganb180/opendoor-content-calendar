@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-04T17:44:51.409Z",
+  "updatedAt": "2026-09-04T17:45:07.327Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -945,7 +945,7 @@
       "socialCaption": "Kinda chic to skip the repairs. Sell as-is, pick your close date, spend the long weekend somewhere else.",
       "canva": "DAHUF-8-MT8",
       "media": {
-        "img": "previews/labor-day-skip-repairs.png",
+        "img": "previews/labor-day-skip-repairs.jpg",
         "slides": [],
         "video": ""
       },
@@ -964,7 +964,7 @@
       "socialCaption": "Happy No-Labor Day. Sold as-is, no repairs, no showings. The ladder is decorative now.",
       "canva": "DAHUF6RouBI",
       "media": {
-        "img": "previews/labor-day-no-labor-day.png",
+        "img": "previews/labor-day-no-labor-day.jpg",
         "slides": [],
         "video": ""
       },
@@ -2948,7 +2948,7 @@
       "socialCaption": "",
       "canva": "DAHUF7Xpmbw",
       "media": {
-        "img": "previews/labor-day-tribute-mtkqqnph.png",
+        "img": "previews/labor-day-tribute-mtkqqnph.jpg",
         "slides": [],
         "video": ""
       },
@@ -2964,7 +2964,7 @@
       "socialCaption": "Opendoor Home Loans is open. On a $300K loan, half a point lower is about $98 a month back. See today's rates at opendoor.com/mortgage.",
       "canva": "DAHUQfi3jYY",
       "media": {
-        "img": "previews/mortgage-launch-A-dusk.png",
+        "img": "previews/mortgage-launch-A-dusk.jpg",
         "slides": [],
         "video": ""
       },
@@ -2980,7 +2980,7 @@
       "socialCaption": "Opendoor Home Loans is open. On a $300K loan, half a point lower is about $98 a month back. See today's rates at opendoor.com/mortgage.",
       "canva": "DAHUQeDCfvQ",
       "media": {
-        "img": "previews/mortgage-launch-B-sunlit.png",
+        "img": "previews/mortgage-launch-B-sunlit.jpg",
         "slides": [],
         "video": ""
       },

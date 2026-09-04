@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-02T23:42:38.035Z",
+  "updatedAt": "2026-09-04T17:44:51.409Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2953,6 +2953,70 @@
         "video": ""
       },
       "updatedAt": "2026-09-02T23:42:15.404Z"
+    },
+    {
+      "id": "p-mtn8uqgngg",
+      "status": "ready",
+      "title": "Home Loans launch A: We do mortgages now (dusk)",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Opendoor Home Loans is open. On a $300K loan, half a point lower is about $98 a month back. See today's rates at opendoor.com/mortgage.",
+      "canva": "DAHUQfi3jYY",
+      "media": {
+        "img": "previews/mortgage-launch-A-dusk.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-04T17:44:51.028Z"
+    },
+    {
+      "id": "p-mtn8uqo72rg",
+      "status": "ready",
+      "title": "Home Loans launch B: We do mortgages now (sunlit)",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Opendoor Home Loans is open. On a $300K loan, half a point lower is about $98 a month back. See today's rates at opendoor.com/mortgage.",
+      "canva": "DAHUQeDCfvQ",
+      "media": {
+        "img": "previews/mortgage-launch-B-sunlit.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-04T17:44:51.306Z"
+    },
+    {
+      "id": "p-mtn8uqvw30e",
+      "status": "ready",
+      "title": "Home Loans launch C: Pamela C. review card",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Real review, real rate. Opendoor Home Loans is now open. See today's rates at opendoor.com/mortgage.",
+      "canva": "DAHUQT4PclM",
+      "media": {
+        "img": "previews/mortgage-launch-C-review.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-04T17:44:51.357Z"
+    },
+    {
+      "id": "p-mtn8uqx942o",
+      "status": "ready",
+      "title": "Home Loans launch D: the rate my lender gave me (two-panel)",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Mortgages made honest. Opendoor Home Loans is now open. See today's rates at opendoor.com/mortgage.",
+      "canva": "DAHUQQWdKS4",
+      "media": {
+        "img": "previews/mortgage-launch-D-twopanel.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-04T17:44:51.407Z"
     }
   ],
   "comments": {}

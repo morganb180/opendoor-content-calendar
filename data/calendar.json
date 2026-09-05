@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-04T17:45:57.187Z",
+  "updatedAt": "2026-09-05T18:42:35.774Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -943,13 +943,13 @@
       "fmt": "Static · 3:4",
       "caption": "",
       "socialCaption": "Kinda chic to skip the repairs. Sell as-is, pick your close date, spend the long weekend somewhere else.",
-      "canva": "DAHUF-8-MT8",
+      "canva": "DAHUWrypcWs",
       "media": {
-        "img": "previews/labor-day-skip-repairs.jpg",
+        "img": "/Users/morganbrown/opendoor/projects/labor-day-2026/deliver/labor-day-skip-repairs-v2.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-09-02T23:26:27.498Z",
+      "updatedAt": "2026-09-05T18:42:35.772Z",
       "date": "2026-09-06",
       "holiday": "",
       "postedUrl": ""

@@ -242,3 +242,6 @@
 {"ts":"2026-09-04T17:45:07.504Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Home Loans launch: optimize previews","posts":32,"inventory":116}}
 {"ts":"2026-09-04T17:45:57.187Z","actor":"morganbrown","action":"set","id":"p-mtn8uqx942o","title":"Home Loans launch D: the rate my lender gave me (two-panel)","detail":{"fields":["socialCaption"]}}
 {"ts":"2026-09-04T17:45:57.311Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Home Loans launch D: caption","posts":32,"inventory":116}}
+{"ts":"2026-09-05T18:42:09.893Z","actor":"morganbrown","action":"set","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"fields":["canva","media.img"]}}
+{"ts":"2026-09-05T18:42:35.776Z","actor":"morganbrown","action":"set","id":"p-mtkq4mudma","title":"Labor Day - Kinda chic to skip repairs","detail":{"fields":["media.img"]}}
+{"ts":"2026-09-05T18:42:36.037Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Labor Day Sun 9/6: skip-repairs v2 (brush, not roller)","posts":32,"inventory":116}}

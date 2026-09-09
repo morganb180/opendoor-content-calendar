@@ -249,3 +249,4 @@
 {"ts":"2026-09-05T18:57:27.411Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Sun 9/6 caption: a little less labor","posts":32,"inventory":116}}
 {"ts":"2026-09-09T19:29:42.624Z","actor":"morganbrown","action":"add","id":"p-mtuhsuf33sh","title":"US Open Final - Game. Set. Sold.","detail":{"date":"2026-09-13","inventory":false}}
 {"ts":"2026-09-09T19:29:42.827Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"US Open Final - Game. Set. Sold. (Sun 9/13)","posts":33,"inventory":116}}
+{"ts":"2026-09-09T19:29:58.462Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"US Open preview compress","posts":33,"inventory":116}}

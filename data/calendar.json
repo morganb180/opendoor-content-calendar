@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-05T18:57:27.260Z",
+  "updatedAt": "2026-09-09T19:29:42.623Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -971,6 +971,25 @@
       "updatedAt": "2026-09-02T23:42:38.032Z",
       "date": "2026-09-07",
       "holiday": "Labor Day",
+      "postedUrl": ""
+    },
+    {
+      "id": "p-mtuhsuf33sh",
+      "status": "ready",
+      "title": "US Open Final - Game. Set. Sold.",
+      "theme": "seasonal",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "Game. Set. Sold. 🎾\nChampionship Sunday is not open house Sunday. Get a cash offer in minutes, skip the showings, and watch the final from your own couch.\n#USOpen #GameSetSold #SellYourHome",
+      "canva": "DAHUu3ihCco",
+      "media": {
+        "img": "previews/B_court.png",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-09T19:29:42.620Z",
+      "date": "2026-09-13",
+      "holiday": "",
       "postedUrl": ""
     }
   ],

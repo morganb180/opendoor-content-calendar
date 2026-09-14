@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-14T17:54:01.074Z",
+  "updatedAt": "2026-09-14T18:05:07.055Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3045,7 +3045,7 @@
       "fmt": "Carousel · 3:4",
       "caption": "Homes of the week, Week of September 14, 2026. 8 homes on the market with Opendoor right now. Tour any of them on your schedule, no appointment needed.\n\n1. Brentwood, TN: $1,600,000, 5 bd / 3.5 ba / 3,969 sqft\nhttps://www.opendoor.com/properties/9316-Chesapeake-Dr-Brentwood-TN-37027/aid_fde16ba8-4c55-5772-8eb4-639153ca81a5\n\n2. Castle Rock, CO: $1,475,000, 5 bd / 5.5 ba / 5,465 sqft\nhttps://www.opendoor.com/properties/4730-Tierra-Alta-Dr-Castle-Rock-CO-80104/aid_b0430dcf-f0d1-542f-812a-e9fbc1cd385b\n\n3. Roswell, GA: $1,375,000, 7 bd / 5.5 ba / 5,736 sqft\nhttps://www.opendoor.com/properties/245-Steeple-Point-Dr-Roswell-GA-30076/aid_28ef9b5a-9e51-5252-a3ec-48456fc64c02\n\n4. Gilbert, AZ: $1,400,000, 4 bd / 3.5 ba / 4,047 sqft\nhttps://www.opendoor.com/properties/6138-S-Granite-St-Gilbert-AZ-85298/aid_ebd2634f-7707-5fa9-ba82-822044330a59\n\n5. Provo, UT: $1,350,000, 5 bd / 5.5 ba / 6,706 sqft\nhttps://www.opendoor.com/properties/3077-Bannock-Dr-Provo-UT-84604/aid_1c6b6df4-9bc8-5610-a8dc-678a7939f58d\n\n6. Kemah, TX: $715,000, 4 bd / 3.5 ba / 3,316 sqft\nhttps://www.opendoor.com/properties/1005-Lewis-Dr-Kemah-TX-77565/aid_a79bffdb-e66c-583c-9104-07ef940ce407\n\n7. Portland, OR: $911,000, 5 bd / 3.5 ba / 3,448 sqft\nhttps://www.opendoor.com/properties/1710-Nw-Hoyt-St-Portland-OR-97209/aid_d338a9bd-1dcc-5ec6-b7a8-8a79b7d8c7b1\n\n8. Sunbury, OH: $700,000, 4 bd / 3 ba / 2,935 sqft\nhttps://www.opendoor.com/properties/6400-Clark-Rd-Sunbury-OH-43074/aid_5c879a5c-9a32-5dfd-88d7-f9f0dccc5f7b\n\n#homesoftheweek #opendoor #housetour #dreamhome #realestate",
       "socialCaption": "",
-      "canva": "",
+      "canva": "DAHVMgZbtbI",
       "media": {
         "img": "previews/slide_00_title.jpg",
         "slides": [
@@ -3061,7 +3061,7 @@
         ],
         "video": ""
       },
-      "updatedAt": "2026-09-14T17:54:01.073Z"
+      "updatedAt": "2026-09-14T18:05:07.055Z"
     }
   ],
   "comments": {}

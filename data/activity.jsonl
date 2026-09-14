@@ -252,3 +252,5 @@
 {"ts":"2026-09-09T19:29:58.462Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"US Open preview compress","posts":33,"inventory":116}}
 {"ts":"2026-09-14T17:54:01.075Z","actor":"morganbrown","action":"add","id":"p-mu1jl1f519s","title":"Homes of the Week, Sept 14","detail":{"date":"","inventory":true}}
 {"ts":"2026-09-14T17:54:01.246Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Homes of the Week, Sept 14 carousel","posts":33,"inventory":117}}
+{"ts":"2026-09-14T18:05:07.056Z","actor":"morganbrown","action":"set","id":"p-mu1jl1f519s","title":"Homes of the Week, Sept 14","detail":{"fields":["canva"]}}
+{"ts":"2026-09-14T18:05:07.150Z","actor":"morganbrown","action":"publish","id":"","title":"","detail":{"message":"Homes of the Week: attach Canva design","posts":33,"inventory":117}}

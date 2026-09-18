@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-14T18:05:07.055Z",
+  "updatedAt": "2026-09-18T23:51:39.047Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3062,6 +3062,22 @@
         "video": ""
       },
       "updatedAt": "2026-09-14T18:05:07.055Z"
+    },
+    {
+      "id": "p-mu7m4dgd62u",
+      "status": "ready",
+      "title": "Turns out: Opendoor offer in your pocket",
+      "theme": "meme",
+      "fmt": "Static · 3:4",
+      "caption": "Approved A: an editorial pocket detail with the line ‘Turns out... house hunting with an Opendoor offer in your pocket is kind of nice.’",
+      "socialCaption": "A little certainty makes what’s next feel a lot lighter.",
+      "canva": "DAHVl2fkb1A",
+      "media": {
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/opendoor-offer-in-your-pocket-c63e8f2187.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-09-18T23:51:39.038Z"
     }
   ],
   "comments": {}

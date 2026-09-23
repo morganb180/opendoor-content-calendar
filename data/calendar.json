@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-23T19:24:49.768Z",
+  "updatedAt": "2026-09-23T21:45:52.200Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2453,15 +2453,15 @@
       "title": "Fast Food Sign Sayings",
       "theme": "meme",
       "fmt": "carousel 3:4 x10",
-      "caption": "",
+      "caption": "Ten-slide roadside sign carousel. Page 1 updated to OVER 350,000 HOMEOWNERS SERVED with individual changeable-letter cards, approved September 23, 2026.",
       "socialCaption": "",
       "canva": "DAHQwHO7vb4",
       "media": {
-        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/sign_01-d7f47d929e.png",
+        "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/homeowners-served-letter-cards-comma-low-39c64508c7.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-07-29T08:36:08.714Z"
+      "updatedAt": "2026-09-23T21:45:52.195Z"
     },
     {
       "id": "p-ms5vkgdp19e",

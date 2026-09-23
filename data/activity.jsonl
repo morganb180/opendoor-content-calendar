@@ -257,3 +257,5 @@
 {"ts":"2026-09-18T23:51:39.093Z","actor":"morgan.brown@opendoor.com","action":"add","id":"p-mu7m4dgd62u","title":"Turns out: Opendoor offer in your pocket","detail":{"date":"","inventory":true}}
 {"ts":"2026-09-18T23:51:51.810Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add Opendoor offer in your pocket creative","posts":33,"inventory":118}}
 {"ts":"2026-09-18T23:52:04.480Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add Opendoor offer in your pocket creative","posts":33,"inventory":118}}
+{"ts":"2026-09-23T19:24:49.769Z","actor":"morgan.brown@opendoor.com","action":"add","id":"p-muehshya1d5","title":"What You Could Be Doing on Game Day","detail":{"date":"","inventory":true}}
+{"ts":"2026-09-23T19:24:57.892Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add approved game-day static to content inventory","posts":33,"inventory":119}}

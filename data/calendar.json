@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-23T21:45:52.200Z",
+  "updatedAt": "2026-09-23T21:50:34.977Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -2454,14 +2454,14 @@
       "theme": "meme",
       "fmt": "carousel 3:4 x10",
       "caption": "Ten-slide roadside sign carousel. Page 1 updated to OVER 350,000 HOMEOWNERS SERVED with individual changeable-letter cards, approved September 23, 2026.",
-      "socialCaption": "",
+      "socialCaption": "we may have taken the drive-thru menu a little too seriously 🍟\n\nswipe through the specials, then get a free offer for your home at opendoor.com",
       "canva": "DAHQwHO7vb4",
       "media": {
         "img": "https://raw.githubusercontent.com/morganb180/canva-asset-host/main/assets/homeowners-served-letter-cards-comma-low-39c64508c7.png",
         "slides": [],
         "video": ""
       },
-      "updatedAt": "2026-09-23T21:45:52.195Z"
+      "updatedAt": "2026-09-23T21:50:34.972Z"
     },
     {
       "id": "p-ms5vkgdp19e",

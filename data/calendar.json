@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-24T18:37:55.382Z",
+  "updatedAt": "2026-09-28T21:01:02.375Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3094,6 +3094,29 @@
         "video": ""
       },
       "updatedAt": "2026-09-23T19:24:49.766Z"
+    },
+    {
+      "id": "p-mulqfhgd4w",
+      "status": "ready",
+      "title": "What Comes Next | Opendoor",
+      "theme": "brand",
+      "fmt": "Carousel · 6 slides",
+      "caption": "Seller motivation carousel. Process chores contrast with the life behind the move. Approved A layout with revised checklist and paperwork photos.",
+      "socialCaption": "No one dreams about open houses, repairs, packing, or paperwork. They dream about the backyard, the new job, Sunday dinner near family, and more time at home.\n\nWhat's next is the point. Explore selling with Opendoor.",
+      "canva": "DAHWhKBMl8c",
+      "media": {
+        "img": "previews/slides/p-mulqfhgd4w/01.jpg",
+        "slides": [
+          "previews/slides/p-mulqfhgd4w/01.jpg",
+          "previews/slides/p-mulqfhgd4w/02.jpg",
+          "previews/slides/p-mulqfhgd4w/03.jpg",
+          "previews/slides/p-mulqfhgd4w/04.jpg",
+          "previews/slides/p-mulqfhgd4w/05.jpg",
+          "previews/slides/p-mulqfhgd4w/06.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-09-28T21:01:02.373Z"
     }
   ],
   "comments": {}

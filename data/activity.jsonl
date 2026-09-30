@@ -267,3 +267,5 @@
 {"ts":"2026-09-24T18:38:05.795Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Correct fast food sign carousel to 300,000 homeowners","posts":33,"inventory":119}}
 {"ts":"2026-09-28T21:01:02.376Z","actor":"morgan.brown@opendoor.com","action":"add","id":"p-mulqfhgd4w","title":"What Comes Next | Opendoor","detail":{"date":"","inventory":true}}
 {"ts":"2026-09-28T21:02:22.839Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add What Comes Next Opendoor carousel","posts":33,"inventory":120}}
+{"ts":"2026-09-30T19:57:51.015Z","actor":"morgan.brown@opendoor.com","action":"set","id":"p-mulqfhgd4w","title":"What Comes Next | Opendoor","detail":{"fields":["canva","media.img","slides","caption"]}}
+{"ts":"2026-09-30T19:58:00.301Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update What Comes Next for Instagram 4x5","posts":33,"inventory":120}}

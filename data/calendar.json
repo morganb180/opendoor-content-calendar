@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-28T21:01:02.375Z",
+  "updatedAt": "2026-09-30T19:57:51.014Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3101,22 +3101,22 @@
       "title": "What Comes Next | Opendoor",
       "theme": "brand",
       "fmt": "Carousel · 6 slides",
-      "caption": "Seller motivation carousel. Process chores contrast with the life behind the move. Approved A layout with revised checklist and paperwork photos.",
+      "caption": "Seller motivation carousel. Process chores contrast with the life behind the move. Approved 4:5 version with open house sign and balloons plus doorway height-mark paint touch-up.",
       "socialCaption": "No one dreams about open houses, repairs, packing, or paperwork. They dream about the backyard, the new job, Sunday dinner near family, and more time at home.\n\nWhat's next is the point. Explore selling with Opendoor.",
-      "canva": "DAHWhKBMl8c",
+      "canva": "DAHWs7vo-vo",
       "media": {
-        "img": "previews/slides/p-mulqfhgd4w/01.jpg",
+        "img": "previews/slides/p-mulqfhgd4w-v2/01.jpg",
         "slides": [
-          "previews/slides/p-mulqfhgd4w/01.jpg",
-          "previews/slides/p-mulqfhgd4w/02.jpg",
-          "previews/slides/p-mulqfhgd4w/03.jpg",
-          "previews/slides/p-mulqfhgd4w/04.jpg",
-          "previews/slides/p-mulqfhgd4w/05.jpg",
-          "previews/slides/p-mulqfhgd4w/06.jpg"
+          "previews/slides/p-mulqfhgd4w-v2/01.jpg",
+          "previews/slides/p-mulqfhgd4w-v2/02.jpg",
+          "previews/slides/p-mulqfhgd4w-v2/03.jpg",
+          "previews/slides/p-mulqfhgd4w-v2/04.jpg",
+          "previews/slides/p-mulqfhgd4w-v2/05.jpg",
+          "previews/slides/p-mulqfhgd4w-v2/06.jpg"
         ],
         "video": ""
       },
-      "updatedAt": "2026-09-28T21:01:02.373Z"
+      "updatedAt": "2026-09-30T19:57:51.013Z"
     }
   ],
   "comments": {}

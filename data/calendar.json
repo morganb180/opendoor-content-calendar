@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-09-30T19:57:51.014Z",
+  "updatedAt": "2026-10-20T15:27:47.549596+00:00",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3117,6 +3117,22 @@
         "video": ""
       },
       "updatedAt": "2026-09-30T19:57:51.013Z"
+    },
+    {
+      "id": "ci-20261020-071728-this-but-for-opendoor",
+      "status": "ready",
+      "title": "Odd One Out - Monochrome Home",
+      "theme": "brand",
+      "fmt": "Static · 3:4",
+      "caption": "",
+      "socialCaption": "one of these is not like the others. no spoilers in the comments 👀",
+      "canva": "DAHYjwhe1Aw",
+      "media": {
+        "img": "previews/ci-20261020-071728-this-but-for-opendoor-preview.jpg",
+        "slides": [],
+        "video": ""
+      },
+      "updatedAt": "2026-10-20T15:27:46.675Z"
     }
   ],
   "comments": {}

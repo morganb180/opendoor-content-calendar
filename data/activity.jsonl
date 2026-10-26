@@ -273,3 +273,5 @@
 {"ts":"2026-10-20T15:27:48.002Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add approved Creative Inbox asset 20261020-071728-this-but-for-opendoor","posts":33,"inventory":121}}
 {"ts":"2026-10-26T22:26:33.112Z","actor":"morgan.brown@opendoor.com","action":"set","id":"ci-20260928-105127-this-but-for-opendoor-no-one-dre","title":"What Comes Next | Opendoor","detail":{"fields":["id","canva","media.img","slides","caption","socialCaption"]}}
 {"ts":"2026-10-26T22:26:33.372Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update approved Move Forward carousel and Mesa end card","posts":33,"inventory":121}}
+{"ts":"2026-10-26T22:36:35.330Z","actor":"morgan.brown@opendoor.com","action":"set","id":"ci-20260928-105127-this-but-for-opendoor-no-one-dre","title":"What Comes Next | Opendoor","detail":{"fields":["canva","slides","caption"]}}
+{"ts":"2026-10-26T22:36:35.558Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update approved dreams carousel end-card copy","posts":33,"inventory":121}}

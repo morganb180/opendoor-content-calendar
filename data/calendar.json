@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-10-20T15:27:47.549596+00:00",
+  "updatedAt": "2026-10-26T22:26:33.111Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3096,27 +3096,27 @@
       "updatedAt": "2026-09-23T19:24:49.766Z"
     },
     {
-      "id": "p-mulqfhgd4w",
+      "id": "ci-20260928-105127-this-but-for-opendoor-no-one-dre",
       "status": "ready",
       "title": "What Comes Next | Opendoor",
       "theme": "brand",
       "fmt": "Carousel · 6 slides",
-      "caption": "Seller motivation carousel. Process chores contrast with the life behind the move. Approved 4:5 version with open house sign and balloons plus doorway height-mark paint touch-up.",
-      "socialCaption": "No one dreams about open houses, repairs, packing, or paperwork. They dream about the backyard, the new job, Sunday dinner near family, and more time at home.\n\nWhat's next is the point. Explore selling with Opendoor.",
-      "canva": "DAHWs7vo-vo",
+      "caption": "Seller motivation carousel. Approved 4:5 version with a real Mesa home and the closing line Opendoor helps you move forward.",
+      "socialCaption": "No one dreams about open houses, repairs, packing, or paperwork. They dream about the backyard, the new job, Sunday dinner near family, and more time at home.\n\nOpendoor helps you move forward. Explore selling at opendoor.com.",
+      "canva": "DAHZJu4TW4Y",
       "media": {
-        "img": "previews/slides/p-mulqfhgd4w-v2/01.jpg",
+        "img": "previews/ci-20260928-105127-this-but-for-opendoor-no-one-dre-preview.jpg",
         "slides": [
-          "previews/slides/p-mulqfhgd4w-v2/01.jpg",
-          "previews/slides/p-mulqfhgd4w-v2/02.jpg",
-          "previews/slides/p-mulqfhgd4w-v2/03.jpg",
-          "previews/slides/p-mulqfhgd4w-v2/04.jpg",
-          "previews/slides/p-mulqfhgd4w-v2/05.jpg",
-          "previews/slides/p-mulqfhgd4w-v2/06.jpg"
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/01.jpg",
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/02.jpg",
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/03.jpg",
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/04.jpg",
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/05.jpg",
+          "previews/slides/ci-20260928-105127-this-but-for-opendoor-no-one-dre/06.jpg"
         ],
         "video": ""
       },
-      "updatedAt": "2026-09-30T19:57:51.013Z"
+      "updatedAt": "2026-10-26T22:26:33.106Z"
     },
     {
       "id": "ci-20261020-071728-this-but-for-opendoor",

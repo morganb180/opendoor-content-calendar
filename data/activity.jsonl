@@ -271,3 +271,5 @@
 {"ts":"2026-09-30T19:58:00.301Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update What Comes Next for Instagram 4x5","posts":33,"inventory":120}}
 {"ts":"2026-10-20T15:27:46.683Z","actor":"morgan.brown@opendoor.com","action":"add","id":"ci-20261020-071728-this-but-for-opendoor","title":"Odd One Out - Monochrome Home","detail":{"date":"","inventory":true}}
 {"ts":"2026-10-20T15:27:48.002Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add approved Creative Inbox asset 20261020-071728-this-but-for-opendoor","posts":33,"inventory":121}}
+{"ts":"2026-10-26T22:26:33.112Z","actor":"morgan.brown@opendoor.com","action":"set","id":"ci-20260928-105127-this-but-for-opendoor-no-one-dre","title":"What Comes Next | Opendoor","detail":{"fields":["id","canva","media.img","slides","caption","socialCaption"]}}
+{"ts":"2026-10-26T22:26:33.372Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update approved Move Forward carousel and Mesa end card","posts":33,"inventory":121}}

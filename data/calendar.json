@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-10-27T19:41:07.019Z",
+  "updatedAt": "2026-10-27T20:02:51.636Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3102,7 +3102,7 @@
       "theme": "brand",
       "fmt": "Carousel · 6 slides",
       "caption": "Seller motivation carousel. Final 4:5 version with portrait home-loan documents, tidy hair in the new-job image, revised first-morning copy, and the closing line Turn your dreams into reality today.",
-      "socialCaption": "No one dreams about open houses, repairs, packing, or paperwork. They dream about the backyard, the new job, Sunday dinner near family, and more time at home.\n\nOpendoor helps you move forward. Explore selling at opendoor.com.",
+      "socialCaption": "What comes next is up to you. We're here to help you move forward.",
       "canva": "DAHZOw0gMK0",
       "media": {
         "img": "previews/ci-20260928-105127-this-but-for-opendoor-no-one-dre-preview.jpg",
@@ -3116,7 +3116,7 @@
         ],
         "video": ""
       },
-      "updatedAt": "2026-10-27T19:41:07.015Z"
+      "updatedAt": "2026-10-27T20:02:51.632Z"
     },
     {
       "id": "ci-20261020-071728-this-but-for-opendoor",

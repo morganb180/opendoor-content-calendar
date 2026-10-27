@@ -277,3 +277,5 @@
 {"ts":"2026-10-26T22:36:35.558Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Update approved dreams carousel end-card copy","posts":33,"inventory":121}}
 {"ts":"2026-10-27T19:41:07.020Z","actor":"morgan.brown@opendoor.com","action":"set","id":"ci-20260928-105127-this-but-for-opendoor-no-one-dre","title":"What Comes Next | Opendoor","detail":{"fields":["canva","slides","caption"]}}
 {"ts":"2026-10-27T19:41:07.260Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Deliver approved final dreams carousel corrections","posts":33,"inventory":121}}
+{"ts":"2026-10-27T20:02:51.637Z","actor":"morgan.brown@opendoor.com","action":"set","id":"ci-20260928-105127-this-but-for-opendoor-no-one-dre","title":"What Comes Next | Opendoor","detail":{"fields":["socialCaption"]}}
+{"ts":"2026-10-27T20:02:51.833Z","actor":"morgan.brown@opendoor.com","action":"deploy","id":"","title":"","detail":{"message":"Use approved What comes next carousel caption","posts":33,"inventory":121}}

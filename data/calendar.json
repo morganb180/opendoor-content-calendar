@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-11-03T02:05:35.352Z",
+  "updatedAt": "2026-11-03T02:20:45.109Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3140,13 +3140,13 @@
       "title": "It’s a buyer’s market | September 2026",
       "theme": "proof",
       "fmt": "Carousel · 3:4 · 6 slides",
-      "caption": "September 2026 market snapshot: national stats and six metros with the biggest seller surpluses. Offer CTA on final slide only.",
-      "socialCaption": "If your next move needs to happen this year, waiting for the market to change isn’t your only option.\n\nSell directly to Opendoor for Cash, skip showings, and choose an available closing date. Review your final offer and estimated net before you decide.\n\nStart at opendoor.com. Eligibility and offer terms apply.\n\nMarket conditions vary by area. Data shown are for September 2026, including Redfin’s analysis of the 50 most populous U.S. metro areas.\n\nSources:\nhttps://www.redfin.com/news/buyers-vs-sellers-september-2026/\nhttps://www.redfin.com/news/pending-home-sales-sink-rates/",
+      "caption": "September 2026 national and metro data. Opening explains how Opendoor lets sellers skip the buyer search.",
+      "socialCaption": "A slow market doesn’t have to mean waiting for a buyer.\n\nA new job, a new city, a fresh start. Your next move won’t always line up with the housing market. Opendoor buys your home directly, so you can skip listing, showings, and the buyer search.\n\nSee what Opendoor can offer at opendoor.com.\n\nMarket data: Redfin, September 2026. Eligibility and offer terms apply.",
       "canva": "DAHZ0kt7xlc",
       "media": {
-        "img": "previews/ci-20261028-113606-can-we-make-a-post-based-on-this-preview.png",
+        "img": "previews/ci-20261028-113606-can-we-make-a-post-based-on-this-r5-preview.png",
         "slides": [
-          "previews/slides/ci-20261028-113606-can-we-make-a-post-based-on-this/01.png",
+          "previews/slides/ci-20261028-113606-can-we-make-a-post-based-on-this/01-r5.png",
           "previews/slides/ci-20261028-113606-can-we-make-a-post-based-on-this/02.png",
           "previews/slides/ci-20261028-113606-can-we-make-a-post-based-on-this/03.png",
           "previews/slides/ci-20261028-113606-can-we-make-a-post-based-on-this/04.png",
@@ -3155,7 +3155,7 @@
         ],
         "video": ""
       },
-      "updatedAt": "2026-11-03T02:05:35.346Z"
+      "updatedAt": "2026-11-03T02:20:45.109Z"
     }
   ],
   "comments": {}

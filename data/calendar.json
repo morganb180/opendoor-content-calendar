@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-11-03T02:20:45.109Z",
+  "updatedAt": "2026-11-12T18:10:54.270987+00:00",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3156,6 +3156,33 @@
         "video": ""
       },
       "updatedAt": "2026-11-03T02:20:45.109Z"
+    },
+    {
+      "id": "ci-20261112-083024-there-s-got-to-be-a-version-s-of",
+      "status": "ready",
+      "title": "Your next chapter | 10 SOLD yard signs",
+      "theme": "brand",
+      "fmt": "Carousel · 3:4 · 10 slides",
+      "caption": "",
+      "socialCaption": "A new opportunity. A different pace. A little closer to the people you love.\n\nSelling your home can make room for what comes next. Whatever you’re moving toward, we’re rooting for you. 💙",
+      "canva": "DAHaulTh-p4",
+      "media": {
+        "img": "previews/ci-20261112-083024-there-s-got-to-be-a-version-s-of-preview.jpg",
+        "slides": [
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/01_rooting.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/02_new_job.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/03_commute.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/04_closer.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/05_growing.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/06_adventure.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/07_downsize.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/08_dreams.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/09_fresh_start.jpg",
+          "previews/slides/ci-20261112-083024-there-s-got-to-be-a-version-s-of/10_moving_forward.jpg"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-11-12T18:10:47.857Z"
     }
   ],
   "comments": {}

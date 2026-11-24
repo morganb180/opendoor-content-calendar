@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "updatedAt": "2026-11-12T18:10:54.270987+00:00",
+  "updatedAt": "2026-11-24T20:44:20.831Z",
   "config": {
     "cadence": "Mon/Wed/Fri + event specials",
     "timezone": "America/Los_Angeles",
@@ -3183,6 +3183,31 @@
         "video": ""
       },
       "updatedAt": "2026-11-12T18:10:47.857Z"
+    },
+    {
+      "id": "ci-20261124-thanksgiving-customer-thanks",
+      "status": "ready",
+      "title": "Thankful for You - Thanksgiving Customer Stories",
+      "theme": "seasonal",
+      "fmt": "Carousel - 3:4",
+      "caption": "Six customer stories and a Thanksgiving thank-you. Approved typography version with first name and last initial.",
+      "socialCaption": "To everyone who bought or sold a home with Opendoor this year, thank you for trusting us with your next move. And to everyone who shared their experience, thank you for telling your story. Wherever you’re spending Thanksgiving, we’re wishing you a warm holiday and a happy next chapter.",
+      "canva": "DAHb3Gw4qis",
+      "media": {
+        "img": "previews/ci-20261124-thanksgiving-customer-thanks-preview.png",
+        "slides": [
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/01_cover.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/02_jennifer.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/03_lili.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/04_shevawn.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/05_robert.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/06_jeff.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/07_tom.png",
+          "previews/slides/ci-20261124-thanksgiving-customer-thanks/08_happy_thanksgiving.png"
+        ],
+        "video": ""
+      },
+      "updatedAt": "2026-11-24T20:44:20.830Z"
     }
   ],
   "comments": {}

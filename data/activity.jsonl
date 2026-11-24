@@ -285,3 +285,5 @@
 {"ts":"2026-11-03T02:20:45.373Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Update approved buyer-market opener and caption","posts":33,"inventory":122}}
 {"ts":"2026-11-12T18:10:47.861Z","actor":"morgan.brown@opendoor.com","action":"add","id":"ci-20261112-083024-there-s-got-to-be-a-version-s-of","title":"Your next chapter | 10 SOLD yard signs","detail":{"date":"","inventory":true}}
 {"ts":"2026-11-12T18:10:54.797Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add approved Creative Inbox asset 20261112-083024-there-s-got-to-be-a-version-s-of","posts":33,"inventory":123}}
+{"ts":"2026-11-24T20:44:20.832Z","actor":"morgan.brown@opendoor.com","action":"add","id":"ci-20261124-thanksgiving-customer-thanks","title":"Thankful for You - Thanksgiving Customer Stories","detail":{"date":"","inventory":true}}
+{"ts":"2026-11-24T20:44:21.232Z","actor":"morgan.brown@opendoor.com","action":"publish","id":"","title":"","detail":{"message":"Add approved Creative Inbox asset 20261124-thanksgiving-customer-thanks","posts":33,"inventory":124}}
